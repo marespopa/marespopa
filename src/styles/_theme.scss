@@ -1,0 +1,25 @@
+.navbar-brand .navbar-item img {
+  max-height: 2.75rem;
+}
+
+:root {
+  --text-light: #fff;
+  --text-dark: #000000;
+  --navbar-bg: #00030f;
+  --section-alternate-bg: #e7dfd8;
+}
+
+$primary: #1649ff;
+$link: $blue;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-dark;
+$family-primary: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+$family-secondary: 'Montserrat', Arial, Helvetica, sans-serif;
+$navbar-background-color: var(--navbar-bg);
+$navbar-item-color: var(--text-light);
+$button-border-color: var(--text-dark);
+$button-background-color: transparent;

@@ -1,0 +1,1 @@
+{"mappings":"AAAAA,OAAOC,MAAMC,KAAK,CAAEC,QAAS,WAAYC,KAAM,gBAAiBC,KAAM","sources":["src/scripts/cookie-consent.js"],"sourcesContent":["window.start.init({ Palette: 'palette2', Mode: 'banner bottom', Time: '5' });\r\n"],"names":["window","start","init","Palette","Mode","Time"],"version":3,"file":"index.bad51036.js.map"}

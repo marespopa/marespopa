@@ -1,0 +1,11 @@
+.section--alternate {
+  background-color: var(--section-alternate-bg);
+}
+
+.navbar.is-dark {
+  background-color: var(--navbar-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
