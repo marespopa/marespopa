@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     $navbarBurgers.forEach((el)=>{
         el.addEventListener('click', ()=>{
             // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
+            const { target  } = el.dataset;
             const $target = document.getElementById(target);
             // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
             el.classList.toggle('is-active');
@@ -14,15 +14,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
         });
     });
 });
-let links = document.querySelectorAll('a.navbar-item');
-console.dir(links);
-console.log('test');
+const links = document.querySelectorAll('a.navbar-item');
 links.forEach((link)=>{
     link.addEventListener('click', ()=>{
-        let currActive = document.querySelector('.is-active');
-        console.dir(currActive);
-        let nextActive = currActive.className;
-        currActive.className = nextActive.replace(' is-active', '');
+        const currActive = document.querySelector('.is-active');
+        const nextActive = currActive.className;
+        currActive.className = nextActive.replace('is-active', '');
+        // eslint-disable-next-line no-param-reassign
         link.className += ' is-active';
     });
 });

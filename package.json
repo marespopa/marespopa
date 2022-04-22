@@ -14,6 +14,9 @@
     "@parcel/packager-raw-url": "^2.4.1",
     "@parcel/transformer-sass": "^2.4.1",
     "@parcel/transformer-webmanifest": "^2.4.1",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "parcel": "latest"
   },
   "dependencies": {
