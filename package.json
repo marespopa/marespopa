@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.4.1",
+    "@parcel/packager-xml": "^2.4.1",
     "@parcel/transformer-sass": "^2.4.1",
     "@parcel/transformer-webmanifest": "^2.4.1",
     "eslint": "^8.13.0",
@@ -20,6 +21,22 @@
     "parcel": "latest"
   },
   "dependencies": {
-    "bulma": "^0.9.3"
+    "bulma": "^0.9.3",
+    "parcel-config-pwa-manifest": "^0.1.1"
+  },
+  "pwaManifest": {
+    "name": "Mares Popa",
+    "shortName": "Mares",
+    "startURL": "./offline",
+    "theme": "#fefefe",
+    "generateIconOptions": {
+      "baseIcon": "src/assets/images/logo/pwa_icon.svg",
+      "sizes": [
+        192,
+        384,
+        512
+      ],
+      "genFavicons": true
+    }
   }
 }
