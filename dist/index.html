@@ -29,245 +29,472 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-  <body id="home" class="has-navbar-fixed-top">
-    <header class="main-navigation">
-      <nav class="navbar is-dark is-fixed-top">
-        <div class="container">
-          <div class="navbar-brand">
-            <a href="#home" class="navbar-item">
-              <img src="/logo_white_text.6190213c.png" alt="Mares Popa" title="Mares Popa Logo">
-            </a>
-            <span class="navbar-burger" data-target="mainNavigation">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+  <body class="has-navbar-fixed-top">
+    <div class="main-content">
+      <header class="header">
+        <nav class="navbar is-primary is-fixed-top">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="#home" class="navbar-item">
+                <img src="/logo_white_text.6190213c.png" alt="Mares Popa" title="Mares Popa Logo">
+              </a>
+              <span id="mainNavigationBurger" class="navbar-burger" data-target="mainNavigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="mainNavigation" class="navbar-menu main-navigation">
+              <div class="navbar-end">
+                <a href="#home" data-target="home" class="navbar-item is-active"> Acasă </a>
+                <a href="#about" data-target="about" class="navbar-item"> Cine sunt? </a>
+                <a href="#services" data-target="services" class="navbar-item"> Servicii </a>
+                <a href="#prices" data-target="prices" class="navbar-item"> Preț </a>
+                <a href="#contact" data-target="contact" class="navbar-item"> Contact </a>
+              </div>
+            </div>
           </div>
-          <div id="mainNavigation" class="navbar-menu">
-            <div class="navbar-end">
-              <a href="#home" class="navbar-item is-active"> Acasă </a>
-              <a href="#about" class="navbar-item"> Cine sunt? </a>
-              <a href="#services" class="navbar-item"> Servicii </a>
-              <a href="#prices" class="navbar-item"> Preț </a>
-              <a href="#contact" class="navbar-item"> Contact </a>
+        </nav>
+      </header>
+
+      <section id="home" class="page-section hero is-fullheight">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div class="content">
+              <h1 class="title">Salut,</h1>
+              <p class="subtitle">Te-ai întrebat vreodată de ce e important un site pentru afacerea / evenimentul tău?</p>
+              <p>
+                Un site web îți oferă credibilitate în fața clienților și crește încrederea lor în ceea ce vinzi / promovezi / organizezi.
+                Este o oportunitate de a face o primă impresie excelentă și de a oferi liniștea celor ce te vizitează că ești serios.
+              </p>
+
+              <p>
+                <button onclick="window.location.href='#learnMore'" class="button is-large is-responsive is-primary mx-auto my-6 has-bounce">
+                  Află mai multe
+                </button>
+              </p>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </section>
 
-    <section class="section section--alternate py-0">
-      <div class="container">
-        <div class="columns is-centered mt-0 pt-0">
-          <div class="column content">
-            <h1>Salut,</h1>
-
-            <p>Te-ai gândit vreodată cât de important este un site pentru afacerea ta?</p>
-
-            <p class="subtitle">Este foaaarte important.</p>
-
-            <button onclick="window.location.href='#learn-more'" class="button is-outlined mt-6">Află mai multe</button>
-          </div>
-
-          <div class="column py-0">
-            <figure class="image is-square">
-              <img src="/main_header_image.e995600a.png" alt="Person Working at Laptop" title="Importanta unui site">
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="learn-more" class="section is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">De ce e important un site?</h2>
-          <p class="px-5">
-            Un site de calitate este important pentru că îți poate aduce noi clienți în momentul în care cineva caută produsul/serviciul tău
-            pe internet. Știi care e faza nasoală cu site-urile prost făcute? Chiar dacă lumea ajunge să le vadă, nu își face cea mai bună
-            impresie despre ceea ce oferi tu.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alternate is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">Ce înseamnă un site de calitate?</h2>
-          <p class="px-5">
-            Un site de calitate înseamnă un pic mai mult decât să iei o tema de Wordpress, să schimbi niște culori și să pui niște imagini
-            de pe internet. Un site web făcut de la 0 nu are limitări sau restricții cu privire la modul în care îl proiectezi.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">De ce să aleg un site făcut de la zero?</h2>
-          <p class="px-5">
-            Un site de calitate este important pentru că îți poate aduce noi clienți în momentul în care cineva caută produsul/serviciul tău
-            pe internet. Știi care e faza nasoală cu site-urile prost făcute? Chiar dacă lumea ajunge să le vadă, nu își face cea mai bună
-            impresie despre ceea ce oferi tu.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alternate is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">Cum mă ajută defapt?</h2>
-          <p class="px-5">
-            Tu obții un design unic, pe care poți foarte ușor să îl asortezi și să îl completezi cu o prezență în social media. Un site unic
-            te diferențează de competitori prezentând produsele și serviciile cu accent pe experiența vizitatorilor.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">Doar atât?</h2>
-          <p class="px-5">
-            Pe lângă toate acestea se mai adaugă și dezvoltarea cu accent pe navigația utilizatorului, astfel încât oricine vizitează
-            site-ul să aibă un timp cât mai scurt până cumpără produsul/serviciul tău. Plus optimizarea pentru motoarele de căutare (SEO)
-            încorporată în cadrul său, care permite o mai bună clasare pe GOOGLE cu cod curat, conținut centrat pe cuvinte cheie (dar nu
-            prea dens), etichete de titlu (în special un H1), metadate și etichete alternative de imagine. Crează un site web „SEO-friendly”
-            de la început, astfel încât clienții să te poate găsi ușor. Plus securitate sporită.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section section--alternate is-medium">
-      <div class="container has-text-centered">
-        <figure class="image is-128x128 mx-auto">
-          <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
-        </figure>
-        <div class="block">
-          <h2 class="mt-1">Cine sunt eu?</h2>
-          <p class="pt-5">
-            Numele meu este Mareș Popa. Sunt Frontend Developer și locuiesc într-un mic orășel din nordul României, Negrești Oaș.
-          </p>
-
-          <p>
-            Am peste șase ani de experiență ca programator, fiind implicat în dezvoltarea multor produse și proiecte de-a lungul carierei
-            mele. M-aș descrie ca un programator pasionat de ceea ce face, și curios tot timpul să fie la zi cu noile tehnologii de pe sfera
-            Web❤️.
-          </p>
-
-          <p class="pb-5">
-            Mi-am început călătoria în web development undeva în jurul clasei a IX-a, când am creat, alături de unul dintre colegii mei de
-            clasă, un joc de manager de fotbal online, în care poți să-ți alegi propria echipă, să vinzi jucători, să-i antrenezi. A fost
-            primul meu contact cu aplicațiile web și de atunci am fost cucerit. ☀️
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="section is-medium">
-      <div class="container">
-        <div class="block has-text-centered">
-          <h2 class="mt-1">Ce servicii ofer?</h2>
-        </div>
-        <div class="columns">
-          <div class="column content">
-            <h2 class="heading">Design</h2>
-            <p>Crearea aspectului site-ului, definitivarea conținutului și structurii lui, folosind cele mai bune și moderne practici.</p>
-          </div>
-          <div class="column content">
-            <h2 class="heading">Implementare</h2>
-            <p>Crearea aspectului site-ului, definitivarea conținutului și structurii lui, folosind cele mai bune și moderne practici.</p>
-          </div>
-          <div class="column content">
-            <h2 class="heading">Setare</h2>
-            <p>Setarea site-ului și optimizarea lui pentru performanță, și o indexare cât mai bună în motoarele de căutare</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="prices" class="section is-medium section--alternate">
-      <div class="container has-text-centered">
-        <div class="block">
-          <h2 class="mt-1">Cât costă?</h2>
-          <p class="px-5">
-            Aș vrea să existe un preț fix, dar e un pic mai complicat de atât. În funcție de cerințe și de necesitățile site-ului prețul
-            poate varia. Având în vedere că o temă de wordpress costă în jur de 300 de lei, un site făcut custom de la 0 pentru nevoile tale
-            nu poate fi la aceeași sumă. Nu zic că nu poți găsi mai ieftin în altă parte.
-          </p>
-          <p class="px-5">
-            Dar de multe ori mai ieftin nu îți aduce și seriozitate și calitate. Ca idee un site de prezentare pornește de la 300 de euro și
-            poate ajunge la câteva mii de euro. La toate acestea se adaugă și costurile cu host-ul (5-15 EUR/lună) și domeniul care pornește
-            de la 10 EUR/an. Dacă vrei să aflii cât ar costa realizarea site-ului tău, trimite-mi un mail la
-            <a href="mailto:contact@marespopa.com">contact@marespopa.com</a>
-            cu ceea ce îți dorești și eu voi reveni cu o ofertă.
-          </p>
-          <button onclick="window.location.href='contact'" class="button is-outlined mt-6">Cere ofertă</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section is-medium pb-5">
-      <div class="container has-text-centered">
-        <div class="content">
-          <h2>Succesul este al celor care lucrează pentru el.</h2>
-          <figure>
-            <img src="/skyscraper.0ca7e719.jpg" alt="Skyscraper Image" title="Success" class="image is-fullwidth">
+      <section id="learnMore" class="section is-medium">
+        <div class="container has-text-centered">
+          <figure class="image is-128x128 mx-auto">
+            <img alt="MaresPopa Logo" title="Mares Popa" src="/logo_icon_128.6e37fd41.png">
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section--alternate py-5">
-      <div class="container">
-        <div class="columns is-centered is-vcentered mt-0 pt-0">
-          <div class="column py-0">
-            <figure class="image is-square">
-              <img src="/laptop_working.3a351621.jpg" alt="Person Working at Laptop" title="Cerere Ofertă Site Personalizat">
-            </figure>
-          </div>
-
-          <div class="column content">
-            <h2>Hai să pavăm calea ta spre succes și în online!</h2>
-
-            <p class="mb-0 has-text-weight-semibold is-uppercase">Contact</p>
-
-            <p class="mt-0">
-              <a href="tel:0743010745">0743 01 07 45</a> <br>
-              <a href="mailto:contact@marespopa.com">contact@marespopa.com</a>
+          <div class="block">
+            <h2 class="mt-1">De ce e important un site?</h2>
+            <p class="px-5">
+              Un site de calitate este important pentru că îți poate aduce noi clienți în momentul în care cineva caută
+              produsul/serviciul/evenimentul tău pe internet. Știi care e faza nasoală cu site-urile prost făcute? Chiar dacă lumea ajunge
+              să le vadă, nu își face cea mai bună impresie despre ceea ce oferi tu.
             </p>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>© 2022 Toate drepturile rezervate, <strong>Mares Popa</strong>.</p>
-      </div>
-    </footer>
+      </section>
 
-    <script src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-    <script src="/index.6175e75d.js"></script>
+      <section class="section section--alternate is-medium">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">Ce înseamnă un site de calitate?</h2>
+            <p class="px-5">
+              Un site de calitate înseamnă un pic mai mult decât să iei o tema de Wordpress, să schimbi niște culori și să pui niște imagini
+              de pe internet. Un site web făcut de la 0 nu are limitări sau restricții cu privire la modul în care îl proiectezi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section is-medium">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">De ce să aleg un site făcut de la zero?</h2>
+            <p class="px-5">
+              Un site de calitate este important pentru că îți poate aduce noi clienți în momentul în care cineva caută produsul/serviciul
+              tău pe internet. Știi care e faza nasoală cu site-urile prost făcute? Chiar dacă lumea ajunge să le vadă, nu își face cea mai
+              bună impresie despre ceea ce oferi tu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alternate is-medium">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">Cum mă ajută defapt?</h2>
+            <p class="px-5">
+              Tu obții un design unic, pe care poți foarte ușor să îl asortezi și să îl completezi cu o prezență în social media. Un site
+              unic te diferențează de competitori prezentând produsele și serviciile cu accent pe experiența vizitatorilor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section is-medium">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">Doar atât?</h2>
+            <p class="px-5">
+              Pe lângă toate acestea se mai adaugă și dezvoltarea cu accent pe navigația utilizatorului, astfel încât oricine vizitează
+              site-ul să aibă un timp cât mai scurt până cumpără produsul/serviciul tău. Plus optimizarea pentru motoarele de căutare (SEO)
+              încorporată în cadrul său, care permite o mai bună clasare pe GOOGLE cu cod curat, conținut centrat pe cuvinte cheie (dar nu
+              prea dens), etichete de titlu (în special un H1), metadate și etichete alternative de imagine. Crează un site web
+              „SEO-friendly” de la început, astfel încât clienții să te poate găsi ușor. Plus securitate sporită.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--alternate page-section is-medium">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">Cine sunt eu?</h2>
+            <div class="mt-5 content">
+              <figure class="mx-auto image is-128x128">
+                <img src="/square_portrait.4ef9c3cd.jpg" title="Mares Popa Profile" alt="Mares Popa Profile">
+              </figure>
+
+              <p>Numele meu este Mareș Popa. Sunt Frontend Developer și locuiesc într-un mic orășel din nordul României, Negrești Oaș.</p>
+
+              <p>
+                Am peste șase ani de experiență ca programator, fiind implicat în dezvoltarea multor produse și proiecte de-a lungul
+                carierei mele. M-aș descrie ca un programator pasionat de ceea ce face, și curios tot timpul să fie la zi cu noile
+                tehnologii de pe sfera Web❤️.
+              </p>
+
+              <p class="pb-5">
+                Mi-am început călătoria în web development undeva în jurul clasei a IX-a, când am creat, alături de unul dintre colegii mei
+                de clasă, un joc de manager de fotbal online, în care poți să-ți alegi propria echipă, să vinzi jucători, să-i antrenezi. A
+                fost primul meu contact cu aplicațiile web și de atunci am fost cucerit. ☀️
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section is-medium page-section">
+        <div class="container">
+          <div class="block has-text-centered">
+            <h2 class="mt-1">Ce servicii ofer?</h2>
+          </div>
+          <div class="columns">
+            <div class="column content">
+              <h2 class="heading">Design</h2>
+              <p>Crearea aspectului site-ului, definitivarea conținutului și structurii lui, folosind cele mai bune și moderne practici.</p>
+            </div>
+            <div class="column content">
+              <h2 class="heading">Implementare</h2>
+              <p>Crearea aspectului site-ului, definitivarea conținutului și structurii lui, folosind cele mai bune și moderne practici.</p>
+            </div>
+            <div class="column content">
+              <h2 class="heading">Setare</h2>
+              <p>Setarea site-ului și optimizarea lui pentru performanță, și o indexare cât mai bună în motoarele de căutare</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="prices" class="section section--alternate page-section">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="title pt-1">Cât costă?</h2>
+            <p class="subtitle is-size-6">
+              În funcție de cerințe și de necesitățile site-ului prețul poate varia. Ca idee constul pentru creearea unui site pornește de
+              la cateva sute de euro și poate ajunge la câteva mii de euro. La toate acestea se adaugă și costurile cu host-ul (5-15
+              EUR/lună) și domeniul care pornește de la 10 EUR/an. Mai jos ai căteva prețuri orientative, în funcție de categoria de site
+              dorită.
+            </p>
+            <div class="spacer"></div>
+            <div class="mt-5 columns pricing-table">
+              <div class="column is-one-third has-text-centered pricing-table__column">
+                <h2 class="title is-3 plan_title has-text-weight-bold">Landing Page</h2>
+                <p class="has-text-weight-light plan_subtitle">Ideală pentru afaceri mici, evenimente sau portofolii</p>
+                <div class="price">
+                  <h2 class="title is-3 has-text-weight-bold">de la 1000 RON</h2>
+                  <p class="subtitle is-size-7">preț cu TVA</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="features">
+                  <p>Site de o singura pagină</p>
+                  <p>Soluție customizată utilizând ultimele tehnologii HTML/CSS/Javascript</p>
+                  <p>Design Unic</p>
+                  <p>Responsive (arată bine și pe mobil)</p>
+                  <p>Încărcare rapidă</p>
+                  <p>100% Valid W3C pentru HTML și CSS</p>
+                  <p>Setare Host/Domeniu</p>
+                  <p>Setare Google Analytics</p>
+                  <p>Conformare Cookies</p>
+                </div>
+                <div class="spacer"></div>
+                <button data-target="modal-contact" class="js-modal-trigger button is-primary">Cere ofertă</button>
+              </div>
+              <div class="column is-one-third has-text-centered pricing-table__column pricing-table__column-alt">
+                <h2 class="title is-3 plan_title has-text-weight-bold">Website Standard</h2>
+                <p class="has-text-weight-light plan_subtitle">
+                  Ideal pentru bussiness-uri scalabile, hoteluri, sau dacă ai mai mult conținut de oferit
+                </p>
+                <div class="price">
+                  <h2 class="title is-3 has-text-weight-bold">de la 1400 RON</h2>
+                  <p class="subtitle is-size-7">preț cu TVA</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="features">
+                  <p>Site de 5-10 pagini</p>
+                  <p>Soluție customizată utilizând ultimele tehnologii HTML/CSS/Javascript</p>
+                  <p>Design Unic</p>
+                  <p>Responsive (arată bine și pe mobil)</p>
+                  <p>Încărcare rapidă</p>
+                  <p>100% Valid W3C pentru HTML și CSS</p>
+                  <p>Setare Host/Domeniu</p>
+                  <p>Setare Google Analytics</p>
+                  <p>Conformare Cookies</p>
+                </div>
+                <div class="spacer"></div>
+                <button data-target="modal-contact" class="js-modal-trigger button is-primary">Cere ofertă</button>
+              </div>
+              <div class="column is-one-third has-text-centered pricing-table__column">
+                <h2 class="title plan_title has-text-weight-bold">Aplicație</h2>
+                <p class="has-text-weight-light plan_subtitle">O soluție web mai complexă</p>
+                <div class="price">
+                  <h2 class="title is-3 has-text-weight-bold">de la 3000 RON</h2>
+                  <p class="subtitle is-size-7">preț cu TVA</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="features">
+                  <p>Aplicație complexă (eg. Magazin Online, Dashboard, CRM)</p>
+                  <p>Soluție customizată utilizând ultimele tehnologii React/HTML/CSS/Javascript</p>
+                  <p>Design Unic</p>
+                  <p>Responsive (arată bine și pe mobil)</p>
+                  <p>Încărcare rapidă</p>
+                  <p>100% Valid W3C pentru HTML și CSS</p>
+                  <p>Setare Host/Domeniu</p>
+                  <p>Setare Google Analytics</p>
+                  <p>Conformare Cookies</p>
+                </div>
+                <div class="spacer"></div>
+                <button data-target="modal-contact" class="js-modal-trigger button is-primary">Cere ofertă</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section is-medium page-section">
+        <div class="container">
+          <div class="content has-text-centered">
+            <h2>Contact</h2>
+            <div class="contact-info">
+              <article class="is-centered has-text-centered">
+                <p>
+                  <a href="tel:0743010745" class="is-size-4-desktop">
+                    <span class="icon is-hidden-mobile">
+                      <img src="/phone_icon.29515fc5.png" alt="Phone" title="Numar de telefon">
+                    </span>
+                    0743 01 07 45
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:contact@marespopa.com" class="is-size-4-desktop">
+                    <span class="icon is-hidden-mobile">
+                      <img src="/email_icon.435b2cf5.png" alt="Email" title="Adresa de email">
+                    </span>
+                    contact@marespopa.com
+                  </a>
+                </p>
+                <p>
+                  <button data-target="modal-contact" class="js-modal-trigger button is-primary is-large is-responsive has-bounce">
+                    Cere ofertă
+                  </button>
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alternate is-medium pb-1">
+        <div class="container has-text-centered">
+          <div class="block">
+            <h2 class="mt-1">Hai să pavăm calea ta spre succes și în online!</h2>
+            <p class="px-5">
+              </p><figure>
+                <img decoding="async" src="/skyscraper.0ca7e719.jpg" alt="Skyscraper Image" title="Success" class="image is-fullwidth">
+              </figure>
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <h4 class="heading has-text-light">Instagram</h4>
+                <p class="title">
+                  <a target="_blank" href="https://instagram.com/afrontendengineer" title="Instagram Profile"> @afrontendengineer </a>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <h4 class="heading has-text-light">LinkedIn</h4>
+                <p class="title">
+                  <a target="_blank" href="https://www.linkedin.com/in/mares-popa/" title="LinkedIn Profile"> mares-popa </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="level-item has-text-centered">
+              <div>
+                <h4 class="heading has-text-light">GitHub</h4>
+                <p class="title">
+                  <a target="_blank" href="https://github.com/xkrromania" title="GitHub Profile">@xkrromania</a>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <a href="https://bulma.io" target="_blank">
+                  <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="256" height="48">
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="container copyright has-text-centered mt-6">
+            <p>© 2022 Mares Popa - Toate drepturile rezervate.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="modal-contact" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <form name="contact" method="POST" data-netlify="true">
+                <!-- Nume -->
+                <div class="field">
+                  <label class="label">Nume</label>
+                  <p class="control is-expanded">
+                    <input class="input" name="name" type="text" placeholder="">
+                  </p>
+                </div>
+                <!-- Email -->
+                <div class="field">
+                  <label class="label">Nume</label>
+                  <p class="control is-expanded">
+                    <input class="input" name="email" type="email" placeholder="">
+                  </p>
+                </div>
+                <!-- Project Type -->
+                <div class="field">
+                  <label class="label">Tipul Proiectului:</label>
+                  <div class="control">
+                    <div class="select">
+                      <select name="type[]">
+                        <option value="basic">Pagină de prezentare</option>
+                        <option value="standard">Site de prezentare</option>
+                        <option value="complex">Aplicație</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Description -->
+                <div class="field">
+                  <label class="label">Descrierea Proiectului: </label>
+                  <div class="control">
+                    <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    Prin trimiterea formularului, declar ca sunt de acord cu
+                    <a href="" data-target="modal-terms" class="js-modal-trigger">termenii și condițiile</a>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control mt-5">
+                    <button class="button is-success">Trimite</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-terms" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div class="content">
+            <h3 id="statement-of-purpose"><em>Termeni și condiții GDPR pentru utilizarea marespopa.com</em></h3>
+            <p>
+              Website-ul marespopa.com este administrat de MARES POPA PFA, cu sediul în B-dul Bucureștii Noi, 136, et. Parter, ap. 5, SECTOR
+              1, BUCURESTI, înregistrată la Registrul Comerțului de pe sub nr. F40/659/2022, având codul de înregistrare fiscal 45666867.
+              <br>
+              Prin utilizarea acestui website, sunteți de acord cu aceste condiții de utilizare: Acest document stabilește termenii și
+              condițiile în care puteți utiliza website-ul marespopa.com. Accesul și utilizarea website-ului sunt supuse următoarelor
+              reguli, în termenii și condițiile de mai jos
+            </p>
+            <h4>1. ACCES:</h4>
+            <p>
+              Scopul permis pentru utilizarea website-ului este obținerea de informații și accesul la serviciile online oferite prin
+              intermediul acestuia. Orice utilizare în alte scopuri decât acesta nu este permisă Întreg conţinutul acestui site poate fi
+              modificat şi vă este oferit “ca atare”, fără a se oferi nicio garanţie de niciun fel, fie aceasta expresă sau implicită La
+              accesarea site-ului va rugam sa bifati acordul pentru prelucrarea datelor personale. <br>
+              Acest website foloseste cookie-uri pentru a furniza utilizatorilor servicii mai bune de navigare si adaptate nevoilor si
+              interesului fiecaruia Cookie-urile nu solicita informatii cu caracter personal si nu identifica personal utilizatori de
+              internet. Pentru a vă oferi cea mai bună experienţă, website-ul nostru funcţionează optim având cookies activate. <br>
+              Acestea ne permit să vă recunoaştem în momentul în care vă reîntoarceţi pe site, să indentificăm şi să rezolvăm erorile –
+              oferindu-vă o experienţă mai personală, într-un timp foarte scurt. Datele suplimentare sunt stocate numai cu acordul
+              dumneavoastră, ca de exemplu momentul în care oferiţi informaţii prin crearea unui cont de utilizator
+            </p>
+            <h4>2. LIMITAREA RASPUNDERII</h4>
+            <p>
+              Daca se considera ca orice material pus la dispozitie pe site, postat de MARES POPA PFA , de catre terti sau utilizatori,
+              violeaza drepturile de autor sau orice alte legi in vigoare, este necesara semnalarea acestei situatii la adresa
+              contact@marespopa.com înțelege orice “vizitator” care completează în calitate de “utilizator” un formular de contact. MARES
+              POPA PFA isi rezerva dreptul de a schimba termenii, conditiile şi politicile in orice moment fara a anunta in prealabil, prin
+              urmare sunteti rugat sa revedeti in mod regulat aceasta sectiune pentru a fi la curent cu modificarile aduse.
+            </p>
+
+            <h4>3. DREPTURI DE AUTOR, MARCĂ ȘI PROPRIETATE INTELECTUALĂ:</h4>
+            <p>
+              Drepturile de proprietate intelectuală asupra întregului conţinut al site-ului, incluzând fără limitare toate textele,
+              imaginile, elementele grafice, animaţiile, elementele video, sunet etc., formulare ataşate şi alte elemente similare
+              (Conţinutul), aparţin în exclusivitate MARES POPA PFA.
+            </p>
+            <h4>4.CONFIDENTIALITATE</h4>
+            <p>
+              MARES POPA PFA nu va colecta automat nicio informaţie sau date care permit identificarea persoanelor fizice (de exemplu: nume,
+              adresă, număr de telefon sau adresă de poştă electronică – „Date Personale”) prin intermediul site-ului, în afara cazului în
+              care aceste informaţii ne sunt oferite în mod voluntar de către utilizatorii site-ului. <br>
+              Această furnizare voluntară de informaţii va fi considerată şi va reprezenta consimţământul dumneavoastră expres ca datele
+              dumneavoastră personale să fie folosite de MARES POPA PFA în conformitate cu termenii Regulamentului (UE) 2016/679 (GDPR) In
+              cazul in care decideti sa solicitati stergerea datelor dvs. colectate prin intermediul site-ului, va rugam sa transmiteti
+              solicitarea prin email la adresa admin@marespopa.com si aceasta solicitare va fi luata in considerare in cel mai scurt timp
+            </p>
+            <h4>5. DISPOZITII FINALE</h4>
+            <p>
+              Dispozițiile prezentului termeni și condiții sunt aplicabile in momentul accesarii acestui Site. Vă mulțumim pentru faptul că
+              ați ales să fiți vizitatorii si viitorii clienti ai noștri!
+            </p>
+            <button class="button is-success modal-clear">Sunt de acord</button>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script src="/index.90050791.js"></script>
     <script src="/index.6b653075.js"></script>
+    <script async="" src="/index.fec68465.js" defer=""></script>
   </body>
 </html>

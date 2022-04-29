@@ -1,15 +1,17 @@
-.navbar-brand .navbar-item img {
-  max-height: 2.75rem;
-}
-
 :root {
   --text-light: #fff;
   --text-dark: #000000;
-  --navbar-bg: #00030f;
-  --section-alternate-bg: #e7dfd8;
+  --section-alternate-bg: #e8e8e8;
+  --transition-duration: 0.3s;
+  --footer-background: #231123;
+  --footer-subtext: #f2e3f2;
+  --cookie-notice-background: #000;
+  --cookie-notice-text: #fff;
+  --fade-transition: opacity 1s ease;
+  --faded-opacity-value: 0.2;
 }
 
-$primary: #1649ff;
+$primary: #613dc1;
 $link: $blue;
 $info: $cyan;
 $success: $green;
@@ -19,7 +21,10 @@ $dark: $grey-darker;
 $text: $grey-dark;
 $family-primary: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
 $family-secondary: 'Montserrat', Arial, Helvetica, sans-serif;
-$navbar-background-color: var(--navbar-bg);
-$navbar-item-color: var(--text-light);
 $button-border-color: var(--text-dark);
 $button-background-color: transparent;
+$shadow: 0.5rem 0.5rem rgba(45, 45, 45, 0.15);
+$footer-color: var(--footer-background);
+$radius: 0;
+$radius-small: 0;
+$radius-large: 0;

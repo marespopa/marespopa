@@ -1,0 +1,46 @@
+@media screen and (max-width: 1024px) {
+  .navbar-item {
+    &.has-dropdown {
+      .navbar-dropdown {
+        display: none;
+      }
+      &.is-active {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/** Mobile Styles */
+@media screen and (max-width: 768) {
+  .pricing-table__column + .pricing-table__column {
+    margin: 1rem 0 0 0;
+  }
+
+  .field {
+    flex-direction: column;
+  }
+
+  .field .control button {
+    width: 100%;
+  }
+
+  .field .control:first-child:not(:only-child) .button,
+  .field .control:first-child:not(:only-child) .input,
+  .field .control:first-child:not(:only-child) .select select {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .field .control:last-child:not(:only-child) .button,
+  .field .control:last-child:not(:only-child) .input,
+  .field .control:last-child:not(:only-child) .select select {
+    border-radius: 0 0 4px 4px;
+  }
+
+  .field .control:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: -1px;
+  }
+}

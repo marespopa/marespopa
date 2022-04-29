@@ -1,5 +1,11 @@
 @import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
 @import './theme';
 @import '../../node_modules/bulma/bulma.sass';
+
+@import './animations';
 @import './typography';
 @import './layout';
+@import './modals';
+@import './cookie-notice';
+@import './pricing-table';
+@import './responsiveness';

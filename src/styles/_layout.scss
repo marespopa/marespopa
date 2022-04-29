@@ -2,10 +2,57 @@
   background-color: var(--section-alternate-bg);
 }
 
-.navbar.is-dark {
-  background-color: var(--navbar-bg);
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  opacity: 1;
+  transition: var(--fade-transition);
+
+  &.fade-content {
+    background: rgb(48, 48, 48);
+    padding-top: 0 !important;
+
+    .main-content {
+      opacity: var(--faded-opacity-value) !important;
+      overflow-y: hidden;
+    }
+  }
+}
+
+.spacer {
+  height: 40px;
+}
+
+:target {
+  scroll-margin-top: 24px;
+}
+
+.main-navigation .navbar-item {
+  transition: background 0.3s ease-in 0.5s;
+}
+
+.navbar-brand .navbar-item img {
+  max-height: 2.75rem;
+}
+
+.contact-info {
+  a {
+    font-style: normal;
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+.footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+
+  .copyright {
+    color: var(--footer-subtext);
+    font-size: 0.9rem;
+  }
 }
