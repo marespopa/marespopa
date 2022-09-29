@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Consent from '../consent/Consent';
 
 import { AppConfig } from '../utils/AppConfig';
 
@@ -10,6 +11,7 @@ class MyDocument extends Document {
         <Head />
         <body>
           <Main />
+          <Consent />
           <NextScript />
         </body>
       </Html>
