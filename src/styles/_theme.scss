@@ -1,0 +1,40 @@
+:root {
+  --text-light: #fff;
+  --text-dark: #212427;
+  --text-dark--faded: #404245;
+  --generic-border-radius: 16px;
+  --navigation-background: #fafafa;
+  --navigation-background--hover: #f5f5f5;
+  --navigation-background--active: #ebebeb;
+  --section-alternate-bg: #eaefbd;
+  --transition-duration: 0.2s;
+  --footer-background: #212427;
+  --footer-subtext: #f2e3f2;
+  --cookie-notice-background: #212427;
+  --cookie-notice-text: #fff;
+  --fade-transition: opacity 1s ease;
+}
+
+$primary: #cdf551;
+$navbar-background-color: var(--navigation-background);
+$navbar-item-color: var(--text-dark--faded);
+$navbar-item-hover-color: var(--text-dark);
+$navbar-item-hover-background-color: var(--navigation-background--hover);
+$navbar-item-active-color: var(--text-dark);
+$navbar-item-active-background-color: var(--navigation-background--active);
+$link: $blue;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$dark: $grey-darker;
+$text: $grey-dark;
+$family-primary: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+$family-secondary: 'Montserrat', Arial, Helvetica, sans-serif;
+$button-border-color: var(--text-dark);
+$button-background-color: transparent;
+$shadow: 0.5rem 0.5rem rgba(45, 45, 45, 0.15);
+$footer-color: var(--footer-background);
+$radius: 0;
+$radius-small: 0;
+$radius-large: 0;

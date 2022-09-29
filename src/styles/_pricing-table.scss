@@ -1,0 +1,33 @@
+.pricing-table {
+  --pricing-table-column: #ffffff;
+  --pricing-table-price-h2: #242466;
+  --pricing-table-subtitle: #888888;
+
+  &__column {
+    background-color: var(--pricing-table-column);
+    border-radius: var(--generic-border-radius);
+    box-shadow: 0.5rem 0.5rem rgba(45, 45, 45, 0.15);
+
+    & + .pricing-table__column {
+      margin: 1rem 0 0 0;
+    }
+  }
+
+  .plan_subtitle {
+    color: var(--pricing-table-subtitle);
+  }
+  .price h2 {
+    color: var(--pricing-table-price-h2);
+  }
+
+  .features {
+    p {
+      margin-top: 0;
+      padding: 0.5rem;
+
+      & + p {
+        margin-top: 3px;
+      }
+    }
+  }
+}

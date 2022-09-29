@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mares Popa - A Frontend Engineer</title>
+    <meta name="description" content="Mares Popa - A Frontend Engineer" />
+    <meta name="author" content="MaresPopa" />
+
+    <meta property="og:title" content="Mares Popa - A Frontend Engineer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="A Frontend Engineer from Eastern Europe" />
+    <meta property="og:locale" content="en_EN" />
+
+    <link rel="stylesheet" href="styles/main.scss" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- The initial config of Consent Mode -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            analytics_storage: 'denied',
+            wait_for_update: 1500
+        });
+        gtag('set', 'ads_data_redaction', true);
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WY0KQ8W98H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WY0KQ8W98H', {
+            anonymize_ip: true
+        });
+    </script>
+
+    <!-- Update this section based on your business requirements. -->
+    <script>
+        window.consentGranted = function() {
+            gtag('consent', 'update', {
+                ad_storage: 'granted',
+                analytics_storage: 'granted'
+            });
+        };
+    </script>
+</head>
+
+<body class="has-navbar-fixed-top">
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <nav class="navbar is-fixed-top">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a href="#home" class="navbar-item">
+                            <img src="./assets/images/logo/logo.png" alt="Mares Popa" title="Mares Popa Logo" />
+                        </a>
+                        <span id="mainNavigationBurger" class="navbar-burger" data-target="mainNavigation">
+                <span></span>
+                        <span></span>
+                        <span></span>
+                        </span>
+                    </div>
+                    <div id="mainNavigation" class="navbar-menu main-navigation">
+                        <div class="navbar-end">
+                            <a href="#home" data-target="home" class="navbar-item is-active"> Home </a>
+                            <a href="#about" data-target="about" class="navbar-item"> About Me </a>
+                            <a href="#contact" data-target="contact" class="navbar-item"> Contact </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="home" class="page-section hero is-fullheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="content">
+                        <h1 class="title">Hi, I'm Mareș</h1>
+                        <p class="subtitle">and I'm a frontend engineer and a graphic designer.</p>
+                        <p>
+                            ✔️ I have around 6 years of experience in software engineering, mainly working on creating and maintaining modern frontend web applications
+                        </p>
+                        <p>✔️ Are you looking for someone to take care of your branding or packaging? I can help you with that.</p>
+                        <p>
+                            <button onclick="window.location.href='#about'" class="button is-large is-responsive is-primary mx-auto my-6 has-bounce">
+                  Contact me
+                </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section section--alternate page-section is-medium">
+            <div class="container has-text-centered">
+                <div class="block">
+                    <h2 class="mt-1">Who am I?</h2>
+                    <div class="mt-5 content">
+                        <figure class="mx-auto image is-128x128">
+                            <img src="./assets/images/content/square_portrait.jpg" title="Mares Popa Profile" alt="Mares Popa Profile" />
+                        </figure>
+
+                        <p>
+                            My name is Mareș Popa. I'm a software engineer and a marketing wizard, specializing in creating and planning engaging content on social media platforms. I live in a small town in northern Romania, Negrești Oaș.
+                        </p>
+
+                        <p>
+                            I have over six years of experience as a programmer, being involved in the development of many products and projects throughout my career. I would describe myself as a programmer who is passionate about what he does, and curious to always be up to date
+                            with the news Web technologies❤️.
+                        </p>
+
+                        <p class="pb-5">
+                            I started my web development journey in my first highschool year, when I created, alongside one of my classmates, an online football manager game, in which you can choose your own team, sell players, train them. That was my first contact with web applications
+                            and since then I have been hooked. ☀️
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section is-medium page-section">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <h2>Contact Me</h2>
+                    <div class="contact-info">
+                        <div class="is-centered has-text-centered">
+                            <p>
+                                <a href="https://wa.me/40751844347" class="is-size-4-desktop">
+                                    <span class="icon is-hidden-mobile">
+                      <img src="./assets/images/icons/whatsapp_icon.png" alt="Whatsapp" title="WhatsApp" />
+                    </span> WhatsApp
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://www.instagram.com/smoothwizz/" class="is-size-4-desktop">
+                                    <span class="icon is-hidden-mobile">
+                      <img src="./assets/images/icons/instagram_icon.png" alt="Instagram" title="Instagram" />
+                    </span> Instagram
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:hello@smoothwizzdesigns.com" class="is-size-4-desktop">
+                                    <span class="icon is-hidden-mobile">
+                      <img src="./assets/images/icons/email_icon.png" alt="Email" title="Email Address" />
+                    </span> contact@smoothwizzdesigns.com
+                                </a>
+                            </p>
+                            <p>
+                                <button data-target="modal-contact" class="js-modal-trigger button is-primary is-large is-responsive has-bounce">
+                    Schedule a free online consultation!
+                  </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <nav class="level container">
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <h4 class="heading has-text-light">Instagram</h4>
+                            <p class="title">
+                                <a target="_blank" href="https://instagram.com/afrontendengineer" title="Instagram Profile"> @afrontendengineer </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <h4 class="heading has-text-light">LinkedIn</h4>
+                            <p class="title">
+                                <a target="_blank" href="https://www.linkedin.com/in/mares-popa/" title="LinkedIn Profile"> mares-popa </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <h4 class="heading has-text-light">GitHub</h4>
+                            <p class="title">
+                                <a target="_blank" href="https://github.com/xkrromania" title="GitHub Profile">@xkrromania</a>
+                            </p>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="copyright has-text-centered mt-6">
+                    <p>© 2022 Mares Popa - All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="modal-contact" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <div class="media">
+                    <div class="media-content">
+                        <form name="contact" method="POST" data-netlify="true">
+                            <!-- Name -->
+                            <div class="field">
+                                <label class="label">Name</label>
+                                <p class="control is-expanded">
+                                    <input class="input" name="name" type="text" placeholder="" />
+                                </p>
+                            </div>
+                            <!-- Email -->
+                            <div class="field">
+                                <label class="label">Email</label>
+                                <p class="control is-expanded">
+                                    <input class="input" name="email" type="email" placeholder="" />
+                                </p>
+                            </div>
+
+                            <!-- Website -->
+                            <div class="field">
+                                <label class="label">Website (if any)</label>
+                                <p class="control is-expanded">
+                                    <input class="input" name="website" type="url" placeholder="" />
+                                </p>
+                            </div>
+                            <!-- Description -->
+                            <div class="field">
+                                <label class="label">Message </label>
+                                <div class="control">
+                                    <textarea class="textarea" name="message" placeholder="Details - Please share any information that will help us to prepare for our meeting "></textarea>
+                                </div>
+                            </div>
+                            <!-- Schedule -->
+                            <div class="field">
+                                <label class="label">Select your preferred date and time </label>
+                                <div class="control">
+                                    <input type="datetime-local" name="schedule" />
+                                </div>
+                            </div>
+                            <!-- Schedule -->
+                            <div class="field">
+                                <div class="control">
+                                    By submitting the form, I declare that I agree with
+                                    <a href="" data-target="modal-terms" class="js-modal-trigger">the terms and conditions</a>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control mt-5">
+                                    <button class="button is-success">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="modal-terms" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <div class="content">
+                    <h3 id="statement-of-purpose"><em>Terms and Conditions for the use of marespopa.com</em></h3>
+                    <p>
+                        The marespopa.com website is managed by MARES POPA PFA, based in 136 Bucureștii Noi Blvd., et. Ground floor, room 5, SECTOR 1, BUCHAREST, registered at the Trade Register under no. F40 / 659/2022, having the fiscal registration code 45666867.
+                        <br /> By using this website, you agree to these terms of use: This document sets out the terms and the conditions under which you can use the marespopa.com website. Access to and use of the website is subject to the following:
+                        rules, in the terms and conditions below
+                    </p>
+                    <h4>1. ACCESS:</h4>
+                    <p>
+                        The permitted purpose of using the website is to obtain information and access to the online services offered through through it. Any use other than this is not permitted. The entire content of this site may be is provided to you "as is" without any warranty,
+                        either express or implied. accessing the site please tick the agreement for the processing of personal data. <br /> This website uses cookies to provide users with better browsing services and tailored to
+                        their needs and In the interest of everyone Cookies do not request personal information and do not personally identify users of Internet. In order to give you the best experience, our website works optimally with cookies enabled.
+                        <br /> These allow us to recognize you when you return to the site, identify and resolve errors - giving you a more personal experience in a very short time. Additional data is stored only with the consent such as when you provide
+                        information by creating a user account
+                    </p>
+                    <h4>2. LIMITATION OF LIABILITY</h4>
+                    <p>
+                        If it is considered that any material made available on the site, posted by MARES POPA PFA, by third parties or users, violates copyright or any other law in force, it is necessary to report this situation to the address contact@marespopa.com means any
+                        “visitor” who completes a contact form as a “user”. MARES POPA PFA reserves the right to change the terms, conditions and policies at any time without prior notice, by therefore please review this section regularly to keep up to
+                        date with any changes.
+                    </p>
+
+                    <h4>3. COPYRIGHT, TRADEMARK AND INTELLECTUAL PROPERTY</h4>
+                    <p>
+                        Intellectual property rights over the entire content of the site, including without limitation all texts, images, graphics, animations, video, sound, etc., attached forms, and the like (Content), belong exclusively to MARES POPA PFA.
+                    </p>
+                    <h4>4. CONFIDENTIALITY</h4>
+                    <p>
+                        MARES POPA PFA will not automatically collect any information or data that allows the identification of individuals (for example: name, address, telephone number or e-mail address - "Personal Data") through the site, unless otherwise which this information
+                        is provided to us voluntarily by the users of the site. <br /> This voluntary provision of information will be considered and will represent your express consent as data to be used by MARES POPA PFA in accordance
+                        with the terms of Regulation (EU) 2016/679 (GDPR) If you decide to request the deletion of your data collected through the site, please submit request by email to contact@marespopa.com and this request will be considered as soon
+                        as possible
+                    </p>
+                    <h4>5. FINAL NOTES</h4>
+                    <p>
+                        The provisions of this term and conditions are applicable when accessing this Site. Thanks for that you have chosen to be our visitors and future customers!
+                    </p>
+                    <button class="button is-success modal-clear">I agree</button>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script async type="text/javascript" src="./scripts/modal.js"></script>
+    <script type="text/javascript" src="./scripts/navigation.js"></script>
+    <script type="text/javascript" src="./scripts/cookie.js"></script>
+</body>
+
+</html>

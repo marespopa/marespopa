@@ -1,0 +1,62 @@
+.section--alternate {
+  background-color: var(--section-alternate-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 1;
+  transition: var(--fade-transition);
+
+  &.fade-content {
+    background: rgb(118, 118, 118);
+    padding-top: 0 !important;
+
+    .main-content {
+      opacity: 0.9 !important;
+      overflow-y: hidden;
+
+      button,
+      .button {
+        opacity: 0.4 !important;
+      }
+    }
+  }
+}
+
+.spacer {
+  height: 40px;
+}
+
+:target {
+  scroll-margin-top: 24px;
+}
+
+.contact-info {
+  a {
+    font-style: normal;
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+}
+
+.footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+
+  .copyright {
+    color: var(--footer-subtext);
+    font-size: 0.9rem;
+  }
+}
+
+.list li {
+  &::before {
+    content: '✔️';
+  }
+  list-style: none;
+}

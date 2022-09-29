@@ -1,0 +1,19 @@
+.main-navigation {
+  .navbar-end {
+    align-items: center;
+  }
+
+  .navbar-item {
+    border-radius: var(--generic-border-radius);
+    max-height: 48px;
+    transition: background var(--transition-duration) ease-out;
+
+    & + .navbar-item {
+      margin-left: 8px;
+    }
+  }
+}
+
+.navbar-brand .navbar-item img {
+  max-height: 2.75rem;
+}
