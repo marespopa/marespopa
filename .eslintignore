@@ -1,2 +1,10 @@
 node_modules
 out
+*.js
+site.webmanifest
+*.html
+*.png
+*.svg
+*.jpg
+*.ico
+*.xml
