@@ -1,0 +1,24 @@
+import Head from 'next/head'
+import type { NextPage } from 'next'
+import PublicLayout from '../components/layouts/PublicLayout'
+import Landing from '../components/landing/Landing'
+
+const Home: NextPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Mares Popa - Frontend Engineer</title>
+        <meta
+          name="description"
+          content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
+        />
+      </Head>
+
+      <PublicLayout>
+        <Landing />
+      </PublicLayout>
+    </>
+  )
+}
+
+export default Home
