@@ -8,21 +8,15 @@ const GlobalNavigation = () => {
   const logoHeight = 156
 
   return (
-    <header className="flex items-center border-b border-gray-200 h-14">
-      <Container>
-        <nav>
-          <ul>
-            <li>
-              <Link
-                href="/"
-                className="text-sm font-medium text-center capitalize"
-              >
-                <Image src={logo} alt="Mares Popa" height={logoHeight} />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </Container>
+    <header className="flex items-center shadow-sm h-14 bg-white px-2 sm:px-4 py-2.5">
+      <nav className="container flex flex-wrap items-center justify-between mx-auto">
+        <Link
+          href="/"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          <Image src={logo} alt="Mares Popa" height={logoHeight} />
+        </Link>
+      </nav>
     </header>
   )
 }
