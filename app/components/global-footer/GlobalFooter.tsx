@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+
 import { Container } from '../layouts/PublicLayout'
 
 const GlobalFooter = () => {

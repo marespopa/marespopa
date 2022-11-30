@@ -1,7 +1,8 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-import PublicLayout from '../components/layouts/PublicLayout'
+import Head from 'next/head'
+
 import Landing from '../components/landing/Landing'
+import PublicLayout from '../components/layouts/PublicLayout'
 
 const Home: NextPage = () => {
   return (

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-640,0)">
+        <g transform="matrix(1,0,0,1,640,0)">
+            <rect id="HamburgerOpen" x="0" y="0" width="256" height="256" style="fill:none;"/>
+            <g id="HamburgerOpen1" serif:id="HamburgerOpen">
+                <g transform="matrix(0.530417,0.530417,-0.595902,0.595902,-73.6855,-145.728)">
+                    <path d="M548.106,43.361C548.106,42.313 547.15,41.463 545.973,41.463L350.329,41.463C349.152,41.463 348.196,42.313 348.196,43.361L348.196,77.536C348.196,78.584 349.152,79.434 350.329,79.434L545.973,79.434C547.15,79.434 548.106,78.584 548.106,77.536L548.106,43.361Z" style="fill:rgb(29,78,216);"/>
+                </g>
+                <g transform="matrix(-0.530417,0.530417,0.595902,0.595902,329.686,-145.728)">
+                    <path d="M548.106,43.361C548.106,42.313 547.15,41.463 545.973,41.463L350.329,41.463C349.152,41.463 348.196,42.313 348.196,43.361L348.196,77.536C348.196,78.584 349.152,79.434 350.329,79.434L545.973,79.434C547.15,79.434 548.106,78.584 548.106,77.536L548.106,43.361Z" style="fill:rgb(29,78,216);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
