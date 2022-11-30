@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import CookieConsent from '../banners/CookieConsent'
 import GlobalFooter from '../global-footer/GlobalFooter'
 import GlobalNavigation from '../global-navigation/GlobalNavigation'
