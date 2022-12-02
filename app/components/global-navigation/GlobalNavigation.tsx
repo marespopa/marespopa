@@ -21,7 +21,7 @@ const GlobalNavigation = () => {
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-blue-700 focus:border"
                   onClick={() => setIsNavOpen(!isNavOpen)}
                 >
-                  {isNavOpen ? hamburgerClosed : hamburgerOpen}
+                  {isNavOpen ? hamburgerOpen : hamburgerClosed}
                 </button>
               </div>
             </div>
