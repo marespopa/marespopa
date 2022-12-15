@@ -7,7 +7,7 @@ const Landing = () => {
         <h1 className="text-5xl font-bold mt-0 mb-6">Welcome!</h1>
 
         <p className="my-10 mx-auto text-3xl">
-          {`Hi, I’m Mares! I'm a fronted engineer with more than half a decade of
+          {`Hi, I'm Mares! I'm a fronted engineer with more than half a decade of
           experience in developing web applications that help organizations
           address business challenges and meet their needs. My expertise lies
           within front-end web apps, and the main keywords in my tech stack are
