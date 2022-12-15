@@ -4,13 +4,23 @@ const Landing = () => {
   return (
     <section className="my-5">
       <div className="text-center text-gray-800 py-20 px-6">
-        <h1 className="text-5xl font-bold mt-0 mb-6"> Coming Soon</h1>
+        <h1 className="text-5xl font-bold mt-0 mb-6">Welcome!</h1>
 
         <p className="my-10 mx-auto text-3xl">
-          Mark your calendars! The new site will drop on{' '}
-          <span className="font-bold">December 16th.</span> <br />
-          {`Can't wait
-          until then to reach me? Contact me below and I'll get back to you as soon as I can.`}
+          {`Hi, I’m Mares! I'm a fronted engineer with more than half a decade of
+          experience in developing web applications that help organizations
+          address business challenges and meet their needs. My expertise lies
+          within front-end web apps, and the main keywords in my tech stack are
+          JavaScript, Typescript, Next.JS, React, and of course HTML/CSS. `}
+        </p>
+        <p className="my-4 mx-auto text-3xl">
+          {`I live in Romania, married to a wonderful wife and been alive since
+          93'. Beside being obsessed with the web, I also enjoy cycling,
+          basketball and visiting new cities.`}
+        </p>
+        <p className="my-4 mx-auto text-3xl">
+          <br />
+          {`Have an interesting proposal? Contact me below and I'll get back to you as soon as I can.`}
         </p>
 
         <a
