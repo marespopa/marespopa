@@ -3,11 +3,17 @@ import React from 'react'
 const Landing = () => {
   return (
     <section className="my-5">
-      <div className="text-center text-gray-800 py-20 px-6">
-        <h1 className="text-5xl font-bold mt-0 mb-6">Welcome!</h1>
+      <div className=" text-gray-800 py-20 px-6">
+        <p className="mt-0 mb-3 mx-auto text-xl">Hi! My name is</p>
+
+        <h1 className="text-5xl font-bold my-3">Mares Popa</h1>
+        <h2 className="text-3xl font-bold mt-3 mb-6">
+          <span className="text-blue-600">&</span> I build and develop web
+          applications
+        </h2>
 
         <p className="my-10 mx-auto text-xl">
-          {`Hi, I'm Mares! I'm a frontend engineer with more than half a decade of
+          {`I'm a frontend engineer with more than seven years of
           experience in developing web applications that help organizations
           address business challenges and meet their needs. My expertise lies
           within front-end web apps, and the main keywords in my tech stack are `}
@@ -16,7 +22,7 @@ const Landing = () => {
           </span>
           {'and of course '} <span className="font-bold">HTML/CSS.</span>
         </p>
-        <p className="my-4 mx-auto text-md">
+        <p className="my-4 mx-auto text-xl">
           {`I live in Romania, married to a wonderful wife and been alive since
           93'. Beside being obsessed with the web, I also enjoy cycling,
           basketball and visiting new cities.`}

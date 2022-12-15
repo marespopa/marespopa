@@ -28,22 +28,22 @@ const GlobalLinks = () => {
       <li className="text-gray-600 hover:text-blue-600">
         <a
           target="_blank"
-          href="https://www.instagram.com/smoothwizz"
+          href="https://github.com/smoothwizz"
           rel="noopener noreferrer"
           className="flex items-center text-sm font-medium text-center capitalize"
         >
-          <span className="mr-1">Instagram</span>
+          <span className="mr-1">Github</span>
           <Icon type="extLink" />
         </a>
       </li>
       <li className="text-gray-600 hover:text-blue-600">
         <a
           target="_blank"
-          href="https://www.behance.net/maresp"
+          href="https://www.instagram.com/smoothwizz"
           rel="noopener noreferrer"
           className="flex items-center text-sm font-medium text-center capitalize"
         >
-          <span className="mr-1">Portfolio</span>
+          <span className="mr-1">Instagram</span>
           <Icon type="extLink" />
         </a>
       </li>
