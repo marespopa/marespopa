@@ -7,4 +7,5 @@ I'm a frontend engineer with in-depth experience in UI/UX development. In a nuts
 I live in Romania, married to a wonderful wife and been alive since 93'. Beside being obsessed with the web, I also enjoy cycling, basketball and visiting new cities.
 
 ## Build status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8572b4f1-e7eb-4343-b6f7-6f56904396ff/deploy-status)](https://app.netlify.com/sites/marespopa/deploys)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75d72d5f-09b9-4048-9fb3-2c527bcad91a/deploy-status)](https://app.netlify.com/sites/marespopa/deploys)
