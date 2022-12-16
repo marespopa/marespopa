@@ -1,6 +1,10 @@
 import React from 'react'
 
 const Landing = () => {
+  const currentYear = new Date().getFullYear()
+  const startingYear = 2015
+  const yearsWorking = currentYear - startingYear
+
   return (
     <section className="my-5">
       <div className=" text-gray-800 py-20 px-6">
@@ -13,14 +17,19 @@ const Landing = () => {
         </h2>
 
         <p className="my-10 mx-auto text-xl">
-          {`I'm a frontend engineer with more than seven years of
-          experience in developing web applications that help organizations
-          address business challenges and meet their needs. My expertise lies
-          within front-end web apps, and the main keywords in my tech stack are `}
+          {`Started my journey ${yearsWorking} years ago as a professional frontend engineer.
+           In these time I've been part of multiple projects and collaborated with talented people to create and mantain
+           digital products for both business and consumer use. `}
+        </p>
+        <p className="my-10 mx-auto text-xl">
+          {`I specialize in building web applications and my current
+           toolset includes `}
           <span className="font-bold">
-            {'JavaScript, Typescript, Next.JS, React, '}
+            {'Next.JS, React, Typescript, JavaScript, '}
           </span>
-          {'and of course '} <span className="font-bold">HTML/CSS.</span>
+          {
+            'and all the other various frameworks, libraries and technologies related to them. '
+          }
         </p>
         <p className="my-4 mx-auto text-xl">
           {`I live in Romania, married to a wonderful wife and been alive since
