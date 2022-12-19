@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 import Link from 'next/link'
 import { MouseEvent, useCallback, useEffect, useState } from 'react'
 
-import { Container } from '../layouts/PublicLayout'
+import Container from '../container/Container'
 
 const USER_CONSENT_COOKIE_KEY = 'cookie_consent_is_true'
 const USER_CONSENT_COOKIE_EXPIRE_DATE =
