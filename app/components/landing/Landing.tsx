@@ -21,7 +21,7 @@ const Landing = () => {
 
           <p className="my-10 mx-auto text-xl">
             {`Started my journey ${yearsWorking} years ago as a professional frontend engineer.
-           In these time I've been part of multiple projects and collaborated with talented people to create and mantain
+           In these time I've been part of multiple projects and collaborated with talented people to create and maintain
            digital products for both business and consumer use. `}
           </p>
           <p className="my-10 mx-auto text-xl">
