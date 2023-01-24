@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import Landing from '../components/landing/Landing'
-import PublicLayout from '../components/layouts/PublicLayout'
+import HomePage from '../components/HomePage'
 
 const Home: NextPage = () => {
   return (
@@ -14,10 +13,7 @@ const Home: NextPage = () => {
           content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
-
-      <PublicLayout>
-        <Landing />
-      </PublicLayout>
+      <HomePage />
     </>
   )
 }
