@@ -15,7 +15,7 @@ const GlobalFooter = () => {
           </p>
           <div className="my-4 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
             <p className="order-2 md:order-1 md:mt-0">
-              &copy; Mares Popa © {currentYear}. All rights reserved
+              &copy; Mares Popa {currentYear}. All rights reserved
             </p>
             <div className="order-1 md:order-2">
               <span className="px-2 hover:underline focus:underline">
