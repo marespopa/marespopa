@@ -14,11 +14,10 @@ const Projects = () => {
             <div className="flex flex-col col-span-2 mb-4 md:mb-0">
               <h5 className="text-xl md:text-2xl font-bold underline">
                 <a
-                  href="https://devxloper.netlify.app/"
+                  href="https://doloper.netlify.app/"
                   className="flex flex-cols"
                 >
-                  <span className="mr-2">Devxloper</span>{' '}
-                  <Icon type="extLink" />
+                  <span className="mr-2">Doloper</span> <Icon type="extLink" />
                 </a>
               </h5>
               <h6 className="text-lg font-bold">Productivity app</h6>
@@ -30,7 +29,7 @@ const Projects = () => {
                 In case you don't, let me share with you the end result. He gets out with no rabbit.
                 That's the same with our development. If we try to focus on more than one task at a time, 
                 we rarely give out our best effort.`}</p>
-              <p className="mt-4">{`Devxloper comes out to help you. Start by clearly describe what you are trying to accomplish in at most two hours coding session.
+              <p className="mt-4">{`Doloper comes out to help you. Start by clearly describe what you are trying to accomplish in at most two hours coding session.
                 For example, you might have to build out the navigation for your app. Depending on the complexity,
                 this might take more than two hours if you plan on implementing authentication in this. 
                 In that case, you should split it out in something that can be accomplished in a coding session.`}</p>
