@@ -6,9 +6,7 @@ const Contact = () => {
   return (
     <section className="my-4 py-10 bg-white">
       <Container>
-        <h4 className="mb-8 text-5xl font-bold text-center md:text-left">
-          Contact
-        </h4>
+        <h4 className="mb-8 text-5xl font-bold">Contact</h4>
         <p className="mx-auto text-lg text-gray-800">
           {`Have an interesting proposal? Contact me below and I'll get back to you as soon as I can.`}
         </p>
