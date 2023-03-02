@@ -15,11 +15,13 @@ const ExperienceEntry = ({ title, company, period, description }: Props) => {
         <h6 className="text-lg font-bold">{company}</h6>
         <p>{period}</p>
       </div>
-      <div className="flex flex-col col-span-4">
+      <ul className="col-span-4 list-disc">
         {description.map((entry, index) => (
-          <p key={index}>{entry}</p>
+          <li className="my-2" key={index}>
+            {entry}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }

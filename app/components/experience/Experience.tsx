@@ -13,18 +13,9 @@ const Experience = () => {
           company="Cognizant Softvision"
           period="May 2022 - present"
           description={[
-            `Understand business requirements and translate them into technical
-                        requirements`,
-            `Develop new user-facing features using latest React
-                        tools`,
-            `Use Figma designs to develop responsive web and Single Page
-                        Applications consuming server-side JSON restful services`,
-            `Build
-                        reusable components and front-end libraries`,
-            `Manual and Automated
-                        Unit Testing Work on CI/CD pipelines under assistance`,
-            `Performs
-                        design & code reviews for team members.`,
+            `Working on a hotel booking app rewrite from AngularJS to NextJS, working with ~150 teammates using SAFe methodology`,
+            `Applied atomic design principles to develop features from Figma designs using Chakra UI components`,
+            `Improved unit testing coverage across the project (RTL and Jest) for all UI elements`,
           ]}
         />
         <ExperienceEntry
@@ -32,11 +23,9 @@ const Experience = () => {
           company="3Pillar Global"
           period="Oct 2018 - May 2022"
           description={[
-            `Develop and maintain codebases for rich, interactive modern application`,
-            `Ensure quality and timeliness of deliverables by employing strategies such as code reviews, TDD, continuous integration`,
-            `Involvement in technical and architectural decisions that shape the course of the project`,
-            `Involvement in product shaping decisions and empowerment to propose new features`,
-            `Document and update the design and architecture of projects`,
+            `Contributed to the success of a fast-growing cybersecurity startup, developing advanced features for their frontend application`,
+            `Pioneered the transition of the FE application from AngularJS to React`,
+            `Developed key elements such as an interactive HighchartJS Dashboard and a versatile search functionality`,
             `Spreading technical knowledge inside the team, mentoring juniors`,
           ]}
         />
@@ -45,11 +34,10 @@ const Experience = () => {
           company="Frequentis"
           period="Sep 2015 - Sep 2018"
           description={[
-            `.NET Developement (with DevExpress Framework)`,
-            `Frontend Development on Angular JS`,
-            `Ensure a streamlined user experience`,
-            `Mantain a clean and modern look of the applications`,
-            `Provide high quality code in accordance with the coding guidelines`,
+            `Led development of an frontend application written in AngularJS from initial concept to completion,
+            connecting to a REST Api and allowing improved data manipulation / visualization.`,
+            `Enhanced software functionality via C# backend programming and creation/modification of SQL stored procedures.`,
+            `Grew role from intern to Software Engineer, leveraging expertise in multiple development languages and technologies.`,
           ]}
         />
       </Container>
