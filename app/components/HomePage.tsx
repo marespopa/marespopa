@@ -5,6 +5,7 @@ import Experience from './experience/Experience'
 import Hero from './hero/Hero'
 import PublicLayout from './layouts/PublicLayout'
 import Projects from './projects/Projects'
+import WithAnimation from './WithAnimation'
 
 type Props = {}
 
@@ -12,11 +13,17 @@ const HomePage = (props: Props) => {
   return (
     <PublicLayout>
       <Hero />
-      <Projects />
+      <WithAnimation>
+        <Projects />
+      </WithAnimation>
       <hr className="border-gray-400 mx-60" />
-      <Experience />
+      <WithAnimation>
+        <Experience />
+      </WithAnimation>
       <hr className="border-gray-400 mx-60" />
-      <Contact />
+      <WithAnimation>
+        <Contact />
+      </WithAnimation>
     </PublicLayout>
   )
 }

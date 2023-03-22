@@ -16,7 +16,6 @@ const Hero = () => {
             <span className="text-blue-600">&</span> I build and develop web
             applications
           </h2>
-
           <p className="my-10 mx-auto text-xl">
             {`Started my journey back in ${startingYear} as a professional frontend engineer.
            In these time I've been part of multiple projects and collaborated with talented people to create and maintain
