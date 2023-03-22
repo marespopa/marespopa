@@ -1,5 +1,5 @@
 import { motion, useAnimation } from 'framer-motion'
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -10,18 +10,23 @@ type Props = {
 const WithAnimation = ({ children }: Props) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
+  const [isAnimationShown, setIsAnimationShown] = useState(false)
+
   const boxVariant = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   }
 
   useEffect(() => {
-    if (inView) {
-      control.start('visible')
-    } else {
-      control.start('hidden')
+    if (!isAnimationShown) {
+      if (inView) {
+        control.start('visible')
+        setIsAnimationShown(true)
+      } else {
+        control.start('hidden')
+      }
     }
-  }, [control, inView])
+  }, [isAnimationShown, control, inView])
 
   return (
     <motion.div
