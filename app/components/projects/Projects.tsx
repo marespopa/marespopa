@@ -14,23 +14,18 @@ const Projects = () => {
             <div className="flex flex-col col-span-2 mb-4 md:mb-0">
               <h5 className="text-xl md:text-2xl font-bold underline">
                 <a
-                  href="https://doloper.netlify.app/"
+                  href="https://dolooper.netlify.app/"
                   className="flex flex-cols"
                 >
-                  <span className="mr-2">Doloper</span> <Icon type="extLink" />
+                  <span className="mr-2">Dolooper</span> <Icon type="extLink" />
                 </a>
               </h5>
               <h6 className="text-lg font-bold">Productivity app</h6>
               <p>Built using NextJS</p>
             </div>
             <div className="flex flex-col col-span-4">
-              <p>{`Some hard truth. Multitasking doesn't work. You probably know the 
-                story of the hunter who tries to shoot two rabbits at the same time.
-                In case you don't, let me share with you the end result. He gets out with no rabbit.
-                That's the same with our development. If we try to focus on more than one task at a time, 
-                we rarely give out our best effort.`}</p>
-              <p className="mt-4">{`Doloper comes out to help you. It helps you streamline your workflow by planning, 
-              time-boxing and executing one task at a time.`}</p>
+              <p>{`Dolooper is a productivity app written on top of Next.JS, using Tailwind CSS and Typescript.`}</p>
+              <p className="mt-4">{`With Dolooper's One Task Focus feature, you can work on one task at a time for improved concentration and productivity. Our Clear Planning feature allows you to break down complex tasks into manageable pieces for easier prioritization and success. Time-Boxing helps you fight procrastination and accomplish more in less time by setting time estimates for each task. And with Markdown support, organizing and formatting your work has never been easier.`}</p>
             </div>
           </div>
         </div>
