@@ -12,7 +12,7 @@ const GlobalNavigation = () => {
 
   return (
     <header>
-      <nav className="w-full bg-blue-50">
+      <nav className="w-full bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
         <Container>
           <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex">
             <div>
@@ -20,7 +20,7 @@ const GlobalNavigation = () => {
                 <GlobalLogo />
                 <div className="md:hidden">
                   <button
-                    className="p-2 text-gray-700 rounded-md outline-none focus:border-blue-700 focus:border"
+                    className="p-2 text-white rounded-md outline-none focus:border-blue-700 focus:border"
                     onClick={() => setIsNavOpen(!isNavOpen)}
                   >
                     {isNavOpen ? hamburgerOpen : hamburgerClosed}

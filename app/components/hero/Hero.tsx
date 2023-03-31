@@ -11,8 +11,8 @@ const Hero = () => {
         <div className="pt-20 pb-10">
           <p className="mt-0 mb-3 mx-auto text-xl">Hi! My name is</p>
 
-          <h1 className="text-5xl font-bold my-3">Mares Popa</h1>
-          <h2 className="text-3xl font-bold mt-3 mb-6">
+          <h1 className="text-5xl font-bold my-3 text-gray-900">Mares Popa</h1>
+          <h2 className="text-3xl font-bold mt-3 mb-6 text-gray-900">
             <span className="text-blue-600">&</span> I build and develop web
             applications
           </h2>
