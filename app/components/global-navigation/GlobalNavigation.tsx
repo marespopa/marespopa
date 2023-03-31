@@ -20,7 +20,7 @@ const GlobalNavigation = () => {
                 <GlobalLogo />
                 <div className="md:hidden">
                   <button
-                    className="p-2 text-white rounded-md outline-none focus:border-blue-700 focus:border"
+                    className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
                     onClick={() => setIsNavOpen(!isNavOpen)}
                   >
                     {isNavOpen ? hamburgerOpen : hamburgerClosed}
