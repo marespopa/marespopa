@@ -6,7 +6,7 @@ import Icon from '../../utils/Icon'
 const GlobalLinks = () => {
   return (
     <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-      <li className="text-white hover:text-gray-200">
+      <li className={linkStyle}>
         <Link
           href="/"
           className="flex items-center text-sm font-medium text-center capitalize"
@@ -14,7 +14,7 @@ const GlobalLinks = () => {
           Home
         </Link>
       </li>
-      <li className="text-white hover:text-gray-200">
+      <li className={linkStyle}>
         <Link
           href="/blog"
           className="flex items-center text-sm font-medium text-center capitalize"
@@ -22,7 +22,7 @@ const GlobalLinks = () => {
           Blog
         </Link>
       </li>
-      <li className="text-white hover:text-gray-200">
+      <li className={linkStyle}>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/mares-popa/"
@@ -36,5 +36,6 @@ const GlobalLinks = () => {
     </ul>
   )
 }
+const linkStyle = 'text-white hover:text-gray-200 focus:underline'
 
 export default GlobalLinks

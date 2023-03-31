@@ -12,7 +12,7 @@ const GlobalNavigation = () => {
 
   return (
     <header>
-      <nav className="w-full bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
+      <nav className="w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600">
         <Container>
           <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex">
             <div>
