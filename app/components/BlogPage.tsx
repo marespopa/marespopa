@@ -35,10 +35,10 @@ const BlogPage = (props: Props) => {
               </p>
               <p>
                 Another tip I would give to newcomers is to never stop learning.
-                The IT industry is constantly evolving, and it's important to
-                stay up to date with the latest trends and technologies. Attend
-                conferences, read industry publications, and take courses to
-                enhance your skills and knowledge.
+                The IT industry is constantly evolving, and it&lsquo;s important
+                to stay up to date with the latest trends and technologies.
+                Attend conferences, read industry publications, and take courses
+                to enhance your skills and knowledge.
               </p>
               <p>
                 Finally, I have found that being passionate and curious about

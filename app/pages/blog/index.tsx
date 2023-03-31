@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import BlogPage from '../../components/BlogPage.tsx'
+import BlogPage from '../../components/BlogPage'
 
 const Blog: NextPage = () => {
   return (
