@@ -1,22 +1,26 @@
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 import Container from '../container/Container'
 
 const GlobalFooter = () => {
   const currentYear = new Date().getFullYear()
-  const LIST_OF_PHRASES = [
-    'Keep it simple!',
-    'Thank you for visiting my website!',
-    "There's always something to learn!",
-  ]
+  const LIST_OF_PHRASES = useMemo(
+    () => [
+      'Keep it simple!',
+      'Thank you for visiting my website!',
+      "There's always something to learn!",
+    ],
+    [],
+  )
+
   const [catchPhrase, setCatchPhrase] = useState<string>('')
 
   useEffect(() => {
     setCatchPhrase(
       LIST_OF_PHRASES[Math.floor(Math.random() * LIST_OF_PHRASES.length)],
     )
-  }, [])
+  }, [LIST_OF_PHRASES])
 
   return (
     <footer className="py-5 bg-gray-800">
