@@ -1,7 +1,7 @@
 import React from 'react'
 
+import PublicLayout from './common/layouts/PublicLayout'
 import Container from './container/Container'
-import PublicLayout from './layouts/PublicLayout'
 
 type Props = {}
 

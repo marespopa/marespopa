@@ -1,9 +1,9 @@
 import React from 'react'
 
+import PublicLayout from './common/layouts/PublicLayout'
 import Contact from './contact/Contact'
 import Experience from './experience/Experience'
 import Hero from './hero/Hero'
-import PublicLayout from './layouts/PublicLayout'
 import Projects from './projects/Projects'
 import WithAnimation from './WithAnimation'
 

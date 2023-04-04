@@ -1,21 +1,46 @@
-import type { NextPage } from 'next'
+import { getAllPosts } from 'lib/api'
 import Head from 'next/head'
+import { BlogPost } from 'types'
 
-import BlogPage from '../../components/BlogPage'
+import PublicLayout from '@/components/common/layouts/PublicLayout'
 
-const Blog: NextPage = () => {
+type Props = {
+  posts: BlogPost[]
+}
+
+export default function Post({ posts }: Props) {
+  const title = `Blog | Mares Popa`
+
   return (
     <>
       <Head>
-        <title>Mares Popa - Frontend Engineer - Blog</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
-      <BlogPage />
+      <PublicLayout>
+        <section className="bg-gradient-to-br from-slate-50 to-gray-100">
+          {JSON.stringify(posts)}
+        </section>
+      </PublicLayout>
     </>
   )
 }
 
-export default Blog
+type Params = {
+  params: {
+    slug: string
+  }
+}
+
+export async function getStaticProps({ params }: Params) {
+  const posts = getAllPosts(['slug', 'title'])
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
