@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Icon from '../../utils/Icon'
+import Icon from '@/utils/Icon'
+
 import Container from '../container/Container'
 
 const Projects = () => {

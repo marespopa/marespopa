@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { useEffect, useMemo, useState } from 'react'
 
-import Container from '../container/Container'
+import Container from '../../container/Container'
 
 const GlobalFooter = () => {
   const currentYear = new Date().getFullYear()
@@ -25,7 +25,7 @@ const GlobalFooter = () => {
   return (
     <footer className="py-5 bg-gray-800">
       <Container>
-        <div className="text-gray-200">
+        <section className="text-gray-200">
           <p className="text-2xl mt-4 text-center sm:text-left">
             {catchPhrase}
           </p>
@@ -42,7 +42,7 @@ const GlobalFooter = () => {
               </span>
             </div>
           </div>
-        </div>
+        </section>
       </Container>
     </footer>
   )

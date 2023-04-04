@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-import logo from '../../public/logo.svg'
+import logo from '../../../public/logo.svg'
 
 const GlobalLogo = () => {
   const logoHeight = 32

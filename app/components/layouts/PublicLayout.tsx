@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
-import CookieConsent from '../banners/CookieConsent'
-import GlobalFooter from '../global-footer/GlobalFooter'
-import GlobalNavigation from '../global-navigation/GlobalNavigation'
-import Seo from '../Seo'
+import CookieConsent from '../common/banners/CookieConsent'
+import GlobalFooter from '../common/global-footer/GlobalFooter'
+import GlobalNavigation from '../common/global-navigation/GlobalNavigation'
+import Seo from '../common/Seo'
 
 const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (

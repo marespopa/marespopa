@@ -1,11 +1,11 @@
 import React from 'react'
 
+import WithAnimation from './common/WithAnimation'
 import Contact from './contact/Contact'
 import Experience from './experience/Experience'
 import Hero from './hero/Hero'
 import PublicLayout from './layouts/PublicLayout'
 import Projects from './projects/Projects'
-import WithAnimation from './WithAnimation'
 
 type Props = {}
 

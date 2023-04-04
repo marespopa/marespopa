@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-import Icon from '../../utils/Icon'
+import Icon from '@/utils/Icon'
 
 const GlobalLinks = () => {
   return (

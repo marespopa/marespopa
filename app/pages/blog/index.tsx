@@ -1,21 +1,42 @@
-import type { NextPage } from 'next'
+import { getAllPosts } from 'lib/api'
 import Head from 'next/head'
+import { BlogPost } from 'types'
 
-import BlogPage from '../../components/BlogPage'
+import BlogPage from '@/components/blog/BlogPage'
 
-const Blog: NextPage = () => {
+type Props = {
+  posts: BlogPost[]
+}
+
+export default function Post({ posts }: Props) {
+  const title = `Blog | Mares Popa`
+
   return (
     <>
       <Head>
-        <title>Mares Popa - Frontend Engineer - Blog</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
-      <BlogPage />
+      <BlogPage posts={posts} />
     </>
   )
 }
 
-export default Blog
+type Params = {
+  params: {
+    slug: string
+  }
+}
+
+export async function getStaticProps({ params }: Params) {
+  const posts = getAllPosts(['slug', 'title', 'description', 'date'])
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
