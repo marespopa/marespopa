@@ -2,7 +2,7 @@ import { getAllPosts } from 'lib/api'
 import Head from 'next/head'
 import { BlogPost } from 'types'
 
-import PublicLayout from '@/components/common/layouts/PublicLayout'
+import BlogPage from '@/components/blog/BlogPage'
 
 type Props = {
   posts: BlogPost[]
@@ -20,11 +20,7 @@ export default function Post({ posts }: Props) {
           content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
-      <PublicLayout>
-        <section className="bg-gradient-to-br from-slate-50 to-gray-100">
-          {JSON.stringify(posts)}
-        </section>
-      </PublicLayout>
+      <BlogPage posts={posts} />
     </>
   )
 }
@@ -36,7 +32,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const posts = getAllPosts(['slug', 'title'])
+  const posts = getAllPosts(['slug', 'title', 'description', 'date'])
 
   return {
     props: {

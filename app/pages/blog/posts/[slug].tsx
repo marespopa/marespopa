@@ -3,8 +3,11 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
-import PublicLayout from '../../../components/common/layouts/PublicLayout'
+import PostPage from '@/components/blog/Posts/PostPage'
+import ButtonLink from '@/components/common/ButtonLink'
+
 import Container from '../../../components/container/Container'
+import PublicLayout from '../../../components/layouts/PublicLayout'
 import { getAllPosts, getPostBySlug } from '../../../lib/api'
 
 type Props = {
@@ -27,16 +30,7 @@ export default function Post({ post }: Props) {
           content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
-      <PublicLayout>
-        <section className="bg-gradient-to-br from-slate-50 to-gray-100">
-          <Container>
-            <article className="py-10 prose">
-              <span className="text-sm text-gray-500">{post?.date}</span>
-              <ReactMarkdown>{post.content}</ReactMarkdown>
-            </article>
-          </Container>
-        </section>
-      </PublicLayout>
+      <PostPage post={post} />
     </>
   )
 }

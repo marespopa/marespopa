@@ -28,6 +28,9 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === 'title') {
       items[field] = data.title
     }
+    if (field === 'description') {
+      items[field] = data.description
+    }
     if (field === 'content') {
       items[field] = content
     }

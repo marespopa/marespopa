@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-import Icon from '../../utils/Icon'
-import Container from '../container/Container'
+import Container from '@/components/container/Container'
+import Icon from '@/utils/Icon'
+
 import GlobalLinks from './GlobalLinks'
 import GlobalLogo from './GlobalLogo'
 

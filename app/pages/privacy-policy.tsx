@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import PublicLayout from '../components/common/layouts/PublicLayout'
+import PublicLayout from '../components/layouts/PublicLayout'
 
 const PrivacyPolicy: NextPage = () => {
   return (
