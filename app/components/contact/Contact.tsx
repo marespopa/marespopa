@@ -28,6 +28,8 @@ const Contact = () => {
             data-mdb-ripple-color="light"
             href="https://www.linkedin.com/in/mares-popa/"
             role="button"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
           >
             LinkedIn
           </a>
