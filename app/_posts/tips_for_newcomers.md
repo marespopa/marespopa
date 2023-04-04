@@ -1,6 +1,6 @@
 ---
 title: 'Tips for Newcomers in the IT Industry'
-date: '2023-03-31'
+date: '2023-03-28'
 description: 'Are you a newcomer in the IT industry feeling lost and overwhelmed? As a frontend engineer with years of experience, I know how challenging it can be to get started. In this article, I share valuable insights and tips that I wish I had known when I first began my journey.'
 ---
 
