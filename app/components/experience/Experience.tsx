@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <section className="my-4 py-10 bg-white">
       <Container>
-        <h4 className="mb-8 text-5xl font-bold">Experience</h4>
+        <h2 className="mb-8 text-5xl font-bold">Experience</h2>
         <ExperienceEntry
           title="Frontend Engineer"
           company="Cognizant Softvision"

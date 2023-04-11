@@ -13,15 +13,15 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-6 my-10">
             <div className="flex flex-col col-span-2 mb-4 md:mb-0">
-              <h5 className="text-xl md:text-2xl font-bold underline">
+              <h3 className="text-xl md:text-2xl font-bold underline">
                 <a
                   href="https://dolooper.netlify.app/"
                   className="flex flex-cols"
                 >
                   <span className="mr-2">Dolooper</span> <Icon type="extLink" />
                 </a>
-              </h5>
-              <h6 className="text-lg font-bold">Productivity app</h6>
+              </h3>
+              <h4 className="text-lg font-bold">Productivity app</h4>
               <p>Built using NextJS</p>
             </div>
             <div className="flex flex-col col-span-4">
