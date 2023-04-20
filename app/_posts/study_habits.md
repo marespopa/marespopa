@@ -1,12 +1,12 @@
 ---
 title: '4 Study Techniques for Frontend Engineers to Stay on Top of Their Game'
 date: '2023-04-11'
-description: "As a frontend engineer with experience working on large-scale applications across multiple industries, I've come to realize that staying ahead of the game requires smart study habits. In this article, I'm sharing some of my top tips for fellow developers to help them optimize their learning and development."
+description: "I've come to realize that staying ahead of the game requires smart study habits. In this article, I'm sharing some of my top tips for fellow developers to help them optimize their learning and development."
 ---
 
 # 4 Study Techniques for Frontend Engineers to Stay on Top of Their Game
 
-## As a frontend engineer with experience developing large-scale applications across various industries, I've learned some valuable study techniques that have helped me stay on top of my game. Here are some of my top tips for fellow developers:
+## I've learned some valuable study techniques that have helped me stay on top of my game. Here are some of my top tips for fellow developers:
 
 ### 1. Evolve Habits
 

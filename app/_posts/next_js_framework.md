@@ -1,31 +1,34 @@
 ---
 title: 'Why Next.js Might Be Worth Considering for Your Next Project'
 date: '2023-04-18'
-description: "As a frontend engineer, I've had the opportunity to work with a variety of frameworks, and I've found Next.js to be a helpful tool in my toolkit. It's important to note that I'm not an expert in the framework, but I've found it to be a useful resource that has allowed me to create scalable applications with ease. In this article, I'll share my personal experience with Next.js and why it might be worth considering for your next project."
+description: "I'm always on the lookout for the latest and greatest technologies that can help me and my team build better products faster. In recent years, one framework that has been gaining a lot of traction in the frontend community is Next.js. In this article, I want to share my perspective on why Next.js is such a helpful framework for frontend development, based on my experience using it in a project to modernize a web app."
 ---
 
 # Why Next.js Might Be Worth Considering for Your Next Project
 
 ## Introduction:
 
-As a frontend engineer with experience in developing large-scale applications, I'm always on the lookout for the latest and greatest technologies that can help me and my team build better products faster. In recent years, one framework that has been gaining a lot of traction in the frontend community is Next.js. In this article, I want to share my perspective on why Next.js is such a helpful framework for frontend development, based on my experience using it in a project to modernize a hotel booking app.
+I'm always on the lookout for the latest and greatest technologies that can help me and my team build better products faster. In recent years, one framework that has been gaining a lot of traction in the frontend community is Next.js. In this article, I want to share my perspective on why Next.js is such a helpful framework for frontend development, based on my experience using it in a project to modernize a web app.
 
-## Section 1: What is Next.js?
+## What is Next.js?
 
-First, I'll give a brief overview of what Next.js is, and why it's gaining popularity among frontend developers. I'll talk about its features such as server-side rendering, automatic code splitting, and hot module replacement, and how they make it easier to build high-performance, scalable applications.
+Next.js is a React-based framework for building server-side rendered (SSR) web applications. It was created by Zeit, a company that was acquired by Vercel in 2019. One of the main benefits of Next.js is that it provides a set of conventions and tools that make it easier to build complex web applications without having to worry about the low-level details of SSR and client-side rendering (CSR).
 
-## Section 2: Benefits of using Next.js
+Some of the key features of Next.js include:
 
-Next, I'll dive into some of the key benefits of using Next.js, based on my experience using it in a project. I'll discuss how it helped our team improve the app's performance, reduce page load times, and enhance SEO. I'll also talk about how it simplified our development workflow, making it easier to maintain and update the codebase.
+- Server-side rendering (SSR) of React components: Next.js can render React components on the server and send HTML to the client, which can improve the initial load time and the SEO of the application.
+- Automatic code splitting: Next.js can split the JavaScript code into smaller chunks and load them on demand, which can reduce the initial download size and the time to interactive of the application.
+- Hot module replacement (HMR): Next.js can replace modules in the browser without a full reload, which can speed up the development workflow and make it easier to iterate on the code.
+- File-based routing: Next.js uses the file system as the primary way to define the routes of the application, which can make it easier to organize and navigate the code.
 
-## Section 3: Real-world use case: Modernizing a hotel booking app
+## Benefits of using Next.js
 
-In this section, I'll share a real-world use case of how our team at Cognizant Softvision used Next.js to modernize a hotel booking app. I'll discuss the challenges we faced with the legacy codebase in AngularJS, and how we were able to leverage Next.js to rewrite the app, utilizing SAFe methodology and adhering to atomic design principles. I'll highlight some of the specific features we built using Next.js, such as the header of the app and the guest details page.
+Now that we've seen what Next.js is, let's dive into some of the key benefits of using it in a real-world project.
 
-## Section 4: How to get started with Next.js
+Improved performance: In our project, we found that Next.js helped us improve the performance of the web app in several ways. First, by using SSR, we were able to reduce the time to first byte (TTFB) and the time to first meaningful paint (TTMP), which are critical metrics for user experience and SEO. Second, by using automatic code splitting, we were able to reduce the initial JavaScript payload and load only the necessary code for each page, which improved the time to interactive (TTI) and reduced the risk of JavaScript errors. Third, by using HMR, we were able to speed up the development workflow and iterate on the code more quickly.
 
-Finally, I'll provide some practical advice on how to get started with Next.js, for those who are interested in trying it out. I'll talk about the resources and documentation available, as well as some best practices and tips for using Next.js effectively.
+Simplified development workflow: Another benefit of using Next.js is that it provides a set of conventions and tools that make it easier to maintain and update the codebase. For example, by using file-based routing, we were able to easily add new pages and API endpoints without having to modify a central routing configuration. By using the built-in CSS and Sass support, we were able to organize our styles in a modular and scalable way. By using the built-in API routes, we were able to handle server-side logic without having to set up a separate server. All of these features made our development workflow smoother and more efficient.
 
 ## Conclusion
 
-In conclusion, I believe that Next.js is a valuable framework for frontend developers, especially those who are looking to build high-performance, scalable applications. Its features and benefits make it a powerful tool for modern web development, and I would highly recommend giving it a try in your next project.
+Next.js is a powerful and flexible framework that can help frontend developers build high-performance, scalable, and maintainable web applications. Whether you're building a new project from scratch or modernizing an existing one, Next.js is worth considering for its features, benefits, and community support. As a frontend engineer, I'm excited to see how Next.js will continue to evolve and empower developers to build better products faster.
