@@ -1,17 +1,15 @@
 ---
-title: 'Vanilla Javascript - Foundation of web development'
+title: 'Why Learning Vanilla JavaScript Should be Your First Step as a Web Developer'
 date: '2023-04-28'
 description: "Why Vanilla JavaScript is essential, how it lays the groundwork for future learning, and why it can help you become a more well-rounded and versatile developer. If you're looking to build a strong foundation in JavaScript, this article is a must-read."
 ---
 
-# Vanilla JavaScript: The Foundation of Web Development
+# Why Learning Vanilla JavaScript Should be Your First Step as a Web Developer
 
 JavaScript is a versatile programming language that can be used for a wide range of web development tasks. From adding interactivity to your web pages to building complex web applications, JavaScript is an essential tool in every web developer's toolkit. However, with so many JavaScript frameworks and libraries available today, it can be tempting to jump straight into learning a particular framework like React, Angular, or Next.js.
-
 As a frontend developer, I've seen many aspiring developers jump straight into learning JavaScript frameworks like React or Angular without first mastering the basics of vanilla JavaScript. In my experience, this approach can lead to frustration, confusion, and an incomplete understanding of how JavaScript works.
 
-Before diving into the world of JavaScript frameworks, it's important to have a solid understanding of Vanilla JavaScript. Vanilla JavaScript refers to the core JavaScript language, without any external libraries or frameworks. By learning Vanilla JavaScript, you'll gain a deep understanding of the language's fundamentals, which will make it easier for you to learn and master any JavaScript framework or library.
-First and foremost, vanilla JavaScript is the foundation upon which all JavaScript frameworks are built. By learning the basics of vanilla JavaScript, you'll have a better understanding of how these frameworks work and be better equipped to troubleshoot issues when they arise.
+Before diving into the world of JavaScript frameworks, it's important to have a solid understanding of Vanilla JavaScript. Vanilla JavaScript refers to the core JavaScript language, without any external libraries or frameworks. By learning Vanilla JavaScript, you'll gain a deep understanding of the language's fundamentals, which will make it easier for you to learn and master any JavaScript framework or library. First and foremost, vanilla JavaScript is the foundation upon which all JavaScript frameworks are built. By learning the basics of vanilla JavaScript, you'll have a better understanding of how these frameworks work and be better equipped to troubleshoot issues when they arise.
 
 In addition, mastering vanilla JavaScript will give you a more complete understanding of the language itself, which will enable you to write cleaner, more efficient code. You'll also be better able to customize and extend existing code, rather than relying solely on pre-built solutions.
 
