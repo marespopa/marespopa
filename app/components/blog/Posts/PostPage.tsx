@@ -20,11 +20,13 @@ const PostPage = ({ post }: Props) => {
     <PublicLayout>
       <section className="bg-gradient-to-br from-slate-50 to-gray-100">
         <Container>
-          <article className="mt-12 mb-4 prose">
-            <span className="text-sm text-gray-500">{post?.date}</span>
-            <ReactMarkdown>{post.content}</ReactMarkdown>
-          </article>
-          <ButtonLink url={`/blog`} label={`Back to blog`} />
+          <div className="pt-8">
+            <article className=" mb-4 prose">
+              <span className="text-sm text-gray-500">{post?.date}</span>
+              <ReactMarkdown>{post.content}</ReactMarkdown>
+            </article>
+            <ButtonLink url={`/blog`} label={`Back to blog`} />
+          </div>
         </Container>
       </section>
     </PublicLayout>
