@@ -63,9 +63,8 @@ export default function Seo(props: SeoProps) {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="msapplication-TileColor" content="#172554" />
+      <meta name="theme-color" content="#172554" />
     </Head>
   )
 }
@@ -92,7 +91,7 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
   {
     rel: 'mask-icon',
     href: '/favicon/safari-pinned-tab.svg',
-    color: '#0044DE',
+    color: '#172554',
   },
   { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
 ]
