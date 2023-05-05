@@ -6,16 +6,9 @@ type ImageProps = {
   alt: string
 }
 
-type IconOptions = Parameters<typeof iconMap['get']>[0]
+type IconOptions = Parameters<(typeof iconMap)['get']>[0]
 
 let iconMap = new Map<string, ImageProps>([
-  [
-    'extLink',
-    {
-      src: '/assets/external-link.svg',
-      alt: 'Ext',
-    },
-  ],
   [
     'close',
     {

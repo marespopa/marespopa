@@ -27,7 +27,7 @@ const BlogPage = ({ posts }: Props) => {
       <section>
         <Container>
           <div className="mb-16">
-            <section className="text-blue-900 px-4 py-8 border-2 border-blue-900 my-8">
+            <section className="p-4 bg-blue-900 rounded shadow-sm my-8">
               Thoughts about my experience through the software world.
             </section>
             <section className="grid grid-cols-1 gap-y-4 max-w-xl">
