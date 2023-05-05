@@ -44,7 +44,7 @@ const GlobalFooter = () => {
               />
             </p>
             <nav className="my-4">
-              <ul className="divide-y md:divide-y-0 md:divide-x divide-gray-400 flex items-center flex-col md:flex-row gap:10">
+              <ul className="flex items-center flex-col md:flex-row gap:10">
                 <li className={footerLinkStyle}>
                   <Link href="#">Back to top</Link>
                 </li>
@@ -63,6 +63,7 @@ const GlobalFooter = () => {
   )
 }
 
-const footerLinkStyle = 'p-4 md:px-2 hover:underline focus:underline'
+const footerLinkStyle =
+  'p-4 md:px-2 text-gray-200 hover:text-white focus:text-white hover:underline focus:underline'
 
 export default GlobalFooter
