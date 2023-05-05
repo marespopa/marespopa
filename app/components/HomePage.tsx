@@ -1,30 +1,25 @@
 import React from 'react'
 
-import WithAnimation from './common/WithAnimation'
-import Contact from './contact/Contact'
-import Experience from './experience/Experience'
-import Hero from './hero/Hero'
-import PublicLayout from './layouts/PublicLayout'
-import Projects from './projects/Projects'
+import AboutSection from './about/AboutSection'
+import ContactSection from './contact/ContactSection'
+import Container from './container/Container'
+import ExperienceSection from './experience/ExperienceSection'
+import HeroSection from './hero/HeroSection'
+import ProjectsSection from './projects/ProjectsSection'
+import SkillsSection from './skills/SkillsSection'
 
 type Props = {}
 
 const HomePage = (props: Props) => {
   return (
-    <PublicLayout>
-      <Hero />
-      <WithAnimation>
-        <Projects />
-      </WithAnimation>
-      <hr className="border-gray-400 mx-60" />
-      <WithAnimation>
-        <Experience />
-      </WithAnimation>
-      <hr className="border-gray-400 mx-60" />
-      <WithAnimation>
-        <Contact />
-      </WithAnimation>
-    </PublicLayout>
+    <Container>
+      <HeroSection />
+      <AboutSection index={1} />
+      <ExperienceSection index={2} />
+      <SkillsSection index={3} />
+      <ProjectsSection index={4} />
+      <ContactSection index={5} />
+    </Container>
   )
 }
 

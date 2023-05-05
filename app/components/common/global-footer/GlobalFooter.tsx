@@ -2,14 +2,18 @@ import Link from 'next/link'
 import React, { useEffect, useMemo, useState } from 'react'
 
 import Container from '../../container/Container'
+import ContentLink from '../ContentLink'
 
 const GlobalFooter = () => {
-  const currentYear = new Date().getFullYear()
   const LIST_OF_PHRASES = useMemo(
     () => [
-      'Keep it simple!',
-      'Thank you for visiting my website!',
-      "There's always something to learn!",
+      'Keeping it simple and effective.',
+      'UI/UX crafted with passion.',
+      'Bringing ideas to life visually.',
+      'Crafting the perfect user journey.',
+      'Bridging design and engineering.',
+      'Making web experiences delightful.',
+      'Mastering web technologies with creativity.',
     ],
     [],
   )
@@ -23,29 +27,42 @@ const GlobalFooter = () => {
   }, [LIST_OF_PHRASES])
 
   return (
-    <footer className="py-5 bg-gray-800">
+    <footer className="pt-10 pb-20 bg-gray-950">
       <Container>
         <section className="text-gray-200">
           <p className="text-2xl mt-4 text-center sm:text-left">
             {catchPhrase}
           </p>
           <div className="my-4 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-            <p className="order-2 md:order-1 md:mt-0">
-              &copy; Mares Popa {currentYear}. All rights reserved
+            <p className="mt-4 md:mt-0">
+              Designed & built by{' '}
+              <ContentLink
+                url="https://github.com/smoothwizz?tab=repositories"
+                label="Mares Popa"
+                title="Github Repo"
+                target="_blank"
+              />
             </p>
-            <div className="order-1 md:order-2">
-              <span className="px-2 hover:underline focus:underline">
-                <a href="mailto:hello@marespopa.com">Contact me</a>
-              </span>
-              <span className="px-2 border-l hover:underline focus:underline">
-                <Link href="/privacy-policy">Privacy Policy</Link>
-              </span>
-            </div>
+            <nav className="my-4">
+              <ul className="divide-y md:divide-y-0 md:divide-x divide-gray-400 flex items-center flex-col md:flex-row gap:10">
+                <li className={footerLinkStyle}>
+                  <Link href="#">Back to top</Link>
+                </li>
+                <li className={footerLinkStyle}>
+                  <Link href="mailto:hello@marespopa.com">Contact me</Link>
+                </li>
+                <li className={footerLinkStyle}>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </section>
       </Container>
     </footer>
   )
 }
+
+const footerLinkStyle = 'p-4 md:px-2 hover:underline focus:underline'
 
 export default GlobalFooter

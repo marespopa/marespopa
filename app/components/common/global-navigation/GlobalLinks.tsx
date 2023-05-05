@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
+import SVGLink from '@/components/icons/SVGLink'
 import Icon from '@/utils/Icon'
 
 const GlobalLinks = () => {
@@ -12,6 +13,47 @@ const GlobalLinks = () => {
           className="flex items-center text-sm font-medium text-center capitalize"
         >
           Home
+        </Link>
+      </li>
+      <li className={linkStyle}>
+        <Link
+          href="#about"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          About
+        </Link>
+      </li>
+
+      <li className={linkStyle}>
+        <Link
+          href="#experience"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          Experience
+        </Link>
+      </li>
+      <li className={linkStyle}>
+        <Link
+          href="#skills"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          Skills
+        </Link>
+      </li>
+      <li className={linkStyle}>
+        <Link
+          href="#projects"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          Projects
+        </Link>
+      </li>
+      <li className={linkStyle}>
+        <Link
+          href="#contact"
+          className="flex items-center text-sm font-medium text-center capitalize"
+        >
+          Contact
         </Link>
       </li>
       <li className={linkStyle}>
@@ -30,12 +72,13 @@ const GlobalLinks = () => {
           className="flex items-center text-sm font-medium text-center capitalize"
         >
           <span className="mr-1">LinkedIn</span>
-          <Icon type="extLink" />
+          <SVGLink />
         </a>
       </li>
     </ul>
   )
 }
-const linkStyle = 'text-white hover:text-gray-200 focus:underline'
+const linkStyle =
+  'text-white hover:text-blue-300 focus:text-blue-300 hover:underline focus:underline'
 
 export default GlobalLinks

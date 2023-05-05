@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 
+import SVGLink from '../icons/SVGLink'
+
 type Props = {
   url: string
   label: string
@@ -8,13 +10,17 @@ type Props = {
 
 const ButtonLink = ({ url, label }: Props) => {
   return (
-    <Link
-      href={url}
-      className="my-4 flex items-center text-blue-700 text-sm font-medium text-center capitalize"
-    >
-      {label}
+    <Link href={url} className={style} target="_blank">
+      <span className="mr-4">{label}</span>
+      <SVGLink />
     </Link>
   )
 }
+
+const style = `inline-flex p-4 rounded my-4 border border-blue-300
+               items-center text-blue-300 font-medium
+               transition transition-border-width ease-in-out delay-100  motion-reduce:transition-none
+               hover:bg-blue-300 hover:text-blue-950
+               focus:bg-blue-300 focus:text-blue-950`
 
 export default ButtonLink

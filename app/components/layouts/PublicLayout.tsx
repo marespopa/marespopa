@@ -9,7 +9,7 @@ const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Seo />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-blue-950 text-white">
         <GlobalNavigation />
         <main className="flex-grow">{children}</main>
         <GlobalFooter />
