@@ -24,8 +24,8 @@ const ExperienceSection = ({ index }: Props) => {
         <article className="leading-relaxed text-gray-200 mt-4">
           <ExperienceEntry
             title="Frontend Engineer"
-            company="Cognizant Softvision"
-            site="https://www.cognizantsoftvision.com"
+            company="Cognizant Romania"
+            site="https://www.cognizant.com/ro/en"
             period="May 2022 - Present"
             description={[
               `Working on a hotel booking app rewrite from AngularJS to NextJS, working with ~150 teammates using SAFe methodology`,
