@@ -4,7 +4,7 @@ date: '2023-05-18'
 description: "In the world of software development, perfection can hinder progress. Let's explore the concept of fail fast and see why shipping code quickly is better than shipping perfect code."
 ---
 
-# Why Next.js Might Be Worth Considering for Your Next Project
+# Embracing Imperfection: The Value of Shipping Code Quickly
 
 ## Introduction:
 
