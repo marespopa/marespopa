@@ -34,6 +34,17 @@ const ExperienceSection = ({ index }: Props) => {
             ]}
           />
           <ExperienceEntry
+            title="Fullstack Course Lector"
+            company="GoIT"
+            site="https://goit.global/ro"
+            period="March 2023 - Present"
+            description={[
+              `Delivering engaging and comprehensive lessons on HTML/CSS, JavaScript, React.js, and Node.js modules.`,
+              `Following the curriculum schedule and conducting 2-hour lessons twice a week.`,
+              `Providing valuable feedback to enhance the program's quality and actively participating in internal training for continuous improvement.`,
+            ]}
+          />
+          <ExperienceEntry
             title="Sr. Frontend Engineer"
             company="3Pillar Global"
             site="https://www.3pillarglobal.com/"

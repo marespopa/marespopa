@@ -21,7 +21,12 @@ const ExperienceEntry = ({
         <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
         <h4 className="text-lg font-bold text-blue-300">
           {site ? (
-            <a className="hover:underline focus:underline" href={site}>
+            <a
+              className="hover:underline focus:underline"
+              href={site}
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
               @{company}
             </a>
           ) : (

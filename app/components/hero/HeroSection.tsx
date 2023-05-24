@@ -8,16 +8,17 @@ const HeroSection = () => {
     <section aria-label="Hero" className="pt-16">
       <h3 className="text-xl">Hey there, my name is</h3>
       <h1 className="mt-2 text-6xl font-bold">Mares Popa</h1>
-      <h2 className="text-5xl font-bold text-blue-300 mt-4 leading-tight">
-        I&apos;m crafting digital apps that <br />
-        <span className="border-b-8 border-blue-300 pb-1">make an impact</span>.
+      <h2 className="text-3xl font-bold text-blue-300 mt-4 leading-relaxed">
+        Weaving code and creativity together for remarkable web journeys.
       </h2>
       <p className="mt-16 text-2xl max-w-prose">
-        As a frontend engineer, my passion lies in crafting digital experiences
-        that truly make an impact. With expertise in tools like{' '}
-        <EmphasisedWord>Next.JS, React, and Typescript</EmphasisedWord>, I
-        specialize in building custom web applications that focus on delivering
-        exceptional user experiences.
+        I&apos;m passionate about building exceptional web experiences. With
+        expertise in{' '}
+        <EmphasisedWord>
+          HTML/CSS, JavaScript, React.js, and Next.js
+        </EmphasisedWord>
+        , I specialize in frontend development. I enjoy collaborating with
+        teams, bringing ideas to life, and creating user-friendly solutions.
       </p>
       <div className="mt-8">
         <ButtonLink

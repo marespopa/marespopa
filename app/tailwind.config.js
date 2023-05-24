@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
+        border: 'border',
         'border-width': 'border-width',
       },
     },
