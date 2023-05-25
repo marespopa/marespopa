@@ -46,12 +46,10 @@ const AboutSection = ({ index }: Props) => {
           <p className="mt-4">
             My focus these days is on building robust, accessible web
             applications using cutting-edge technologies such as{' '}
-            <EmphasisedWord>
-              AngularJS, React, NextJS, and Typescript
-            </EmphasisedWord>
-            . Whether it&apos;s developing customizable dashboards or
-            implementing dark/light modes, I&apos;m committed to delivering
-            exceptional user experiences.
+            <EmphasisedWord>React, NextJS, and Typescript</EmphasisedWord>.
+            Whether it&apos;s developing customizable dashboards or implementing
+            dark/light modes, I&apos;m committed to delivering exceptional user
+            experiences.
           </p>
           <p className="mt-4">
             When I&apos;m not coding, I love exploring new cities with my
