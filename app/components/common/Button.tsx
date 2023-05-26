@@ -8,7 +8,7 @@ type Props = {
 const Button = ({ label, handleClick }: Props) => {
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:transition-all duration-150"
       onClick={() => handleClick}
     >
       {label}

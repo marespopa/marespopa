@@ -7,69 +7,48 @@ import Icon from '@/utils/Icon'
 const GlobalLinks = () => {
   return (
     <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-      <li className={linkStyle}>
-        <Link
-          href="/"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="/" className={linkStyle}>
           Home
         </Link>
       </li>
-      <li className={linkStyle}>
-        <Link
-          href="#about"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="#about" className={linkStyle}>
           About
         </Link>
       </li>
 
-      <li className={linkStyle}>
-        <Link
-          href="#experience"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="#experience" className={linkStyle}>
           Experience
         </Link>
       </li>
-      <li className={linkStyle}>
-        <Link
-          href="#skills"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="#skills" className={linkStyle}>
           Skills
         </Link>
       </li>
-      <li className={linkStyle}>
-        <Link
-          href="#projects"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="#projects" className={linkStyle}>
           Projects
         </Link>
       </li>
-      <li className={linkStyle}>
-        <Link
-          href="#contact"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="#contact" className={linkStyle}>
           Contact
         </Link>
       </li>
-      <li className={linkStyle}>
-        <Link
-          href="/blog"
-          className="flex items-center text-sm font-medium text-center capitalize"
-        >
+      <li className={menuItemStyle}>
+        <Link href="/blog" className={linkStyle}>
           Blog
         </Link>
       </li>
-      <li className={linkStyle}>
+      <li className={menuItemStyle}>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/mares-popa/"
           rel="noopener noreferrer"
-          className="flex items-center text-sm font-medium text-center capitalize"
+          className={linkStyle}
         >
           <span className="mr-1">LinkedIn</span>
           <SVGLink />
@@ -78,7 +57,11 @@ const GlobalLinks = () => {
     </ul>
   )
 }
+
+const menuItemStyle =
+  'text-white hover:transition-all duration-150 ease-in-out hover:text-blue-300 focus:text-blue-300 hover:underline focus:underline'
+
 const linkStyle =
-  'text-white hover:text-blue-300 focus:text-blue-300 hover:underline focus:underline'
+  'flex items-center text-sm font-medium text-center capitalize hover:transition-all duration-150 ease-in-out'
 
 export default GlobalLinks

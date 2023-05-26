@@ -10,7 +10,7 @@ const GlobalLogo = () => {
   return (
     <Link
       href="/"
-      className="flex items-center text-sm font-medium text-left capitalize"
+      className="flex items-center text-sm font-medium text-left capitalize hover:transition-all ease-in-out duration-150 motion-reduce:transition-none hover:transform hover:scale-125"
     >
       <Image src={logo} alt="Mares Popa" height={logoHeight} />
     </Link>

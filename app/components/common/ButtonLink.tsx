@@ -19,7 +19,7 @@ const ButtonLink = ({ url, label }: Props) => {
 
 const style = `inline-flex p-4 rounded my-4 border border-blue-300
                items-center text-blue-300 font-medium
-               transition transition-border-width ease-in-out delay-100  motion-reduce:transition-none
+               hover:transition-all ease-in-out motion-reduce:transition-none duration-150
                hover:bg-blue-300 hover:text-blue-950
                focus:bg-blue-300 focus:text-blue-950`
 
