@@ -20,6 +20,8 @@ const ProjectEntry = ({
           <a
             className="hover:underline focus:underline"
             href="https://dolooper.netlify.app"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             {title}
           </a>
@@ -34,6 +36,8 @@ const ProjectEntry = ({
             className="hover:text-blue-300 focus:text-blue-300"
             aria-label="App Link"
             href={appLink}
+            target="_blank"
+            rel="noreferrer noopener"
           >
             <SVGLink />
           </a>
@@ -41,6 +45,8 @@ const ProjectEntry = ({
             className="hover:text-blue-300 focus:text-blue-300"
             aria-label="Github Link"
             href={githubLink}
+            target="_blank"
+            rel="noreferrer noopener"
           >
             <SVGGithub />
           </a>
