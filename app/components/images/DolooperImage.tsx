@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
-
-const DolooperImage = (props: Props) => {
+const DolooperImage = () => {
   return (
     <Image
       src="/assets/dolooper.jpg"
