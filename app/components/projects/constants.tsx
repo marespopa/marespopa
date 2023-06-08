@@ -1,5 +1,5 @@
 import DolooperImage from '../images/DolooperImage'
-import TrackFCLImage from '../images/TrackfclImage'
+import TrackFCLImage from '../images/TrackFCLImage'
 
 export type ProjectItem = {
   id: number
