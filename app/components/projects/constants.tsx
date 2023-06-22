@@ -1,5 +1,5 @@
 import DolooperImage from '../images/DolooperImage'
-import TrackFCLImage from '../images/TrackFCLImage'
+import HermesMDImage from '../images/HermesMDImage'
 
 export type ProjectItem = {
   id: number
@@ -24,13 +24,13 @@ export const PROJECTS_LIST: ProjectItem[] = [
   },
   {
     id: 2,
-    image: <TrackFCLImage />,
-    title: 'TrackFCL',
-    description: ` TrackFCL is a NextJS app designed to provide a seamless and
+    image: <HermesMDImage />,
+    title: 'Hermes Note',
+    description: `Hermes Notes is a NextJS app designed to provide a seamless and
     efficient solution for creating Markdown files and exporting them
     to PDF format, catering specifically to the needs of users who
     frequently work with Markdown.`,
-    appLink: 'https://trackfcl.netlify.app',
-    githubLink: 'https://github.com/smoothwizz/trackfcl',
+    appLink: 'https://hermesmd.netlify.app/',
+    githubLink: 'https://github.com/smoothwizz/hermesnote',
   },
 ]

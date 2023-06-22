@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const TrackFCLImage = () => {
+const HermesMDImage = () => {
   return (
     <Image
       src="/assets/trackfcl.jpg"
@@ -14,4 +14,4 @@ const TrackFCLImage = () => {
   )
 }
 
-export default TrackFCLImage
+export default HermesMDImage
