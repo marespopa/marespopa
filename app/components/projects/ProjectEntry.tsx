@@ -19,7 +19,7 @@ const ProjectEntry = ({
         <h2 className="ml-auto text-2xl">
           <a
             className="hover:underline focus:underline"
-            href="https://dolooper.netlify.app"
+            href={appLink}
             target="_blank"
             rel="noreferrer noopener"
           >

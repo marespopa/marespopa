@@ -25,7 +25,7 @@ export const PROJECTS_LIST: ProjectItem[] = [
   {
     id: 2,
     image: <HermesMDImage />,
-    title: 'Hermes Note',
+    title: 'Hermes Notes',
     description: `Hermes Notes is a NextJS app designed to provide a seamless and
     efficient solution for creating Markdown files and exporting them
     to PDF format, catering specifically to the needs of users who
