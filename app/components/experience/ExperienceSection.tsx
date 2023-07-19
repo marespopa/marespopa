@@ -23,14 +23,19 @@ const ExperienceSection = ({ index }: Props) => {
         </p>
         <article className="leading-relaxed text-gray-200 mt-4">
           <ExperienceEntry
-            title="Frontend Engineer"
-            company="Cognizant Romania"
-            site="https://www.cognizant.com/ro/en"
-            period="May 2022 - Present"
+            title="Senior Frontend Engineer"
+            company="Riverbed"
+            site="https://www.riverbed.com/"
+            period="July 2023 - Present"
             description={[
-              `Working on a hotel booking app rewrite from AngularJS to NextJS, working with ~150 teammates using SAFe methodology`,
-              `Applied atomic design principles to develop features from Figma designs using Chakra UI components`,
-              `Improved unit testing coverage across the project (RTL and Jest) for all UI elements`,
+              `Collaborate with a team of talented individuals to develop and test new and existing features
+              in the Alluvio Platform's SAAS UI, ensuring a seamless user experience and maintaining code quality.`,
+              `Contribute to the design of new features and actively participate in technical discussions,
+              leveraging my experience and knowledge to provide valuable insights and suggestions.`,
+              `Utilize my skills in React, HTML, JavaScript, and CSS to create user-friendly front-end interfaces,
+              while working closely with UX and product management teams to align with their vision. Embrace agile 
+              software development practices, continuously seeking ways to enhance the product and provide innovative 
+              ideas to the team.`,
             ]}
           />
           <ExperienceEntry
@@ -42,6 +47,18 @@ const ExperienceSection = ({ index }: Props) => {
               `Delivering engaging and comprehensive lessons on HTML/CSS, JavaScript, React.js, and Node.js modules.`,
               `Following the curriculum schedule and conducting 2-hour lessons twice a week.`,
               `Providing valuable feedback to enhance the program's quality and actively participating in internal training for continuous improvement.`,
+            ]}
+          />
+
+          <ExperienceEntry
+            title="Frontend Engineer"
+            company="Cognizant Romania"
+            site="https://www.cognizant.com/ro/en"
+            period="May 2022 - June 2023"
+            description={[
+              `Working on a hotel booking app rewrite from AngularJS to NextJS, working with ~150 teammates using SAFe methodology`,
+              `Applied atomic design principles to develop features from Figma designs using Chakra UI components`,
+              `Improved unit testing coverage across the project (RTL and Jest) for all UI elements`,
             ]}
           />
           <ExperienceEntry

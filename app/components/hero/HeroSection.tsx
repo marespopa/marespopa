@@ -9,7 +9,7 @@ const HeroSection = () => {
       <h3 className="text-xl">Hey there, my name is</h3>
       <h1 className="mt-2 text-6xl font-bold">Mares Popa</h1>
       <h2 className="text-3xl font-bold text-blue-300 mt-4 leading-relaxed">
-        Weaving code and creativity together for remarkable web journeys.
+        Writing code that makes design come to life.
       </h2>
       <p className="mt-16 text-2xl max-w-prose">
         I&apos;m passionate about building exceptional web experiences. With
