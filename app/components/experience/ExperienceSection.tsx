@@ -62,7 +62,7 @@ const ExperienceSection = ({ index }: Props) => {
             ]}
           />
           <ExperienceEntry
-            title="Sr. Frontend Engineer"
+            title="Senior Frontend Engineer"
             company="3Pillar Global"
             site="https://www.3pillarglobal.com/"
             period="Oct 2018 - May 2022"
