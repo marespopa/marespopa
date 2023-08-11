@@ -13,28 +13,28 @@ const GlobalLinks = () => {
         </Link>
       </li>
       <li className={menuItemStyle}>
-        <Link href="#about" className={linkStyle}>
+        <Link href="/#about" className={linkStyle}>
           About
         </Link>
       </li>
 
       <li className={menuItemStyle}>
-        <Link href="#experience" className={linkStyle}>
+        <Link href="/#experience" className={linkStyle}>
           Experience
         </Link>
       </li>
       <li className={menuItemStyle}>
-        <Link href="#skills" className={linkStyle}>
+        <Link href="/#skills" className={linkStyle}>
           Skills
         </Link>
       </li>
       <li className={menuItemStyle}>
-        <Link href="#projects" className={linkStyle}>
+        <Link href="/#projects" className={linkStyle}>
           Projects
         </Link>
       </li>
       <li className={menuItemStyle}>
-        <Link href="#contact" className={linkStyle}>
+        <Link href="/#contact" className={linkStyle}>
           Contact
         </Link>
       </li>
