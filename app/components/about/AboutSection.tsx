@@ -26,7 +26,8 @@ const AboutSection = ({ index }: Props) => {
           <p className="mt-4">
             {' '}
             Since then, I&apos;ve had the privilege of working at global
-            companies such as <EmphasisedWord>Cognizant</EmphasisedWord>,{' '}
+            companies such as <EmphasisedWord>Riverbed</EmphasisedWord>, {` `}
+            <EmphasisedWord>Cognizant</EmphasisedWord>,{' '}
             <EmphasisedWord>3Pillar Global</EmphasisedWord>, and{' '}
             <EmphasisedWord>Frequentis</EmphasisedWord>, where I&apos;ve worked
             on a range of projects, including modernizing a hotel booking app,
