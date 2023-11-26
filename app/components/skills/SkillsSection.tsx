@@ -19,15 +19,16 @@ const SkillsSection = ({ index }: Props) => {
     },
     {
       index: 2,
-      heading: 'Expertise with React, Lodash, AngularJS and NextJS',
-      content: `I love working with libraries like React and Lodash, and have had extensive experience with
-      popular frameworks like AngularJS and NextJS. I enjoy exploring new tools and technologies to
-      help create the best possible user experiences for each project.`,
+      heading: 'Expertise with React, NextJS, AstroJS, TailwindCSS',
+      content: `Regardless of the coding tools employed, my primary focus is on crafting applications that prioritize
+        accessibility and performance. Code is a tool, but the ultimate goal remains consistent: delivering apps that
+        are seamlessly accessible to all users and perform at their best. I'm committed to implementing practices that
+        guarantee not just functional code but an inclusive and efficient user experience.`,
     },
     {
       index: 3,
       heading: 'Knowledge of Redux, GraphQL, and NodeJS',
-      content: ` I have a solid understanding of state management tools such as Redux, as well as GraphQL,
+      content: `I have a solid understanding of state management tools such as Redux, as well as GraphQL,
       a query language for APIs. I also have experience working with NodeJS, a popular server-side JavaScript runtime,
       which allows me to build full-stack web applications.`,
     },
