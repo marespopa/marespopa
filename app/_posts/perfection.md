@@ -1,8 +1,9 @@
 ---
+
 title: 'Embracing Imperfection: The Value of Shipping Code Quickly'
 date: '2023-05-18'
-description: "In the world of software development, perfection can hinder progress. Let's explore the concept of fail fast and see why shipping code quickly is better than shipping perfect code."
----
+description: `In the world of software development, perfection can hinder progress. Let's explore the concept of fail fast and see why shipping code quickly is better than shipping perfect code.`
+--
 
 # Embracing Imperfection: The Value of Shipping Code Quickly
 

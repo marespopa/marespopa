@@ -1,7 +1,7 @@
 ---
 title: 'Why Next.js Might Be Worth Considering for Your Next Project'
 date: '2023-04-18'
-description: "I'm always on the lookout for the latest and greatest technologies that can help me and my team build better products faster. In recent years, one framework that has been gaining a lot of traction in the frontend community is Next.js. In this article, I want to share my perspective on why Next.js is such a helpful framework for frontend development, based on my experience using it in a project to modernize a web app."
+description: `I'm always on the lookout for the latest and greatest technologies that can help me and my team build better products faster. In recent years, one framework that has been gaining a lot of traction in the frontend community is Next.js. In this article, I want to share my perspective on why Next.js is such a helpful framework for frontend development, based on my experience using it in a project to modernize a web app.`
 ---
 
 # Why Next.js Might Be Worth Considering for Your Next Project

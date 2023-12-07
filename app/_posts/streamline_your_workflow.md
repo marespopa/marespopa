@@ -1,7 +1,7 @@
 ---
 title: 'Five techniques to boost your productivity'
 date: '2023-04-04'
-description: 'As a software engineer, staying focused and productive is essential to achieving success in your work. However, distractions and multitasking can hinder your ability to accomplish tasks efficiently. In this article, we will explore 5 proven focus-boosting techniques that can help you improve your concentration and productivity.'
+description: `As a software engineer, staying focused and productive is essential to achieving success in your work. However, distractions and multitasking can hinder your ability to accomplish tasks efficiently. In this article, we will explore 5 proven focus-boosting techniques that can help you improve your concentration and productivity.`
 ---
 
 # Boost Your Productivity with These 5 Focus-Boosting Techniques

@@ -1,7 +1,7 @@
 ---
 title: '4 Study Techniques for Frontend Engineers to Stay on Top of Their Game'
 date: '2023-04-11'
-description: "I've come to realize that staying ahead of the game requires smart study habits. In this article, I'm sharing some of my top tips for fellow developers to help them optimize their learning and development."
+description: `I've come to realize that staying ahead of the game requires smart study habits. In this article, I'm sharing some of my top tips for fellow developers to help them optimize their learning and development.`
 ---
 
 # 4 Study Techniques for Frontend Engineers to Stay on Top of Their Game
