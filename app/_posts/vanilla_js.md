@@ -1,7 +1,7 @@
 ---
 title: 'Why Learning Vanilla JavaScript Should be Your First Step as a Web Developer'
 date: '2023-04-28'
-description: `Why Vanilla JavaScript is essential, how it lays the groundwork for future learning, and why it can help you become a more well-rounded and versatile developer. If you're looking to build a strong foundation in JavaScript, this article is a must-read.`
+description: "Why Vanilla JavaScript is essential, how it lays the groundwork for future learning, and why it can help you become a more well-rounded and versatile developer. If you're looking to build a strong foundation in JavaScript, this article is a must-read."
 ---
 
 # Why Learning Vanilla JavaScript Should be Your First Step as a Web Developer
