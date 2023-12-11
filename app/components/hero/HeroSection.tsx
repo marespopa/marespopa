@@ -23,8 +23,8 @@ const HeroSection = () => {
       </p>
       <div className="mt-8">
         <ButtonLink
-          url="https://www.redbubble.com/people/smoothwizz/shop?artistUserName=smoothwizz&asc=u&collections=2753319&iaCode=all-departments&sortOrder=relevant"
-          label="Check out my coding-inspired designs on Redbubble."
+          url="https://hermesmd.netlify.app"
+          label="Fan of markdown? I've created an online editor that helps me with it"
         />
       </div>
     </section>
