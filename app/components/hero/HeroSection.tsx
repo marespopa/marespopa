@@ -23,8 +23,8 @@ const HeroSection = () => {
       </p>
       <div className="mt-8">
         <ButtonLink
-          url="https://hermesmd.netlify.app"
-          label="Fan of markdown? I've created an online editor that helps me with it"
+          url="https://dolooper.netlify.app"
+          label="Tired of juggling multiple tasks and losing focus on what's truly important? Try out Dolooper."
         />
       </div>
     </section>
