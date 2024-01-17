@@ -20,7 +20,7 @@ const HeroSection = () => {
       </p>
       <div className="mt-16">
         <ButtonLink
-          url="https://dolooper.netlify.app"
+          url="https://dolooper.netlify.app?ref=mp"
           label="Tired of juggling multiple tasks and losing focus on what's truly important? Try out Dolooper."
         />
       </div>
