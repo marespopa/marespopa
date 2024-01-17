@@ -5,21 +5,18 @@ import EmphasisedWord from '../common/EmphasisedWord'
 
 const HeroSection = () => {
   return (
-    <section aria-label="Hero" className="pt-16">
-      <h3 className="text-xl">Hello and welcome!</h3>
-      <h1 className="mt-2 text-6xl font-bold">I&apos;m Mares</h1>
-      <h2 className="text-3xl font-bold text-blue-300 mt-4 leading-relaxed">
-        Writing code & spreading knowledge
-      </h2>
+    <section aria-label="Hero" className="pt-16 font-mono">
+      <h1 className="mt-2 text-6xl font-bold">
+        UI/UX Engineer & <span className="text-sky-200"> Online Educator</span>
+      </h1>
+
       <p className="mt-16 text-2xl max-w-prose">
-        Been a software engineer since 2015, mostly focused on frontend. Along
-        the way I&apos;ve had the privilege of working on exciting projects and
-        help bring design visions to life.
+        I build and design digital products like websites and apps while using
+        UX principles.
       </p>
       <p className="mt-4 text-2xl max-w-prose">
-        Beyond coding, I&apos;m deeply committed to spreading knowledge. As an
-        online teacher, I&apos;m dedicated to inspiring minds and fostering a
-        love for technology.
+        Beyond coding, I&apos;m also an online teacher, passionate about walking
+        my students into the world of full-stack development.
       </p>
       <div className="mt-8">
         <ButtonLink

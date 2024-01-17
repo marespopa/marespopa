@@ -1,7 +1,16 @@
 import '../styles/globals.scss'
 
 import type { AppProps } from 'next/app'
+import { Roboto_Mono } from 'next/font/google'
 import Script from 'next/script'
+
+const fontFamily = Roboto_Mono({
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -21,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         });
     `}
       </Script>
-      <Component {...pageProps} />
+      <Component className={fontFamily.variable} {...pageProps} />
     </>
   )
 }

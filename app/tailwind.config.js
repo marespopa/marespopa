@@ -10,6 +10,12 @@ module.exports = {
         border: 'border',
         'border-width': 'border-width',
       },
+      backgroundImage: {
+        'hero-pattern': "url('/dolooper.jpg')",
+      },
+      fontFamily: {
+        roboto: ['var(--font-roboto-mono)'],
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

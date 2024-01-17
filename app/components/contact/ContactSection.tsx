@@ -19,29 +19,28 @@ const ContactSection = ({ index }: Props) => {
         </h2>
         <article className="max-w-prose leading-relaxed text-gray-200">
           <p className="mt-8">
-            I&apos;m always open to meeting new people in the industry and
-            sharing experiences. Whether you have a question, would like to chat
-            about a potential collaboration, or just want to say hello, feel
-            free to send me a message. You can reach me via email at{' '}
-            <ContentLink
-              url="mailto:hello@marespopa.com"
-              title="Mares Popa Email"
-              label="hello@marespopa.com"
-              target="_blank"
-            />{' '}
-            or connect with me on{' '}
+            Have questions, looking to collaborate, or just want to say hello?
+            I&apos;m here for it all! Sending an email is as easy as hitting the{' '}
+            <span className="font-bold">Send</span> button.
+          </p>
+          <p className="mt-2">
+            Connect with me on{' '}
             <ContentLink
               url="https://www.linkedin.com/in/mares-popa/"
               title="Mares Popa LinkedIN"
               label="LinkedIn"
               isExternal={true}
               target="_blank"
-            />
-            . I&apos;m looking forward to hearing from you!
+            />{' '}
+            if you prefer a more casual introduction.
           </p>
 
+          <p className="mt-2">
+            {' '}
+            Let&apos;s make it easy and start the conversation today! 👋✨
+          </p>
           <div className="flex mt-4">
-            <ButtonLink url="mailto:hello@marespopa.com" label="Say hello" />
+            <ButtonLink url="mailto:hello@marespopa.com" label="Send" />
           </div>
         </article>
       </section>

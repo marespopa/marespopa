@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Mares Popa - Frontend Engineer',
-  siteName: 'Mares Popa - Frontend Engineer',
-  description: `Hi, I’m Mares! I'm a frontend engineer with in-depth experience in UI/UX development.
+  title: 'Mares Popa - UI/UX Engineer',
+  siteName: 'Mares Popa - UI/UX Engineer',
+  description: `Hi, I’m Mares! I'm a UI/UX engineer with in-depth experience in UI/UX development.
                 In a nutshell, I create websites and web applications that help organizations address
                 business challenges and meet their needs. My expertise lies within front-end web apps,
                 and I've been working with a lot of frameworks and languages, including Next.JS,

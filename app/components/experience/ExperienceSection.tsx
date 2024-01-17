@@ -23,7 +23,7 @@ const ExperienceSection = ({ index }: Props) => {
         </p>
         <article className="leading-relaxed text-gray-200 mt-4">
           <ExperienceEntry
-            title="Senior Frontend Engineer"
+            title="Sr. Frontend Engineer"
             company="Riverbed"
             site="https://www.riverbed.com/"
             period="July 2023 - Present"
@@ -62,7 +62,7 @@ const ExperienceSection = ({ index }: Props) => {
             ]}
           />
           <ExperienceEntry
-            title="Senior Frontend Engineer"
+            title="Sr. Frontend Engineer"
             company="3Pillar Global"
             site="https://www.3pillarglobal.com/"
             period="Oct 2018 - May 2022"
