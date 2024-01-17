@@ -6,7 +6,7 @@ import EmphasisedWord from '../common/EmphasisedWord'
 const HeroSection = () => {
   return (
     <section aria-label="Hero" className="pt-16 font-mono">
-      <h1 className="mt-2 text-6xl font-bold">
+      <h1 className="mt-2 text-5xl font-bold">
         UI/UX Engineer & <span className="text-sky-200"> Online Educator</span>
       </h1>
 
@@ -14,11 +14,11 @@ const HeroSection = () => {
         I build and design digital products like websites and apps while using
         UX principles.
       </p>
-      <p className="mt-4 text-2xl max-w-prose">
+      <p className="mt-8 text-2xl max-w-prose">
         Beyond coding, I&apos;m also an online teacher, passionate about walking
         my students into the world of full-stack development.
       </p>
-      <div className="mt-8">
+      <div className="mt-16">
         <ButtonLink
           url="https://dolooper.netlify.app"
           label="Tired of juggling multiple tasks and losing focus on what's truly important? Try out Dolooper."
