@@ -5,7 +5,7 @@ import React from 'react'
 import logo from '../../../public/logo.svg'
 
 const GlobalLogo = () => {
-  const logoHeight = 32
+  const logoHeight = 48
 
   return (
     <Link
