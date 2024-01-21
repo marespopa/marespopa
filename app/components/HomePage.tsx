@@ -14,8 +14,8 @@ const HomePage = (props: Props) => {
   return (
     <Container>
       <HeroSection />
-      <AboutSection index={1} />
-      <ProjectsSection index={2} />
+      <ProjectsSection index={1} />
+      <AboutSection index={2} />
       <SkillsSection index={3} />
       <ExperienceSection index={4} />
       <ContactSection index={5} />
