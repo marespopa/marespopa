@@ -3,9 +3,9 @@ import { useRouter } from 'next/router'
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Mares Popa - UI/UX Engineer',
-  siteName: 'Mares Popa - UI/UX Engineer',
-  description: `Hi, I’m Mares! I'm a UI/UX engineer with in-depth experience in UI/UX development.
+  title: 'Mares Popa - Fullstack Developer',
+  siteName: 'Mares Popa - Fullstack Developer',
+  description: `Hi, I’m Mares! I'm a full-stack developer with in-depth experience in coding user interfaces.
                 In a nutshell, I create websites and web applications that help organizations address
                 business challenges and meet their needs. My expertise lies within front-end web apps,
                 and I've been working with a lot of frameworks and languages, including Next.JS,
@@ -63,8 +63,8 @@ export default function Seo(props: SeoProps) {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name="msapplication-TileColor" content="#172554" />
-      <meta name="theme-color" content="#172554" />
+      <meta name="msapplication-TileColor" content="#042f2e" />
+      <meta name="theme-color" content="#042f2e" />
     </Head>
   )
 }
@@ -91,7 +91,7 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
   {
     rel: 'mask-icon',
     href: '/favicon/safari-pinned-tab.svg',
-    color: '#172554',
+    color: '#042f2e',
   },
   { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
 ]
