@@ -1,13 +1,13 @@
 import React from 'react'
 
 import ButtonLink from '../common/ButtonLink'
-import EmphasisedWord from '../common/EmphasisedWord'
 
 const HeroSection = () => {
   return (
     <section aria-label="Hero" className="pt-16 font-mono">
       <h1 className="mt-2 text-5xl font-bold">
-        UI/UX Engineer & <span className="text-sky-200"> Online Educator</span>
+        Fullstack Developer &
+        <span className="text-sky-200"> Online Educator</span>
       </h1>
 
       <p className="mt-16 text-2xl max-w-prose">
