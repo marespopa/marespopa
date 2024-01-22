@@ -24,7 +24,7 @@ const ContactForm = () => {
 
   function renderThankYouSection() {
     return (
-      <div className="bg-cyan-900 py-4 px-2 mt-8">
+      <div className="bg-cyan-900 py-4 px-2 mt-8 animate-pulse">
         <h2 className="text-xl font-extrabold text-white sm:text-2xl">
           Thank you!
         </h2>
