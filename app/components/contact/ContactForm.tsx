@@ -52,7 +52,7 @@ const ContactForm = () => {
         <div className="w-full max-w-md mt-2">
           <form
             name="contact"
-            className="bg-cyan-900 p-4"
+            className="bg-emerald-900 p-4 rounded-md"
             onSubmit={handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -102,7 +102,7 @@ const ContactForm = () => {
             </div>
             <div className="mb-4">
               <button
-                className="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded hover:transition-all duration-150"
+                className="bg-yellow-300 hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:transition-all duration-150"
                 type="submit"
               >
                 Send

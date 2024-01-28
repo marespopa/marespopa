@@ -12,7 +12,7 @@ const GlobalNavigation = () => {
   const hamburgerOpen = <Icon type="hamburger" size={18} />
 
   return (
-    <header className="bg-teal-900 md:bg-teal-900">
+    <header className="bg-emerald-900 md:bg-emerald-900">
       <nav className="w-full">
         <Container>
           <div className="justify-between mx-auto lg:max-w-7xl md:items-center md:flex">

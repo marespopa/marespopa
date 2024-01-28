@@ -25,7 +25,7 @@ const PostPage = ({ post }: Props) => {
               <span className="text-sm text-white">{post?.date}</span>
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </article>
-            <ReadMoreLink url={`/blog`} label={`Back to blog`} />
+            <ReadMoreLink url={`/blog`} label={`← Back to blog`} />
           </div>
         </Container>
       </section>

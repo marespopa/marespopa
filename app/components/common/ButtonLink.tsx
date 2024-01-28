@@ -20,7 +20,7 @@ const ButtonLink = ({ url, label }: Props) => {
 const style = `inline-flex px-4 py-2 rounded my-4 border border-blue-300
                items-center text-blue-300 font-medium
                hover:transition-all ease-in-out motion-reduce:transition-none duration-150
-               hover:bg-sky-300 hover:text-teal-950
-               focus:bg-sky-300 focus:text-teal-950`
+               hover:bg-sky-300 hover:text-emerald-950
+               focus:bg-sky-300 focus:text-emerald-950`
 
 export default ButtonLink
