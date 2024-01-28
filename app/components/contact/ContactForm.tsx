@@ -6,7 +6,11 @@ import ContentLink from '../common/ContentLink'
 
 type SentStatus = 'sent' | 'idle'
 
-const ContactForm = () => {
+interface Props {
+  showIntro?: boolean
+}
+
+const ContactForm = ({ showIntro = false }: Props) => {
   const [error, setError] = useState('')
   const [sentStatus, setSentStatus] = useState<SentStatus>('idle')
   const [formData, setFormData] = useState({
@@ -40,15 +44,18 @@ const ContactForm = () => {
   function renderContactForm() {
     return (
       <>
-        <p className="mt-8">
-          Have questions, looking to collaborate, or just want to say hello?
-          👋✨{' '}
-        </p>
-        <p className="mt-2">
-          I&apos;m here for it all! Sending a message is as easy as hitting the{' '}
-          <span className="font-bold">Send</span> button.
-        </p>
-
+        {showIntro && (
+          <>
+            <p className="mt-8">
+              Have questions, looking to collaborate, or just want to say hello?
+              👋✨{' '}
+            </p>
+            <p className="mt-2">
+              I&apos;m here for it all! Sending a message is as easy as hitting
+              the <span className="font-bold">Send</span> button.
+            </p>
+          </>
+        )}
         <div className="w-full max-w-md mt-2">
           <form
             name="contact"

@@ -36,7 +36,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" type="image/svg+xml" href="favicon.svg" />
         </Head>
-        <body>
+        <body className="font-roboto">
           <Main />
           <NextScript />
         </body>

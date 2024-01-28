@@ -25,7 +25,7 @@ const ContactSection = ({ index }: Props) => {
           <span>Let&apos;s Connect</span>
         </h2>
 
-        <ContactForm />
+        <ContactForm showIntro={true} />
       </section>
     </WithAnimation>
   )

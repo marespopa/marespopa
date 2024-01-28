@@ -8,10 +8,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mares Popa - Looking for a website?</title>
+        <title>Mares Popa - Frontend Engineer</title>
         <meta
           name="description"
-          content="One Page Funnel meticulously crafted to take your business to new heights beyond social media."
+          content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
         />
       </Head>
       <PublicLayout>
