@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-
-import ContentLink from '../common/ContentLink'
+import ConfettiExplosion from 'react-confetti-explosion'
 
 type SentStatus = 'sent' | 'idle'
 
@@ -24,14 +23,26 @@ const ReviewForm = () => {
 
   function renderThankYouSection() {
     return (
-      <div className="bg-cyan-900 py-4 px-2 mt-8 animate-pulse">
+      <div className="bg-teal-900 py-8 px-4 mt-8 prose prose-invert rounded-md">
         <h2 className="text-xl font-extrabold text-white sm:text-2xl">
-          Thank you!
+          Thank you, {formData.name}! ✨
         </h2>
 
-        <p className="mt-2">
-          I&apos;ll let you know my recommendation right away at the end of
-          these questions.
+        <ConfettiExplosion />
+
+        <h3>You&apos;ve taken the first step toward improving your website.</h3>
+
+        <p>
+          You can expect to receive{' '}
+          <span className="font-bold">
+            a detailed report within 1-3 business days
+          </span>
+          . Keep an eye on your inbox for my email and stay tuned for valuable
+          insights to elevate your online presence!
+        </p>
+        <p className="italic">
+          Best regards, <br />
+          Mares
         </p>
       </div>
     )
@@ -121,10 +132,9 @@ const ReviewForm = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formData }),
+      body: encode({ 'form-name': 'review', ...formData }),
     })
       .then(() => {
-        console.debug('Submit')
         setSentStatus('sent')
       })
       .catch((error) => setError(error))

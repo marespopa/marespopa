@@ -28,8 +28,8 @@ const ContactForm = ({ showIntro = false }: Props) => {
 
   function renderThankYouSection() {
     return (
-      <div className="bg-cyan-900 py-4 px-2 mt-8 animate-pulse">
-        <h2 className="text-xl font-extrabold text-white sm:text-2xl">
+      <div className="bg-teal-800 py-4 px-2 mt-8">
+        <h2 className="text-xl font-extrabold text-white sm:text-2xl animate-pulse">
           Thank you!
         </h2>
 
@@ -147,7 +147,6 @@ const ContactForm = ({ showIntro = false }: Props) => {
       body: encode({ 'form-name': 'contact', ...formData }),
     })
       .then(() => {
-        console.debug('Submit')
         setSentStatus('sent')
       })
       .catch((error) => setError(error))
