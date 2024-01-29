@@ -9,7 +9,7 @@ const ReviewPage = () => {
     <Container>
       <div className="prose prose-invert my-4 mt-8">
         <section>
-          <h1>1 Free Website Review for You</h1>
+          <h1>One Free Website Review just for You</h1>
           <h2>Greetings, Ambitious Business Owner! 👋</h2>
           <p>
             I&apos;m Mares, and I&apos; been building and developing websites
