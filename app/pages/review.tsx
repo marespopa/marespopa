@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import FunnelPage from '@/components/funnel/FunnelPage'
 import PublicLayout from '@/components/layouts/PublicLayout'
+import ReviewPage from '@/components/review/ReviewPage'
 
-const Funnel: NextPage = () => {
+const Review: NextPage = () => {
   return (
     <>
       <Head>
@@ -15,10 +15,10 @@ const Funnel: NextPage = () => {
         />
       </Head>
       <PublicLayout>
-        <FunnelPage />
+        <ReviewPage />
       </PublicLayout>
     </>
   )
 }
 
-export default Funnel
+export default Review

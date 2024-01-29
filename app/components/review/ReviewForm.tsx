@@ -6,17 +6,13 @@ import ContentLink from '../common/ContentLink'
 
 type SentStatus = 'sent' | 'idle'
 
-interface Props {
-  showIntro?: boolean
-}
-
-const ContactForm = ({ showIntro = false }: Props) => {
+const ReviewForm = () => {
   const [error, setError] = useState('')
   const [sentStatus, setSentStatus] = useState<SentStatus>('idle')
   const [formData, setFormData] = useState({
+    website: '',
     name: '',
     email: '',
-    message: '',
   })
 
   return (
@@ -34,8 +30,8 @@ const ContactForm = ({ showIntro = false }: Props) => {
         </h2>
 
         <p className="mt-2">
-          I&apos;ve received your message, and will come back soon with the
-          response.{' '}
+          I&apos;ll let you know my recommendation right away at the end of
+          these questions.
         </p>
       </div>
     )
@@ -44,21 +40,9 @@ const ContactForm = ({ showIntro = false }: Props) => {
   function renderForm() {
     return (
       <>
-        {showIntro && (
-          <>
-            <p className="mt-8">
-              Have questions, looking to collaborate, or just want to say hello?
-              👋✨{' '}
-            </p>
-            <p className="mt-2">
-              I&apos;m here for it all! Sending a message is as easy as hitting
-              the <span className="font-bold">Send</span> button.
-            </p>
-          </>
-        )}
-        <div className="w-full max-w-md mt-2">
+        <div className="w-full max-w-md mt-2" id="reviewForm">
           <form
-            name="contact"
+            name="review"
             className="bg-emerald-900 p-4 rounded-md"
             onSubmit={handleSubmit}
             data-netlify="true"
@@ -66,11 +50,29 @@ const ContactForm = ({ showIntro = false }: Props) => {
           >
             <div className="mb-4">
               <label className={formGroupStyle}>
-                <span className={labelStyle}>Your Name:</span>
+                <span className={labelStyle}>Your website URL:</span>
+                <input
+                  className={inputStyle}
+                  type="url"
+                  name="website"
+                  placeholder="https://"
+                  value={formData.website}
+                  onChange={(e) =>
+                    setFormData({ ...formData, website: e.target.value })
+                  }
+                />
+                <input type="hidden" name="form-name" value="contact" />
+              </label>
+            </div>
+
+            <div className="mb-4">
+              <label className={formGroupStyle}>
+                <span className={labelStyle}>Your name:</span>
                 <input
                   className={inputStyle}
                   type="text"
                   name="name"
+                  placeholder="John Smith"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -81,30 +83,17 @@ const ContactForm = ({ showIntro = false }: Props) => {
             </div>
             <div className="mb-4">
               <label className={formGroupStyle}>
-                <span className={labelStyle}>Your Email:</span>
+                <span className={labelStyle}>Your best email:</span>
                 <input
                   className={inputStyle}
                   type="email"
                   name="email"
+                  placeholder="me@email.com"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                 />
-              </label>
-            </div>
-            <div className="mb-4">
-              <label className={formGroupStyle}>
-                <span className={labelStyle}>Message:</span>
-                <textarea
-                  className={inputStyle}
-                  name="message"
-                  rows={3}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                ></textarea>
               </label>
             </div>
             <div className="mb-4">
@@ -122,18 +111,6 @@ const ContactForm = ({ showIntro = false }: Props) => {
             )}
           </form>
         </div>
-
-        <p className="mt-2">
-          Connect with me on{' '}
-          <ContentLink
-            url="https://www.linkedin.com/in/mares-popa/"
-            title="Mares Popa LinkedIN"
-            label="LinkedIn"
-            isExternal={true}
-            target="_blank"
-          />{' '}
-          if you prefer a more casual introduction.
-        </p>
       </>
     )
   }
@@ -168,4 +145,4 @@ const inputStyle =
 const formGroupStyle =
   'flex flex-col gap-2 text-sm font-bold mb-2 first:mt-0 mt-2'
 
-export default ContactForm
+export default ReviewForm
