@@ -11,9 +11,9 @@ const ReviewPage = () => {
           <h1>One Free Website Review just for You</h1>
           <h2>Greetings, Ambitious Business Owner! 👋</h2>
           <p>
-            I&apos;m Mares, and I&apos; been building and developing websites
-            and web application for almost a decade, and I&apos;m more than
-            happy to offer you a FREE website review.
+            I&apos;ve been building websites and web application for almost a
+            decade, and I&apos;m more than happy to offer you a FREE website
+            review.
           </p>
           <h2>The Process</h2>
           <ol className="marker:text-yellow-300">

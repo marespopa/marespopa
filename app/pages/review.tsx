@@ -8,10 +8,10 @@ const Review: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mares Popa - Frontend Engineer</title>
+        <title>Mares Popa - Get a free review of your website!</title>
         <meta
           name="description"
-          content="A Next.js cookie consent banner with TypeScript and Tailwind CSS."
+          content={`Get a free review of your website delivered to your inbox in 1-3 business days from a professional website developer with almost a decade of experience.`}
         />
       </Head>
       <PublicLayout>
