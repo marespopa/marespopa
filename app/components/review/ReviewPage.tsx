@@ -1,6 +1,5 @@
 import React from 'react'
 
-import ContactForm from '../contact/ContactForm'
 import Container from '../container/Container'
 import ReviewForm from './ReviewForm'
 
