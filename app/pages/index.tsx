@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import FunnelPage from '@/components/funnel/FunnelPage'
+import HomePage from '@/components/HomePage'
 import PublicLayout from '@/components/layouts/PublicLayout'
 
 const Home: NextPage = () => {
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <PublicLayout>
-        <FunnelPage />
+        <HomePage />
       </PublicLayout>
     </>
   )
