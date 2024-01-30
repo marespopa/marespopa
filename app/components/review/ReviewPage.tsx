@@ -8,14 +8,10 @@ const ReviewPage = () => {
     <Container>
       <div className="prose prose-invert my-4 mt-8">
         <section>
-          <h1>One Free Website Review just for You</h1>
-          <h2>Greetings, Ambitious Business Owner! 👋</h2>
-          <p>
-            I&apos;ve been building websites and web application for almost a
-            decade, and I&apos;m more than happy to offer you a FREE website
-            review.
-          </p>
-          <h2>The Process</h2>
+          <h1>Greetings, Ambitious Business Owner! 👋</h1>
+
+          <h2>Interested in getting a free review for your own website?</h2>
+          <h3>Here is how the process will look like:</h3>
           <ol className="marker:text-yellow-300">
             <li>
               <span className="font-bold">🌐 Submit Your Website: </span> Share
@@ -52,6 +48,7 @@ const ReviewPage = () => {
             </li>
           </ul>
         </section>
+
         <section className="mb-8">
           <h2>All right. Let&apos;s do this!</h2>
           <p>
