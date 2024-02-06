@@ -1,7 +1,11 @@
+import dynamic from 'next/dynamic'
 import React from 'react'
 
 import Container from '../container/Container'
-import GuideForm from './GuideForm'
+
+const GuideForm = dynamic(() => import('./GuideForm'), {
+  loading: () => <p>Loading form...</p>,
+})
 
 const ReviewPage = () => {
   return (
