@@ -34,8 +34,6 @@ const ReviewPage = () => {
           <p>
             Simply provide your email address in the form below to gain{' '}
             <span className="font-bold">FREE</span> access to the file.
-          </p>
-          <p>
             Don&apos;t worry, we won&apos;t send any spam or marketing messages
             your way.
           </p>
