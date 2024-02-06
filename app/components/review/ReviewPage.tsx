@@ -6,7 +6,7 @@ import ReviewForm from './ReviewForm'
 const ReviewPage = () => {
   return (
     <Container>
-      <div className="prose prose-invert my-4 mt-8">
+      <div className="prose prose-invert my-4 mt-8 mx-auto">
         <section>
           <h1>Greetings, Ambitious Business Owner! 👋</h1>
 
