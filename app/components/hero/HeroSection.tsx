@@ -11,17 +11,17 @@ const HeroSection = () => {
       </h1>
 
       <p className="mt-16 text-2xl max-w-prose">
-        I build and design digital products like websites and apps while using
-        UX principles.
+        I design and develop digital products, including websites and apps, with
+        a focus on UX principles.
       </p>
       <p className="mt-8 text-2xl max-w-prose">
-        Beyond coding, I&apos;m also an online teacher, passionate about walking
-        my students into the world of full-stack development.
+        In addition to coding, I teach full-stack development online to help
+        others enter the world of tech.
       </p>
       <div className="mt-16">
         <ButtonLink
           url="https://dolooper.netlify.app?ref=mp"
-          label="Tired of juggling multiple tasks and losing focus on what's truly important? Try out Dolooper."
+          label="Amplify your productivity with Dolooper."
         />
       </div>
     </section>
