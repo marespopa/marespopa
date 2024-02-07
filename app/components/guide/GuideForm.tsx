@@ -8,6 +8,9 @@ type SentStatus = 'sent' | 'idle'
 
 const GuideForm = () => {
   const [error, setError] = useState('')
+  const [nameError, setNameError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
+
   const [sentStatus, setSentStatus] = useState<SentStatus>('idle')
   const [formData, setFormData] = useState({
     name: '',
@@ -64,7 +67,9 @@ const GuideForm = () => {
               <label className={formGroupStyle}>
                 <span className={labelStyle}>Your name:</span>
                 <input
-                  className={inputStyle}
+                  className={`${inputStyle} ${
+                    nameError && 'border border-red-500'
+                  }`}
                   type="text"
                   name="name"
                   placeholder="John Smith"
@@ -80,7 +85,9 @@ const GuideForm = () => {
               <label className={formGroupStyle}>
                 <span className={labelStyle}>Your best email:</span>
                 <input
-                  className={inputStyle}
+                  className={`${inputStyle} ${
+                    emailError && 'border border-red-500'
+                  }`}
                   type="email"
                   name="email"
                   placeholder="me@email.com"
@@ -91,7 +98,14 @@ const GuideForm = () => {
                 />
               </label>
             </div>
-            <div className="mb-4">
+
+            {error.length > 0 && (
+              <div className="mt-2 mb-4 p-4 rounded-md bg-rose-600 border-rose-700 border">
+                {error}
+              </div>
+            )}
+
+            <div className="my-4">
               <button
                 className="bg-yellow-300 hover:bg-yellow-400 focus:bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded hover:transition-all duration-150"
                 type="submit"
@@ -99,19 +113,49 @@ const GuideForm = () => {
                 Grab the FREE guide!
               </button>
             </div>
-            {error.length > 0 && (
-              <div className="my-2 p-4 rounded-md bg-red-300 border-red-400 border">
-                {error}
-              </div>
-            )}
           </form>
         </div>
       </>
     )
   }
 
+  function validateInputs() {
+    let isValid = true
+    let error = ''
+
+    const NAME_REGEX =
+      /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
+    const EMAIL_REGEX =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    setError('')
+    setNameError(false)
+    setEmailError(false)
+
+    if (!NAME_REGEX.test(formData.name)) {
+      error = 'Please enter your name.'
+      setEmailError(true)
+      isValid = false
+    }
+
+    if (!EMAIL_REGEX.test(formData.email)) {
+      error = 'Please enter the email as name@website.com.'
+      setEmailError(true)
+      isValid = false
+    }
+
+    setError(error)
+
+    return isValid
+  }
+
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
+    const isValid = validateInputs()
+
+    if (!isValid) {
+      return
+    }
 
     fetch('/', {
       method: 'POST',
