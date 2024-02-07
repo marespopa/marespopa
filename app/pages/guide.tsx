@@ -8,7 +8,7 @@ const Review: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mares Popa - Get a free review of your website!</title>
+        <title>Mares Popa - Recipe for a perfect website</title>
         <meta
           name="description"
           content={`Download our comprehensive ebook, 'The Recipe for a Perfect Website:
