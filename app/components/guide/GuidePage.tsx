@@ -20,9 +20,9 @@ const ReviewPage = () => {
 
           <p>
             Are you experiencing high abandonment rates due to slow website
-            loading times? This free expert guide provides detailed optimization
-            techniques and services to refine your website for faster loading
-            times, better user experience, and improved search engine ranking.
+            loading times? This ebook provides detailed optimization techniques
+            and services to refine your website for faster loading times, better
+            user experience, and improved search engine ranking.
           </p>
 
           <p>
