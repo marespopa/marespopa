@@ -20,14 +20,10 @@ const ReviewPage = () => {
           </h2>
 
           <p>
-            Are you experiencing high abandonment rates due to slow website
-            loading times? This ebook provides detailed optimization techniques
-            and services to refine your website for faster loading times, better
+            Are you looking for ways to improve your existing website? <br />
+            This ebook provides easy to apply optimization techniques and
+            practices to refine your website for faster loading times, better
             user experience, and improved search engine ranking.
-          </p>
-
-          <p>
-            Learn how to produce more successful websites now and in the future!
           </p>
         </section>
 
@@ -44,7 +40,7 @@ const ReviewPage = () => {
 
           <p>You&apos;ve taken the first step toward improving your website.</p>
           <p className="italic">
-            Best regards, <br />
+            All the best, <br />
             Mares
           </p>
         </section>
