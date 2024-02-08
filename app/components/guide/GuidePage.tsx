@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import React from 'react'
 
 import Container from '../container/Container'
@@ -31,13 +32,21 @@ const ReviewPage = () => {
         </section>
 
         <section className="mb-8">
-          <p>
-            Simply provide your email address in the form below to gain{' '}
-            <span className="font-bold">FREE</span> access to the file.
-            Don&apos;t worry, we won&apos;t send any spam or marketing messages
-            your way.
+          <h3>
+            <Link
+              href={'/pdf/website-recipe-2024.pdf'}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Click here to download the guide
+            </Link>
+          </h3>
+
+          <p>You&apos;ve taken the first step toward improving your website.</p>
+          <p className="italic">
+            Best regards, <br />
+            Mares
           </p>
-          <GuideForm />
         </section>
       </div>
     </Container>
