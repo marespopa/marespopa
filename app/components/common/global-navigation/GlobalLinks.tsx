@@ -23,6 +23,17 @@ const GlobalLinks = () => {
         </a>
       </li>
       <li className={menuItemStyle}>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/mares.uiux/"
+          rel="noopener noreferrer"
+          className={linkStyle}
+        >
+          <span className="mr-1">Instagram</span>
+          <SVGLink />
+        </a>
+      </li>
+      <li className={menuItemStyle}>
         <Link href="/#contact" className={linkButtonStyle}>
           Contact
         </Link>
