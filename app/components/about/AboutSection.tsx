@@ -18,10 +18,9 @@ const AboutSection = ({ index }: Props) => {
         </h2>
         <article className="max-w-prose leading-relaxed text-gray-200">
           <p className="mt-8">
-            My journey into web development began in high school when I
-            co-created an online football manager game. I was responsible for
-            the visuals and HTML/CSS, which ignited my passion for front-end
-            development.
+            My passion for frontend development began in high school when I
+            co-created an online football manager game. This early project
+            sparked my interest in building intuitive, user-centered interfaces.
           </p>
           <p className="mt-4">
             {' '}
@@ -30,9 +29,8 @@ const AboutSection = ({ index }: Props) => {
             <EmphasisedWord>Cognizant</EmphasisedWord>,{' '}
             <EmphasisedWord>3Pillar Global</EmphasisedWord>, and{' '}
             <EmphasisedWord>Frequentis</EmphasisedWord>, where I&apos;ve worked
-            on a range of projects, including modernizing a hotel booking app,
-            developing cybersecurity features, and creating internal management
-            tools.
+            projects ranging from modernizing a hotel booking app to
+            implementing robust cybersecurity features.
           </p>{' '}
           <p className="mt-4">
             I&apos;m also sharing my knowledge as a lecturer for an online
