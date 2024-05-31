@@ -58,11 +58,10 @@ const ContactForm = ({ showIntro = false }: Props) => {
         )}
         <div className="w-full max-w-md mt-2">
           <form
-            name="contact"
+            name="contact-form"
             className="bg-emerald-900 p-4 rounded-md"
+            method="post"
             onSubmit={handleSubmit}
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
           >
             <div className="mb-4">
               <label className={formGroupStyle}>
@@ -144,7 +143,7 @@ const ContactForm = ({ showIntro = false }: Props) => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formData }),
+      body: encode({ 'form-name': 'contact-form', ...formData }),
     })
       .then(() => {
         setSentStatus('sent')
