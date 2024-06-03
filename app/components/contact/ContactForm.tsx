@@ -1,5 +1,7 @@
 'use client'
 
+import axios from 'axios'
+import { FormData } from 'pages/api/contact'
 import React, { useState } from 'react'
 
 import ContentLink from '../common/ContentLink'
@@ -13,18 +15,11 @@ interface Props {
 const ContactForm = ({ showIntro = false }: Props) => {
   const [error, setError] = useState('')
   const [sentStatus, setSentStatus] = useState<SentStatus>('idle')
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     message: '',
   })
-
-  return (
-    <div className="max-w-prose leading-relaxed text-gray-200">
-      {sentStatus === 'idle' && renderForm()}
-      {sentStatus === 'sent' && renderThankYouSection()}
-    </div>
-  )
 
   function renderThankYouSection() {
     return (
@@ -61,7 +56,10 @@ const ContactForm = ({ showIntro = false }: Props) => {
             name="contact-form"
             className="bg-emerald-900 p-4 rounded-md"
             method="post"
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleSubmit(formData)
+            }}
           >
             <div className="mb-4">
               <label className={formGroupStyle}>
@@ -137,27 +135,39 @@ const ContactForm = ({ showIntro = false }: Props) => {
     )
   }
 
-  function handleSubmit(event: React.FormEvent) {
-    event.preventDefault()
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact-form', ...formData }),
+  async function postData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
     })
-      .then(() => {
-        setSentStatus('sent')
-      })
-      .catch((error) => setError(error))
 
-    event.preventDefault()
+    return response
   }
-}
 
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+  async function handleSubmit(formData: FormData) {
+    try {
+      await postData('/api/contact', formData)
+      setSentStatus('sent')
+    } catch (error) {
+      setError(`${error}`)
+    }
+  }
+
+  return (
+    <div className="max-w-prose leading-relaxed text-gray-200">
+      {sentStatus === 'idle' && renderForm()}
+      {sentStatus === 'sent' && renderThankYouSection()}
+    </div>
+  )
 }
 
 const labelStyle = ''
