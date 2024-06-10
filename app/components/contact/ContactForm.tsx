@@ -23,7 +23,7 @@ const ContactForm = ({ showIntro = false }: Props) => {
 
   function renderProgressSection() {
     return (
-      <div className="bg-teal-800 py-4 px-2 mt-8">
+      <div className="bg-fuchsia-800 py-4 px-2 mt-8">
         <h2 className="text-xl font-extrabold text-white sm:text-2xl animate-pulse">
           Sending the message...
         </h2>
@@ -54,8 +54,8 @@ const ContactForm = ({ showIntro = false }: Props) => {
 
   function renderThankYouSection() {
     return (
-      <div className="bg-teal-800 py-4 px-2 mt-8">
-        <h2 className="text-xl font-extrabold text-white sm:text-2xl animate-pulse">
+      <div className="bg-fuchsia-800 py-4 px-2 mt-8">
+        <h2 className="text-xl font-extrabold text-white sm:text-2xl">
           Thank you!
         </h2>
 
@@ -85,7 +85,7 @@ const ContactForm = ({ showIntro = false }: Props) => {
         <div className="w-full max-w-md mt-2">
           <form
             name="contact-form"
-            className="bg-emerald-900 p-4 rounded-md"
+            className="bg-fuchsia-900 p-4 rounded-md"
             method="post"
             onSubmit={(e) => {
               e.preventDefault()

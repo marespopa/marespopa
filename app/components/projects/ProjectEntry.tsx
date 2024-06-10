@@ -27,7 +27,7 @@ const ProjectEntry = ({
           </a>
         </h2>
         <article>
-          <p className="max-w-prose mt-8 p-4 bg-teal-900 rounded shadow-sm md:-ml-20 md:text-right">
+          <p className="max-w-prose mt-8 p-4 bg-fuchsia-900 rounded shadow-sm md:-ml-20 md:text-right">
             {description}
           </p>
         </article>

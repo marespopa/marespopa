@@ -23,7 +23,7 @@ const ReviewForm = () => {
 
   function renderThankYouSection() {
     return (
-      <div className="bg-teal-900 py-8 px-4 mt-8 prose prose-invert rounded-md">
+      <div className="bg-fuchsia-900 py-8 px-4 mt-8 prose prose-invert rounded-md">
         <h2 className="text-xl font-extrabold text-white sm:text-2xl">
           Thank you, {formData.name}! ✨
         </h2>
@@ -54,7 +54,7 @@ const ReviewForm = () => {
         <div className="w-full max-w-md mt-2" id="reviewForm">
           <form
             name="review"
-            className="bg-emerald-900 p-4 rounded-md"
+            className="bg-fuchsia-900 p-4 rounded-md"
             onSubmit={handleSubmit}
             data-netlify="true"
             data-netlify-honeypot="bot-field"

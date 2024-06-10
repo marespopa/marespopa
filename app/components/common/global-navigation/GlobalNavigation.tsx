@@ -19,7 +19,7 @@ const GlobalNavigation = () => {
     : '/review#reviewForm'
 
   return (
-    <header className="bg-emerald-900 md:bg-emerald-900">
+    <header className="bg-fuchsia-900 md:bg-fuchsia-900">
       <nav className="w-full">
         <Container>
           <div className="mx-auto lg:max-w-7xl md:items-center md:flex md:justify-between ">
