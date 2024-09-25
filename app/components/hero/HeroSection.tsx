@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section aria-label="Hero" className="pt-16 font-mono">
       <h1 className="mt-2 text-5xl font-bold">
-        Fullstack Developer &
+        Senior Software Engineer &
         <span className="text-sky-200"> Online Educator</span>
       </h1>
 

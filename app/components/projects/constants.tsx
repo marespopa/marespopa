@@ -20,7 +20,7 @@ export const PROJECTS_LIST: ProjectItem[] = [
     enhanced security, all data is stored locally for privacy and
     peace of mind.`,
     appLink: 'https://dolooper.netlify.app',
-    githubLink: 'https://github.com/smoothwizz/doloper',
+    githubLink: 'https://github.com/marespopa/doloper',
   },
   {
     id: 2,
@@ -31,6 +31,6 @@ export const PROJECTS_LIST: ProjectItem[] = [
     to PDF format, catering specifically to the needs of users who
     frequently work with Markdown.`,
     appLink: 'https://hermesmd.netlify.app/',
-    githubLink: 'https://github.com/smoothwizz/hermesnote',
+    githubLink: 'https://github.com/marespopa/hermesnote',
   },
 ]

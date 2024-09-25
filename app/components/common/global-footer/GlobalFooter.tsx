@@ -37,7 +37,7 @@ const GlobalFooter = () => {
             <p className="mt-4 md:mt-0">
               Designed & built by{' '}
               <ContentLink
-                url="https://github.com/smoothwizz?tab=repositories"
+                url="https://github.com/marespopa?tab=repositories"
                 label="Mares Popa"
                 title="Github Repo"
                 target="_blank"
