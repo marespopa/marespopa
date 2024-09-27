@@ -13,6 +13,8 @@ const fontFamily = Roboto_Mono({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const MainComponent = Component as any;
+
   return (
     <>
       <Script
@@ -30,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         });
     `}
       </Script>
-      <Component className={fontFamily.variable} {...pageProps} />
+      <MainComponent className={fontFamily.variable} {...pageProps} />
     </>
   )
 }
