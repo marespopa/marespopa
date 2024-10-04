@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
-    "prettier": "3.3.3"
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
