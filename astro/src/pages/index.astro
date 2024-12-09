@@ -1,7 +1,5 @@
 ---
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
-
-
 ---
 
 <html lang="en">
@@ -22,7 +20,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
       content="Mares Popa, Senior Software Engineer, Front-End Developer, UI/UX Developer, Next.js, React, TypeScript, AngularJS, Sass, Tailwind CSS, Web Development"
     />
     <meta name="author" content="Mares Popa" />
-    <GoogleAnalytics measurementId={'G-WY0KQ8W98H'} />
+    <GoogleAnalytics measurementId={"G-WY0KQ8W98H"} />
 
     <!-- Open Graph Meta Tags (For Social Media Previews) -->
     <meta property="og:title" content="Mares Popa - Senior Software Engineer" />
@@ -89,7 +87,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
       </div>
 
       <!-- Projects Section -->
-      <section class="mx-auto prose dark:prose-invert px-4 rounded-md">
+      <section class="mx-auto prose dark:prose-invert px-4 rounded-md !max-w-none">
         <h3 class="font-semibold text-center text-black dark:text-white mb-8">
           Here are some things that I've built 🛠️
         </h3>
@@ -142,6 +140,28 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
               Try Dolooper
             </a>
           </article>
+          <!-- Github Section -->
+          <article
+            class="prose dark:prose-invert flex-1 p-4 bg-purple-100 dark:bg-purple-800 shadow-md rounded-md text-center"
+          >
+            <h4
+              class="text-md font-semibold mb-2 leading-tight text-black dark:text-white"
+            >
+              Github
+            </h4>
+            <p class="text-md mb-4">
+              The story of my work through the repositories I'm interested in,
+              the contributions I've made, and the conversations I've had.
+            </p>
+            <a
+              href="https://github.com/marespopa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex px-4 py-2 rounded my-4 border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline mx-auto"
+            >
+              Check my profile
+            </a>
+          </article>
         </div>
       </section>
 
@@ -159,7 +179,7 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
         >
           Let&apos;s Connect and Collaborate 🤝
         </h3>
-        <div class="flex justify-center gap-4">
+        <div class="flex justify-center gap-4 text-nowrap flex-wrap">
           <a
             href="https://www.linkedin.com/in/mares-popa/"
             target="_blank"
@@ -169,25 +189,25 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
             LinkedIn Profile
           </a>
           <a
-            href="https://github.com/marespopa"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
-          >
-            GitHub Account
-          </a>
-          <a
             href="mailto:office@marespopa.com"
             class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
           >
             Email Me
+          </a>
+          <a
+            href="tel:+40750235661"
+            class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
+          >
+            🇷🇴 +40750235661
           </a>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-purple-950 dark:bg-gray-900 text-white text-center py-4 mt-6">
+    <footer
+      class="bg-purple-950 dark:bg-gray-900 text-white text-center py-4 mt-6"
+    >
       <p>Made with ❤️ by Mares Popa</p>
     </footer>
   </body>
