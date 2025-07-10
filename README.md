@@ -1,10 +1,28 @@
 # Mares Popa
+## Senior Software Engineer – Frontend / UI/UX / React / TypeScript
 
-## Hi, I’m Mares!
+### Hi, I’m Mares!
 
-I'm a senior software engineer with in-depth experience in UI/UX development. In a nutshell, I create websites and web applications that help organizations address business challenges and meet their needs. My expertise lies within front-end web apps, and I've been working with a lot of frameworks and languages, including Next.JS, Typescript, React, AngularJS, Sass, Tailwind CSS and many others.
+I am a senior software engineer with deep expertise in UI/UX development, focused on building websites and web applications that help organizations solve business challenges and achieve their goals. My core strength lies in front-end web apps, and I have extensive hands-on experience with a wide range of frameworks and technologies, including:
 
-I live in Romania, married to a wonderful wife and been alive since 93'. Beside being obsessed with the web, I also enjoy cycling, basketball and visiting new cities.
+- **Next.js**
+- **TypeScript**
+- **React**
+- **AngularJS**
+- **Sass**
+- **Tailwind CSS**
+- Many others, adapting quickly to new tools and best practices
+
+I am passionate about creating robust, user-centric digital solutions and optimizing both performance and developer experience. I also enjoy improving CI/CD pipelines and deployment processes, streamlining workflows to ensure efficient, reliable product delivery.
+
+### About Me
+
+- **Location:** Romania
+- **Personal:** Married, born in 1993
+- **Interests:** Cycling, basketball, exploring new cities, and a genuine obsession with all things web
+- **Additional Passion:** Enhancing development pipelines and deployment automation to boost team productivity and product quality
+
+I thrive on tackling complex problems, collaborating with diverse teams, and continuously learning to stay at the forefront of frontend development, user experience, and modern DevOps practices.
 
 ## Build status
 
