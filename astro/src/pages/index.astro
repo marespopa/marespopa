@@ -1,8 +1,15 @@
 ---
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+import Navigation from "../components/Navigation.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
@@ -45,202 +52,35 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Theme initialization script to prevent flash -->
+    <script is:inline>
+      // Immediately apply theme to prevent flash
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
   </head>
-  <body
-    class="bg-white dark:bg-purple-950 font-sans flex justify-center flex-col"
-  >
-    <main class="container mx-auto max-w-full px-4 md:px-2 flex-1">
-      <!-- Hero Section -->
-      <section class="mx-auto text-center mt-4 prose dark:prose-invert">
-        <header>
-          <h1 class="font-bold mt-8 text-black dark:text-white">
-            Senior Software Engineer
-          </h1>
-          <h2 class="font-semibold mt-2 mb-4 text-black dark:text-white">
-            Hi, I&lsquo;m Mares 👋
-          </h2>
-        </header>
-        <p class="mt-4">
-          With over a decade of experience in software development, I specialize
-          in creating high-quality, user-friendly websites and web applications
-          that drive results. My expertise lies in crafting scalable,
-          accessible, and maintainable digital solutions tailored to meet your
-          unique business needs.
-        </p>
-        <p class="mt-4">
-          I bring deep technical knowledge in <strong>React</strong>, <strong
-            >Next.js</strong
-          >, and <strong>TypeScript</strong>, ensuring your project is built
-          with modern, reliable, and efficient technologies.
-        </p>
-        <p class="mt-4">
-          Whether you&lsquo;re looking to launch a sleek new website, optimize
-          your existing platform, or develop a custom web application, I deliver
-          solutions that not only look great but also perform flawlessly.
-        </p>
-        <p class="mt-4">
-          I collaborate with businesses of all sizes to turn ideas into reality,
-          focusing on:
-        </p>
-
-        <ul class="mt-4 list-disc text-left">
-          <li>
-            <strong>Responsive Design:</strong> Websites and apps that look stunning
-            on any device.
-          </li>
-          <li>
-            <strong>Performance Optimization:</strong> Fast-loading, high-performing
-            digital experiences.
-          </li>
-          <li>
-            <strong>Scalability:</strong> Future-proof solutions that grow with your
-            business.
-          </li>
-          <li>
-            <strong>Accessibility:</strong> Inclusive designs that work for everyone.
-          </li>
-        </ul>
-
-        <p class="mt-4">
-          When we work together, you&lsquo;ll get more than just a
-          developer—you&lsquo;ll gain a partner committed to your success.
-          Let&lsquo;s create something extraordinary that helps your business
-          thrive.
-        </p>
-      </section>
-
-      <!-- Separator -->
-      <div class="flex justify-center my-16">
-        <span
-          class="border-t border-dotted border-gray-400 dark:border-gray-600 w-1/2"
-        ></span>
-      </div>
-
-      <!-- Projects Section -->
-      <section
-        class="mx-auto prose dark:prose-invert px-4 rounded-md !max-w-none"
-      >
-        <h3 class="font-semibold text-center text-black dark:text-white mb-8">
-          Here are some things that I've built 🛠️
-        </h3>
-        <div
-          class="flex flex-col md:flex-row items-center justify-center gap-8 sm:gap-4 px-6"
-        >
-          <!-- Hermes Markdown Section -->
-          <article
-            class="prose dark:prose-invert flex-1 p-4 bg-purple-100 dark:bg-purple-800 shadow-md rounded-md text-center"
-          >
-            <h4
-              class="text-md font-semibold mb-2 leading-tight text-black dark:text-white"
-            >
-              Hermes Markdown
-            </h4>
-            <p class="text-md mb-4">
-              A free, privacy-first Markdown editor that lets you effortlessly
-              create, edit, and export your files—all while keeping your data
-              secure and local.
-            </p>
-            <a
-              href="https://hermesmd.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex px-4 py-2 rounded my-4 border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline mx-auto"
-            >
-              Try Hermes Markdown
-            </a>
-          </article>
-          <!-- Dolooper Section -->
-          <article
-            class="prose dark:prose-invert flex-1 p-4 bg-purple-100 dark:bg-purple-800 shadow-md rounded-md text-center"
-          >
-            <h4
-              class="text-md font-semibold mb-2 leading-tight text-black dark:text-white"
-            >
-              Dolooper
-            </h4>
-            <p class="text-md mb-4">
-              A free coding companion that lets you create tasks from scratch or
-              templates, edit with Markdown, manage subtasks, and track your
-              time.
-            </p>
-            <a
-              href="https://dolooper.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex px-4 py-2 rounded my-4 border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline mx-auto"
-            >
-              Try Dolooper
-            </a>
-          </article>
-          <!-- Github Section -->
-          <article
-            class="prose dark:prose-invert flex-1 p-4 bg-purple-100 dark:bg-purple-800 shadow-md rounded-md text-center"
-          >
-            <h4
-              class="text-md font-semibold mb-2 leading-tight text-black dark:text-white"
-            >
-              Github
-            </h4>
-            <p class="text-md mb-4">
-              The story of my work through the repositories I'm interested in,
-              the contributions I've made, and the conversations I've had.
-            </p>
-            <a
-              href="https://github.com/marespopa"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex px-4 py-2 rounded my-4 border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline mx-auto"
-            >
-              Check my profile
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <!-- Separator -->
-      <div class="flex justify-center my-16">
-        <span
-          class="border-t border-dotted border-gray-400 dark:border-gray-600 w-1/2"
-        ></span>
-      </div>
-
-      <!-- Contact Me Section -->
-      <section class="mx-auto prose dark:prose-invert pt-4 pb-16 rounded-md">
-        <h3
-          class="font-semibold text-center leading-tight text-black dark:text-white mb-8"
-        >
-          Let&apos;s Connect and Collaborate 🤝
-        </h3>
-        <div class="flex justify-center gap-4 text-nowrap flex-wrap">
-          <a
-            href="https://www.linkedin.com/in/mares-popa/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
-          >
-            LinkedIn Profile
-          </a>
-          <a
-            href="mailto:office@marespopa.com"
-            class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
-          >
-            Email Me
-          </a>
-          <a
-            href="tel:+40750235661"
-            class="inline-flex px-4 py-2 rounded border border-purple-600 dark:border-purple-950 items-center text-black font-medium bg-amber-400 dark:bg-yellow-400 hover:bg-amber-500 dark:hover:bg-yellow-500 focus:bg-amber-600 dark:focus:bg-yellow-600 no-underline"
-          >
-            🇷🇴 +40750235661
-          </a>
-        </div>
-      </section>
+  <body class="bg-brutal-50 dark:bg-dark-950 font-sans text-black dark:text-white transition-colors duration-300">
+    <ThemeToggle />
+    <Navigation />
+    
+    <main class="pt-20">
+      <HeroSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <ContactSection />
     </main>
 
-    <!-- Footer -->
-    <footer
-      class="bg-purple-950 dark:bg-gray-900 text-white text-center py-4 mt-6"
-    >
-      <p>Made with ❤️ by Mares Popa</p>
-    </footer>
+    <Footer />
   </body>
 </html>

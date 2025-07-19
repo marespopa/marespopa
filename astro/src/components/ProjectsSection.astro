@@ -1,0 +1,35 @@
+---
+// Projects section component with brutalism design
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section id="projects" class="py-12 lg:py-20 px-4 bg-brutal-50 dark:bg-dark-950">
+  <div class="container mx-auto max-w-6xl">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-8 lg:mb-16">
+      <span class="text-brutal-600 dark:text-brutal-400">PROJECTS</span> I'VE BUILT
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <ProjectCard
+        title="HERMES MARKDOWN"
+        description="A free, privacy-first Markdown editor that lets you effortlessly create, edit, and export your files—all while keeping your data secure and local."
+        link="https://hermesmarkdown.com/"
+        buttonText="TRY IT"
+      />
+
+      <ProjectCard
+        title="DOLOOPER"
+        description="A free coding companion that lets you create tasks from scratch or templates, edit with Markdown, manage subtasks, and track your time."
+        link="https://dolooper.netlify.app/"
+        buttonText="TRY IT"
+      />
+
+      <ProjectCard
+        title="GITHUB"
+        description="The story of my work through the repositories I'm interested in, the contributions I've made, and the conversations I've had."
+        link="https://github.com/marespopa"
+        buttonText="VIEW PROFILE"
+      />
+    </div>
+  </div>
+</section> 
