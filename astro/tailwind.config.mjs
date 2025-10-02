@@ -11,19 +11,19 @@ export default {
 				mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', ...defaultTheme.fontFamily.mono],
 			},
 			colors: {
-				// Brutalism color palette
+				// Brutalism color palette - Emerald Green
 				brutal: {
-					50: '#fef7ee',
-					100: '#fdecd3',
-					200: '#fbd5a5',
-					300: '#f8b86d',
-					400: '#f59332',
-					500: '#f2750a',
-					600: '#e35d05',
-					700: '#bc4508',
-					800: '#95370e',
-					900: '#782f0f',
-					950: '#411505',
+					50: '#ecfdf5',
+					100: '#d1fae5',
+					200: '#a7f3d0',
+					300: '#6ee7b7',
+					400: '#34d399',
+					500: '#10b981',
+					600: '#059669',
+					700: '#047857',
+					800: '#065f46',
+					900: '#064e3b',
+					950: '#022c22',
 				},
 				// Dark mode colors
 				dark: {
