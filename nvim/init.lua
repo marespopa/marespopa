@@ -1,126 +1,123 @@
 -- ========================================================================== --
---                             TERMUX NVIM SETUP                              --
+-- ==                           GENERAL SETTINGS                           == --
 -- ========================================================================== --
-local tmpdir = vim.fn.expand("$PREFIX/tmp")
-if vim.fn.isdirectory(tmpdir) == 0 then vim.fn.mkdir(tmpdir, "p") end
-vim.env.TMPDIR = tmpdir
-vim.env.XDG_RUNTIME_DIR = tmpdir
 
--- ========================================================================== --
---                                  SETTINGS                                  --
--- ========================================================================== --
 vim.g.mapleader = " "
-vim.opt.number = true
-vim.opt.mouse = "a"
-vim.opt.termguicolors = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.undofile = true
-vim.opt.clipboard = "" 
+vim.g.maplocalleader = " "
+
+local opt = vim.opt
+
+opt.number = true           -- Show line numbers
+opt.relativenumber = false  -- Relative line numbers (set to false per your file)
+opt.mouse = "a"             -- Enable mouse support
+opt.ignorecase = true       -- Case insensitive searching
+opt.smartcase = true        -- ... unless uppercase is used
+opt.shiftwidth = 4          -- Size of an indent
+opt.tabstop = 4             -- Number of spaces tabs count for
+opt.expandtab = true        -- Use spaces instead of tabs
+opt.termguicolors = true    -- True color support
+opt.cursorline = true       -- Highlight the current line
+opt.clipboard = "unnamedplus" -- Sync with system clipboard
 
 -- ========================================================================== --
---                               PLUGIN MANAGER                               --
+-- ==                         BOOTSTRAP LAZY.NVIM                          == --
 -- ========================================================================== --
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.uv.fs_stat(lazypath) then
-  vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- ========================================================================== --
+-- ==                               PLUGINS                                == --
+-- ========================================================================== --
+
 require("lazy").setup({
-  { "AlexvZyl/nordic.nvim", priority = 1000, config = function() require('nordic').load() end },
-  { 
-    "folke/noice.nvim", 
-    event = "VeryLazy", 
-    dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" }, 
-    opts = { presets = { bottom_search = true, command_palette = true, lsp_doc_border = true } },
-  },
-  { "lewis6991/gitsigns.nvim", opts = {} },
-  { "folke/flash.nvim", event = "VeryLazy", opts = {} },
+    -- UI & Theme
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "nvim-tree/nvim-web-devicons", lazy = true },
+    
+    -- Dashboard (The Start Page)
+    {
+        "goolord/alpha-nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            local alpha = require("alpha")
+            local dashboard = require("alpha.themes.dashboard")
 
-  -- AI 1: Copilot Core
-  { 
-    "zbirenbaum/copilot.lua", 
-    cmd = "Copilot", 
-    event = "InsertEnter", 
-    config = function() 
-      require("copilot").setup({ 
-        suggestion = { enabled = true, auto_trigger = true, keymap = { accept = "<M-l>" } },
-      }) 
-    end,
-  },
+            -- Custom "Mares" ASCII Header
+            dashboard.section.header.val = {
+                [[                                                     ]],
+                [[               W E L C O M E   M A R E S .           ]],
+                [[                                                     ]],
+            }
 
-  -- AI 2: Avante.nvim (March 2026 Schema)
-  {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    build = "make", 
-    opts = {
-      provider = "copilot",
-      providers = {
-        copilot = {
-          endpoint = "https://api.githubcopilot.com",
-          model = "gpt-codex-5.3", 
-          timeout = 30000,
+            -- Menu Buttons
+            dashboard.section.buttons.val = {
+                dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
+                dashboard.button("n", "  New File", ":ene <BAR> startinsert<CR>"),
+                dashboard.button("r", "  Recent Files", ":Telescope oldfiles<CR>"),
+                dashboard.button("c", "  Config", ":e $MYVIMRC<CR>"),
+                dashboard.button("q", "󰈆  Quit", ":qa<CR>"),
+            }
+
+            -- Styling
+            dashboard.section.header.opts.hl = "AlphaHeader"
+            dashboard.section.buttons.opts.hl = "AlphaButton"
+            dashboard.opts.layout[1].val = 8 -- Padding from top
+            
+            alpha.setup(dashboard.opts)
+        end
+    },
+
+    -- Fuzzy Finder
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.5",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+
+    -- Syntax Highlighting (FIXED VERSION)
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        opts = {
+            ensure_installed = { "lua", "vim", "vimdoc", "javascript", "python" },
+            highlight = { enable = true },
         },
-      },
-      behaviour = {
-        auto_suggestions = false, 
-        minimal_diff = true,      
-      },
-      mappings = {
-        submit = { insert = "<C-s>", normal = "<CR>" },
-      },
+        config = function(_, opts)
+            -- This protected call prevents the crash if the module is missing
+            local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+            if not status_ok then return end
+            configs.setup(opts)
+        end
     },
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim",
-      "MunifTanjim/nui.nvim",
-      "zbirenbaum/copilot.lua",
-    },
-  },
-
-  -- AI 3: Copilot Chat
-  { 
-    "CopilotC-Nvim/CopilotChat.nvim", 
-    branch = "main", 
-    dependencies = { "zbirenbaum/copilot.lua", "nvim-lua/plenary.nvim" }, 
-    build = "make tiktoken",
-    opts = { 
-      model = "gpt-codes-5.3", 
-      window = { layout = 'vertical', width = 0.4, border = 'rounded' },
-    },
-    keys = { 
-      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "Toggle Copilot Chat" },
-    },
-  },
-
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  { "neovim/nvim-lspconfig" }, 
-  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
-  { "nvim-tree/nvim-tree.lua", config = true },
 })
 
 -- ========================================================================== --
---                                KEYBINDINGS                                 --
+-- ==                              KEYMAPS                                 == --
 -- ========================================================================== --
--- LSP & General
-vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
--- 📋 ON-DEMAND SYSTEM CLIPBOARD (The Fix)
--- Use <leader>y to yank to system, <leader>p to paste from system
-vim.keymap.set({"n", "v"}, "<leader>y", '"+y', { desc = "Yank to System Clipboard" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to System Clipboard" })
-vim.keymap.set({"n", "v"}, "<leader>p", '"+p', { desc = "Paste from System Clipboard" })
+local keymap = vim.keymap.set
 
--- 🚀 REPLACE ALL (Kept from before)
-vim.keymap.set("n", "<leader>ra", "ggVGd\"+p", { desc = "Replace all with Clipboard" })
+-- Telescope
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find Files" })
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Grep" })
 
--- Telescope & AI
-local builtin = require('telescope.builtin')
-vim.keymap.set("n", "<leader>ff", builtin.find_files)
-vim.keymap.set("n", "<leader>fg", builtin.live_grep)
-vim.keymap.set("n", "<leader>aa", "<cmd>AvanteAsk<CR>")
+-- General
+keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+
+-- ========================================================================== --
+-- ==                                THEME                                 == --
+-- ========================================================================== --
+
+vim.cmd.colorscheme("catppuccin-mocha")
