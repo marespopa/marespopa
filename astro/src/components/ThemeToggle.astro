@@ -37,9 +37,6 @@
   // Theme toggle functionality
   function initTheme() {
     const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
-
     // Check for saved theme preference or default to light mode
     const getCurrentTheme = (): string => {
       if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
