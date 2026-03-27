@@ -1,84 +1,102 @@
 ---
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
-import Navigation from "../components/Navigation.astro";
-import HeroSection from "../components/HeroSection.astro";
-import ProjectsSection from "../components/ProjectsSection.astro";
-import ContactSection from "../components/ContactSection.astro";
-import Footer from "../components/Footer.astro";
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
 <html lang="en" class="scroll-smooth">
   <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- SEO Meta Tags -->
-    <title>Mares Popa - Senior Software Engineer</title>
-    <meta
-      name="description"
-      content="I'm Mares Popa, a senior software engineer with expertise in front-end web development, creating solutions with frameworks like Next.js, TypeScript, React, and more."
-    />
-    <meta
-      name="keywords"
-      content="Mares Popa, Senior Software Engineer, Front-End Developer, UI/UX Developer, Next.js, React, TypeScript, AngularJS, Sass, Tailwind CSS, Web Development"
-    />
-    <meta name="author" content="Mares Popa" />
+    <title>Mares Popa</title>
     <GoogleAnalytics measurementId={"G-WY0KQ8W98H"} />
-
-    <!-- Open Graph Meta Tags (For Social Media Previews) -->
-    <meta property="og:title" content="Mares Popa - Senior Software Engineer" />
-    <meta
-      property="og:description"
-      content="Mares Popa is a senior software engineer specializing in front-end web development, working with Next.js, TypeScript, React, and more."
-    />
-    <meta property="og:image" content="URL_to_Your_Profile_or_Logo_Image" />
-    <meta property="og:url" content="https://marespopa.com" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Mares Popa - Senior Software Engineer"
-    />
-    <meta
-      name="twitter:description"
-      content="I'm Mares Popa, a senior software engineer with expertise in front-end web development."
-    />
-    <meta name="twitter:image" content="https://twitter.com/smoothwizz" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
-    <!-- Theme initialization script to prevent flash -->
     <script is:inline>
-      // Immediately apply theme to prevent flash
       const theme = localStorage.getItem('theme') || 
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      document.documentElement.classList.toggle('dark', theme === 'dark');
     </script>
   </head>
-  <body class="bg-emerald-50 dark:bg-dark-950 font-sans text-black dark:text-white transition-colors duration-300">
-    <ThemeToggle />
-    <Navigation />
-    
-    <main class="pt-20">
-      <HeroSection />
-      <ProjectsSection />
-      <ContactSection />
-    </main>
 
-    <Footer />
+  <body class="bg-[#f8f8f8] dark:bg-[#1a1a1a] text-[#111] dark:text-[#eee] font-mono selection:bg-[#007aff]/20 transition-colors duration-500 antialiased">
+    
+    <div class="max-w-[640px] mx-auto px-8 py-20 md:py-40">
+      
+      <header class="flex justify-between items-baseline mb-32">
+        <a href="/" class="text-sm font-bold tracking-tight hover:text-[#007aff] transition-colors">Mares Popa</a>
+        <ThemeToggle />
+      </header>
+
+      <main class="space-y-24">
+
+        <section>
+          <p class="text-[22px] md:text-[26px] leading-[1.4] font-medium tracking-tight">
+            Senior software engineer. <br />
+            <span class="text-[#888] dark:text-[#666]">Building privacy-first tools</span> <br />
+            <span class="text-[#888] dark:text-[#666]">and writing about the web.</span>
+          </p>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Writing</h2>
+          <div class="space-y-6">
+            {posts.map(post => (
+              <a href={`/blog/${post.id}`} class="group block no-underline">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2">
+                  <span class="text-[16px] group-hover:text-[#007aff] transition-colors underline decoration-transparent group-hover:decoration-[#007aff]/30 underline-offset-4">
+                    {post.data.title}
+                  </span>
+                  <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">
+                    {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '.')}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+          <a href="/blog" class="inline-block text-[13px] text-[#888] hover:text-[#007aff] transition-colors">
+            Index →
+          </a>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Projects</h2>
+          <ul class="space-y-10">
+            <li>
+              <a href="https://github.com/marespopa/hermes" class="group">
+                <span class="text-[16px] group-hover:text-[#007aff] transition-colors">Hermes Markdown</span>
+                <p class="text-[#888] text-[14px] mt-2 leading-[1.6]">Privacy first, local first markdown editor.</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/marespopa/dolooper" class="group">
+                <span class="text-[16px] group-hover:text-[#007aff] transition-colors">Dolooper</span>
+                <p class="text-[#888] text-[14px] mt-2 leading-[1.6]">Draft, plan execute your tasks with full privacy.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="space-y-8 border-t border-[#eee] dark:border-[#222] pt-12">
+          <div class="flex gap-x-8 text-[13px]">
+            <a href="mailto:hello@marespopa.com" class="text-[#888] hover:text-[#007aff] transition-colors">Email</a>
+            <a href="https://linkedin.com/in/marespopa" class="text-[#888] hover:text-[#007aff] transition-colors">LinkedIn</a>
+            <a href="https://github.com/marespopa" class="text-[#888] hover:text-[#007aff] transition-colors">GitHub</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="mt-32 opacity-30 text-[11px]">
+        <p>Sorted {new Date().getFullYear()}</p>
+      </footer>
+    </div>
+
   </body>
 </html>
