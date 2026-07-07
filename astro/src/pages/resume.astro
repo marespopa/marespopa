@@ -1,0 +1,237 @@
+---
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Mares Popa</title>
+    <GoogleAnalytics measurementId={"G-WY0KQ8W98H"} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <script is:inline>
+      const theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    </script>
+
+    <style>
+      @media print {
+        @page {
+          size: A4;
+          margin: 10mm;
+        }
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background: #fff !important;
+          color: #111 !important;
+          font-size: 12px !important;
+        }
+        .max-w-\[640px\] {
+          max-width: 100% !important;
+        }
+        .px-8 {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .py-20 {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+        h1 {
+          font-size: 22px !important;
+        }
+        h2 {
+          font-size: 10.5px !important;
+        }
+        p, li, span, a {
+          font-size: 12px !important;
+          line-height: 1.5 !important;
+        }
+        .space-y-16 > *:not(:first-child) {
+          margin-top: 1.1rem !important;
+        }
+        .space-y-10 > *:not(:first-child) {
+          margin-top: 0.75rem !important;
+        }
+        .space-y-8 > *:not(:first-child) {
+          margin-top: 0.5rem !important;
+        }
+        .space-y-6 > *:not(:first-child) {
+          margin-top: 0.4rem !important;
+        }
+        .space-y-4 > *:not(:first-child) {
+          margin-top: 0.3rem !important;
+        }
+        .space-y-1 > *:not(:first-child) {
+          margin-top: 0.1rem !important;
+        }
+        .mt-6 {
+          margin-top: 0.45rem !important;
+        }
+        .mt-2 {
+          margin-top: 0.2rem !important;
+        }
+        .mt-1 {
+          margin-top: 0.1rem !important;
+        }
+        .pt-12 {
+          padding-top: 0.5rem !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#f8f8f8] dark:bg-[#1a1a1a] text-[#111] dark:text-[#eee] font-mono selection:bg-[#007aff]/20 transition-colors duration-500 antialiased">
+
+    <div class="max-w-[640px] mx-auto px-8 py-20 md:py-40">
+
+      <header class="no-print flex justify-between items-baseline mb-16">
+        <a href="/" class="text-sm font-bold tracking-tight hover:text-[#007aff] transition-colors">Hi! I'm Mares.</a>
+        <ThemeToggle />
+      </header>
+
+      <main class="space-y-16">
+        <section>
+          <div class="flex justify-between items-start gap-4">
+            <h1 class="text-[22px] md:text-[26px] leading-[1.4] font-medium tracking-tight">
+              Mares Popa
+            </h1>
+            <div class="no-print flex gap-x-6 text-[13px] shrink-0 pt-2">
+              <a href="/resume.md" download class="text-[#888] hover:text-[#007aff] transition-colors">.md</a>
+              <button id="export-pdf" class="text-[#888] hover:text-[#007aff] transition-colors cursor-pointer">.pdf</button>
+            </div>
+          </div>
+          <p class="mt-2 text-[15px] text-[#888] dark:text-[#666]">
+            Senior Frontend Engineer — React, TypeScript, CI/CD, Cloud Migration
+          </p>
+          <p class="mt-1 text-[13px] text-[#aaa] dark:text-[#555]">
+            Cluj-Napoca, Romania
+          </p>
+          <p class="mt-6 text-[14px] leading-[1.7] text-[#666] dark:text-[#999]">
+            Over a decade of experience shipping code that delivers real impact. I specialize in modernizing legacy frontend architecture while keeping business operations running, with a focus on infrastructure that accelerates team velocity, AI-assisted developer workflows, and practical delivery over theoretical perfection.
+          </p>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Experience</h2>
+          <div class="space-y-10">
+            <div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                <span class="text-[16px] font-medium">Senior Software Engineer · Riverbed Technology</span>
+                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2023 — Present</span>
+              </div>
+              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+                <li>Managed frontend platform migration from Azure to AWS with minimal disruption</li>
+                <li>Integrated Cursor and Copilot into the team's development workflow</li>
+                <li>Collaborated with UX and Product on React/TypeScript features</li>
+                <li>Optimized CI/CD pipelines, halving build wait times</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                <span class="text-[16px] font-medium">Fullstack Course Lecturer · GoIT România</span>
+                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2023 — 2024</span>
+              </div>
+              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+                <li>Taught HTML/CSS, JavaScript, React.js, and Node.js modules</li>
+                <li>Delivered twice-weekly lessons and curriculum feedback</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                <span class="text-[16px] font-medium">Frontend Engineer · Cognizant</span>
+                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2022 — 2023</span>
+              </div>
+              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+                <li>Rewrote a hotel booking app from AngularJS to Next.js (150-person team, SAFe)</li>
+                <li>Applied atomic design principles with Chakra UI components from Figma</li>
+                <li>Improved unit test coverage with RTL and Jest</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                <span class="text-[16px] font-medium">Frontend Engineer · 3Pillar Global Romania</span>
+                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2018 — 2022</span>
+              </div>
+              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+                <li>Led the AngularJS-to-React frontend transition for a cybersecurity startup</li>
+                <li>Built interactive Highcharts.js dashboards and advanced search features</li>
+                <li>Advanced from UI Engineer to Senior UI Engineer</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                <span class="text-[16px] font-medium">Software Engineer · Frequentis</span>
+                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2015 — 2018</span>
+              </div>
+              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+                <li>Led AngularJS frontend development from concept to completion</li>
+                <li>Developed C# backend features and SQL stored procedures</li>
+                <li>Progressed from Intern to Software Engineer</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Projects</h2>
+          <ul class="space-y-6">
+            <li>
+              <a href="https://www.hermesmarkdown.com" class="group">
+                <span class="text-[16px] group-hover:text-[#007aff] transition-colors">Hermes Markdown</span>
+                <p class="text-[#888] text-[14px] mt-1 leading-[1.6]">Local-first Markdown editor that structures notes for AI agents — keys and files never leave your device.</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Education</h2>
+          <div class="space-y-4">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+              <span class="text-[16px]">B.Eng. Automated Control Engineering, Politehnica Cluj-Napoca</span>
+              <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2012 — 2016</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="space-y-8">
+          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Languages</h2>
+          <p class="text-[14px] text-[#888] leading-[1.6]">Romanian (native) · English (full professional)</p>
+        </section>
+
+        <section class="no-print space-y-8 border-t border-[#eee] dark:border-[#222] pt-12">
+          <div class="flex gap-x-8 text-[13px]">
+            <a href="mailto:hello@marespopa.com" class="text-[#888] hover:text-[#007aff] transition-colors">Email</a>
+            <a href="https://www.linkedin.com/in/mares-popa/" class="text-[#888] hover:text-[#007aff] transition-colors">LinkedIn</a>
+            <a href="https://www.github.com/marespopa" class="text-[#888] hover:text-[#007aff] transition-colors">GitHub</a>
+          </div>
+          <a href="/" class="inline-block text-[13px] text-[#888] hover:text-[#007aff] transition-colors">
+            ← Home
+          </a>
+        </section>
+      </main>
+
+      <footer class="no-print mt-32 opacity-30 text-[11px]">
+        <p>Sorted {new Date().getFullYear()}</p>
+      </footer>
+    </div>
+
+    <script is:inline>
+      document.getElementById('export-pdf')?.addEventListener('click', () => window.print());
+    </script>
+
+  </body>
+</html>
