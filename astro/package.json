@@ -22,5 +22,31 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1"
   },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "overrides": {
+    "sharp": "^0.35.0",
+    "svgo": "^4.0.2",
+    "anymatch": {
+      "picomatch": "^2.3.2"
+    },
+    "micromatch": {
+      "picomatch": "^2.3.2"
+    },
+    "tailwindcss": {
+      "micromatch": {
+        "picomatch": "^2.3.2"
+      },
+      "readdirp": {
+        "picomatch": "^2.3.2"
+      }
+    }
+  },
+  "resolutions": {
+    "sharp": "^0.35.0",
+    "svgo": "^4.0.2",
+    "anymatch/picomatch": "^2.3.2",
+    "micromatch/picomatch": "^2.3.2",
+    "readdirp/picomatch": "^2.3.2",
+    "tailwindcss/**/picomatch": "^2.3.2"
+  }
 }
