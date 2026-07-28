@@ -20,9 +20,11 @@ const posts = (await getCollection('blog'))
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     
     <script is:inline>
-      const theme = localStorage.getItem('theme') || 
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      const theme = localStorage.getItem('theme') || 'system';
+      const isDark = theme === 'dark' ||
+        (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', isDark);
+      document.documentElement.setAttribute('data-theme-mode', theme);
     </script>
   </head>
 
@@ -37,21 +39,21 @@ const posts = (await getCollection('blog'))
 
       <main>
         <header class="mb-20">
-          <h1 class="text-[11px] font-bold text-[#007aff] uppercase tracking-[0.2em] mb-4">Posts</h1>
-          <p class="text-[#888] dark:text-[#666] text-sm">A collection of thoughts on the software world.</p>
+          <h1 class="text-[11px] font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-[0.2em] mb-4">Posts</h1>
+          <p class="text-[#6b6b6b] dark:text-[#8a8a8a] text-sm">A collection of thoughts on the software world.</p>
         </header>
 
         <section class="space-y-12">
           {posts.map(post => (
             <div class="group">
-              <time class="block text-[12px] text-[#bbb] dark:text-[#444] mb-2 tabular-nums">
+              <time class="block text-[12px] text-[#6b6b6b] dark:text-[#8a8a8a] mb-2 tabular-nums">
                 {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '.')}
               </time>
               <a href={`/blog/${post.id}`} class="text-[18px] font-medium group-hover:text-[#007aff] transition-colors underline decoration-transparent group-hover:decoration-[#007aff]/30 underline-offset-4">
                 {post.data.title}
               </a>
               {post.data.description && (
-                <p class="text-[#888] dark:text-[#666] text-[14px] mt-2 leading-relaxed max-w-md">
+                <p class="text-[#6b6b6b] dark:text-[#8a8a8a] text-[14px] mt-2 leading-relaxed max-w-md">
                   {post.data.description}
                 </p>
               )}
@@ -60,13 +62,13 @@ const posts = (await getCollection('blog'))
         </section>
 
         <footer class="mt-32 pt-12 border-t border-[#eee] dark:border-[#262626]">
-          <a href="/" class="text-[13px] text-[#999] hover:text-[#007aff] transition-colors">
+          <a href="/" class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">
             ← Home
           </a>
         </footer>
       </main>
 
-      <footer class="mt-40 text-[#ccc] dark:text-[#333] text-[10px] tracking-[0.3em] uppercase">
+      <footer class="mt-40 text-[#6b6b6b] dark:text-[#8a8a8a] text-[10px] tracking-[0.3em] uppercase">
         <p>© {new Date().getFullYear()} Mares Popa</p>
       </footer>
     </div>

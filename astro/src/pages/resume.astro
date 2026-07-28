@@ -15,9 +15,11 @@ import ThemeToggle from "../components/ThemeToggle.astro";
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
     <script is:inline>
-      const theme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      const theme = localStorage.getItem('theme') || 'system';
+      const isDark = theme === 'dark' ||
+        (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', isDark);
+      document.documentElement.setAttribute('data-theme-mode', theme);
     </script>
 
     <style>
@@ -105,14 +107,14 @@ import ThemeToggle from "../components/ThemeToggle.astro";
               Mares Popa
             </h1>
             <div class="no-print flex gap-x-6 text-[13px] shrink-0 pt-2">
-              <a href="/resume.md" download class="text-[#888] hover:text-[#007aff] transition-colors">.md</a>
-              <button id="export-pdf" class="text-[#888] hover:text-[#007aff] transition-colors cursor-pointer">.pdf</button>
+              <a href="/resume.md" download class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">.md</a>
+              <button id="export-pdf" class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors cursor-pointer">.pdf</button>
             </div>
           </div>
-          <p class="mt-2 text-[15px] text-[#888] dark:text-[#666]">
+          <p class="mt-2 text-[15px] text-[#6b6b6b] dark:text-[#8a8a8a]">
             Senior Frontend Engineer — React, TypeScript, CI/CD, Cloud Migration
           </p>
-          <p class="mt-1 text-[13px] text-[#aaa] dark:text-[#555]">
+          <p class="mt-1 text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a]">
             Cluj-Napoca, Romania
           </p>
           <p class="mt-6 text-[14px] leading-[1.7] text-[#666] dark:text-[#999]">
@@ -121,14 +123,14 @@ import ThemeToggle from "../components/ThemeToggle.astro";
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Experience</h2>
+          <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">Experience</h2>
           <div class="space-y-10">
             <div>
               <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
                 <span class="text-[16px] font-medium">Senior Software Engineer · Riverbed Technology</span>
-                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2023 — Present</span>
+                <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2023 — Present</span>
               </div>
-              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+              <ul class="mt-2 text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6] list-disc list-inside space-y-1">
                 <li>Managed frontend platform migration from Azure to AWS with minimal disruption</li>
                 <li>Integrated Cursor and Copilot into the team's development workflow</li>
                 <li>Collaborated with UX and Product on React/TypeScript features</li>
@@ -139,9 +141,9 @@ import ThemeToggle from "../components/ThemeToggle.astro";
             <div>
               <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
                 <span class="text-[16px] font-medium">Fullstack Course Lecturer · GoIT România</span>
-                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2023 — 2024</span>
+                <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2023 — 2024</span>
               </div>
-              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+              <ul class="mt-2 text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6] list-disc list-inside space-y-1">
                 <li>Taught HTML/CSS, JavaScript, React.js, and Node.js modules</li>
                 <li>Delivered twice-weekly lessons and curriculum feedback</li>
               </ul>
@@ -150,9 +152,9 @@ import ThemeToggle from "../components/ThemeToggle.astro";
             <div>
               <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
                 <span class="text-[16px] font-medium">Frontend Engineer · Cognizant</span>
-                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2022 — 2023</span>
+                <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2022 — 2023</span>
               </div>
-              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+              <ul class="mt-2 text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6] list-disc list-inside space-y-1">
                 <li>Rewrote a hotel booking app from AngularJS to Next.js (150-person team, SAFe)</li>
                 <li>Applied atomic design principles with Chakra UI components from Figma</li>
                 <li>Improved unit test coverage with RTL and Jest</li>
@@ -162,9 +164,9 @@ import ThemeToggle from "../components/ThemeToggle.astro";
             <div>
               <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
                 <span class="text-[16px] font-medium">Frontend Engineer · 3Pillar Global Romania</span>
-                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2018 — 2022</span>
+                <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2018 — 2022</span>
               </div>
-              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+              <ul class="mt-2 text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6] list-disc list-inside space-y-1">
                 <li>Led the AngularJS-to-React frontend transition for a cybersecurity startup</li>
                 <li>Built interactive Highcharts.js dashboards and advanced search features</li>
                 <li>Advanced from UI Engineer to Senior UI Engineer</li>
@@ -174,9 +176,9 @@ import ThemeToggle from "../components/ThemeToggle.astro";
             <div>
               <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
                 <span class="text-[16px] font-medium">Software Engineer · Frequentis</span>
-                <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2015 — 2018</span>
+                <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2015 — 2018</span>
               </div>
-              <ul class="mt-2 text-[14px] text-[#888] leading-[1.6] list-disc list-inside space-y-1">
+              <ul class="mt-2 text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6] list-disc list-inside space-y-1">
                 <li>Led AngularJS frontend development from concept to completion</li>
                 <li>Developed C# backend features and SQL stored procedures</li>
                 <li>Progressed from Intern to Software Engineer</li>
@@ -186,39 +188,39 @@ import ThemeToggle from "../components/ThemeToggle.astro";
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Projects</h2>
+          <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">Projects</h2>
           <ul class="space-y-6">
             <li>
               <a href="https://www.hermesmarkdown.com" class="group">
                 <span class="text-[16px] group-hover:text-[#007aff] transition-colors">Hermes Markdown</span>
-                <p class="text-[#888] text-[14px] mt-1 leading-[1.6]">A minimalist, local-first Markdown editor designed for deep work. No cloud. No tracking. Just the interface between your mind and the page.</p>
+                <p class="text-[#6b6b6b] dark:text-[#8a8a8a] text-[14px] mt-1 leading-[1.6]">A minimalist, local-first Markdown editor designed for deep work. No cloud. No tracking. Just the interface between your mind and the page.</p>
               </a>
             </li>
           </ul>
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Education</h2>
+          <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">Education</h2>
           <div class="space-y-4">
             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
               <span class="text-[16px]">B.Eng. Automated Control Engineering, Politehnica Cluj-Napoca</span>
-              <span class="text-[13px] text-[#aaa] dark:text-[#444] shrink-0">2012 — 2016</span>
+              <span class="text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] shrink-0">2012 — 2016</span>
             </div>
           </div>
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xs font-bold text-[#007aff] uppercase tracking-widest">Languages</h2>
-          <p class="text-[14px] text-[#888] leading-[1.6]">Romanian (native) · English (full professional)</p>
+          <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">Languages</h2>
+          <p class="text-[14px] text-[#6b6b6b] dark:text-[#8a8a8a] leading-[1.6]">Romanian (native) · English (full professional)</p>
         </section>
 
         <section class="no-print space-y-8 border-t border-[#eee] dark:border-[#222] pt-12">
           <div class="flex gap-x-8 text-[13px]">
-            <a href="mailto:hello@marespopa.com" class="text-[#888] hover:text-[#007aff] transition-colors">Email</a>
-            <a href="https://www.linkedin.com/in/mares-popa/" class="text-[#888] hover:text-[#007aff] transition-colors">LinkedIn</a>
-            <a href="https://www.github.com/marespopa" class="text-[#888] hover:text-[#007aff] transition-colors">GitHub</a>
+            <a href="mailto:hello@marespopa.com" class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">Email</a>
+            <a href="https://www.linkedin.com/in/mares-popa/" class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">LinkedIn</a>
+            <a href="https://www.github.com/marespopa" class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">GitHub</a>
           </div>
-          <a href="/" class="inline-block text-[13px] text-[#888] hover:text-[#007aff] transition-colors">
+          <a href="/" class="inline-block text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] transition-colors">
             ← Home
           </a>
         </section>
