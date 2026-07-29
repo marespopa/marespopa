@@ -18,20 +18,17 @@ React · React Native · Next.js (App Router) · TypeScript · Vitest · Jest ·
 
 - Managed frontend platform migration from Azure to AWS with minimal disruption
 - Integrated Cursor and Copilot into the team's development workflow
-- Collaborated with UX and Product on React/TypeScript features
 - Optimized CI/CD pipelines, halving build wait times
 
 ### Fullstack Course Lecturer · GoIT România
 2023 — 2024
 
-- Taught HTML/CSS, JavaScript, React.js, and Node.js modules
-- Delivered twice-weekly lessons and curriculum feedback
+- Taught HTML/CSS, JavaScript, React.js, and Node.js to career-changers
 
 ### Frontend Engineer · Cognizant
 2022 — 2023
 
 - Rewrote a hotel booking app from AngularJS to Next.js (150-person team, SAFe)
-- Applied atomic design principles with Chakra UI components from Figma
 - Improved unit test coverage with RTL and Jest
 
 ### Frontend Engineer · 3Pillar Global Romania
@@ -39,14 +36,11 @@ React · React Native · Next.js (App Router) · TypeScript · Vitest · Jest ·
 
 - Led the AngularJS-to-React frontend transition for a cybersecurity startup
 - Built interactive Highcharts.js dashboards and advanced search features
-- Advanced from UI Engineer to Senior UI Engineer
 
 ### Software Engineer · Frequentis
 2015 — 2018
 
 - Led AngularJS frontend development from concept to completion
-- Developed C# backend features and SQL stored procedures
-- Progressed from Intern to Software Engineer
 
 ## Projects
 
