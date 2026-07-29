@@ -56,7 +56,7 @@ Romanian (native) · English (full professional)
 
 ## Contact
 
-- Email: hello@marespopa.com
+- Email: office@marespopa.com
 - LinkedIn: https://www.linkedin.com/in/mares-popa/
 - GitHub: https://www.github.com/marespopa
 `;
