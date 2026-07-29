@@ -5,7 +5,11 @@ const markdown = `# Mares Popa
 Senior Frontend Engineer — React, TypeScript, CI/CD, Cloud Migration
 Cluj-Napoca, Romania
 
-Over a decade of experience shipping code that delivers real impact. I specialize in modernizing legacy frontend architecture while keeping business operations running, with a focus on infrastructure that accelerates team velocity, AI-assisted developer workflows, and practical delivery over theoretical perfection.
+Senior Frontend Engineer with 10+ years of hands-on experience refactoring complex legacy codebases into scalable modern web applications. Focused on engineering frontend infrastructure that boosts developer productivity, leveraging AI tools to accelerate delivery cycles, and building resilient systems that keep business operations running smoothly.
+
+## Skills
+
+React · React Native · Next.js (App Router) · TypeScript · Vitest · Jest · React Testing Library · Playwright · Cypress · A/B Testing & Experimentation · CI/CD
 
 ## Experience
 
