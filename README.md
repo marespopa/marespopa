@@ -27,3 +27,9 @@ I thrive on tackling complex problems, collaborating with diverse teams, and con
 ## Build status
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/75d72d5f-09b9-4048-9fb3-2c527bcad91a/deploy-status)](https://app.netlify.com/sites/marespopa/deploys)
+
+## License
+
+The source code is licensed under the [MIT License](./LICENSE). Blog posts,
+the resume, and all other written content are licensed under
+[CC BY-NC-ND 4.0](./CONTENT-LICENSE.md).

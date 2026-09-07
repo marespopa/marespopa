@@ -1,6 +1,7 @@
 // src/content.config.ts
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders"; // The essential new import
+import { z } from "astro/zod";
 
 const blog = defineCollection({
   // Use the glob loader to point to your markdown files
