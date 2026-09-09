@@ -6,6 +6,57 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
+
+const skills = [
+  {
+    id: 'a11y-guard',
+    name: 'a11y-guard',
+    summary: 'Use it when an interface needs a serious accessibility pass before it ships.',
+    description: 'It checks the things that are easy to miss when you are focused on the visual result: semantic HTML, screen-reader feedback, keyboard navigation, focus states, and ARIA that actually matches the interaction.',
+  },
+  {
+    id: 'codebase-onboarder',
+    name: 'codebase-onboarder',
+    summary: 'Use it when a file or module makes you spend more time decoding than changing.',
+    description: 'It turns an unfamiliar codebase into a working mental model. The output traces data from input to output, names the important interfaces and dependencies, and calls out the coupling and footguns that usually surface six months too late.',
+  },
+  {
+    id: 'dep-upgrade-plan',
+    name: 'dep-upgrade-plan',
+    summary: 'Use it before a package upgrade turns into an unplanned migration.',
+    description: 'It compares the requested versions, finds deprecated APIs and changed configuration, and separates the work into an audit, codemods, manual refactors, and validation. The goal is a migration path you can defend before touching the lockfile.',
+  },
+  {
+    id: 'eli5-stakeholder',
+    name: 'eli5-stakeholder',
+    summary: 'Use it when technical work needs to make sense outside the engineering team.',
+    description: 'It translates architecture, technical debt, and incidents into consequences people can act on: user experience, stability, delivery speed, and cost. It also puts the quick fix next to the durable option instead of hiding the trade-off.',
+  },
+  {
+    id: 'grill-me',
+    name: 'grill-me',
+    summary: 'Use it before committing to a design, specification, or large code change.',
+    description: 'It asks the uncomfortable questions first. State, performance, scale, API boundaries, and developer experience are stress-tested in small rounds until the assumptions are explicit and the recommendation is production-ready.',
+  },
+  {
+    id: 'smart-commit',
+    name: 'smart-commit',
+    summary: 'Use it as the last check before a staged diff becomes a commit.',
+    description: 'It fails fast on debug residue, focused tests, temporary comments, and commented-out code. Once the diff is clean, it checks public TypeScript signatures and proposes a concise Conventional Commit message without creating the commit for you.',
+  },
+  {
+    id: 'story-creator',
+    name: 'story-creator',
+    summary: 'Use it when rough notes need to become work someone can actually pick up.',
+    description: 'It turns a Slack thread, idea, or short specification into an engineering ticket with context, affected interfaces, an implementation path, and acceptance criteria that cover the happy path and the edges.',
+  },
+  {
+    id: 'webperf-audit',
+    name: 'webperf-audit',
+    summary: 'Use it when a frontend feels slower, heavier, or more fragile than it should.',
+    description: 'It looks for render bottlenecks, bundle bloat, layout shifts, async waterfalls, and expensive main-thread work. The result is a focused table of issues and fixes, not a vague instruction to “optimize performance.”',
+  },
+];
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -68,7 +119,7 @@ const posts = (await getCollection('blog'))
             ))}
           </div>
           <a href="/blog" class="inline-block text-[13px] text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] dark:hover:text-[#3392ff] transition-colors">
-            Index →
+            All Posts →
           </a>
         </section>
 
@@ -90,11 +141,43 @@ const posts = (await getCollection('blog'))
           </ul>
         </section>
 
-        <section id="skills" class="space-y-8">
+        <section id="skills" class="space-y-8 scroll-mt-24">
           <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">AI Skills</h2>
           <p class="text-[#6b6b6b] dark:text-[#8a8a8a] text-[14px] leading-[1.6]">
-            A small collection of reusable prompts for codebase onboarding, accessibility, performance, architecture, and delivery workflows.
+            A small collection of reusable prompts for the parts of engineering that need more than a quick answer: understanding a codebase, challenging a design, and getting the details right before delivery.
           </p>
+          <div class="space-y-6 rounded-lg border border-[#eee] bg-white/60 p-5 dark:border-[#222] dark:bg-white/[0.03]">
+            <div class="grid grid-cols-1 gap-x-10 gap-y-1 sm:grid-cols-2" role="tablist" aria-label="AI skills">
+              {skills.map((skill) => (
+                <button
+                  id={`tab-${skill.id}`}
+                  type="button"
+                  role="tab"
+                  aria-controls={`panel-${skill.id}`}
+                  aria-selected="false"
+                  tabindex={0}
+                  class="skill-tab border-l-2 border-transparent px-3 py-2 text-left text-[13px] text-[#6b6b6b] transition-colors hover:border-[#007aff]/30 hover:text-[#007aff] dark:text-[#8a8a8a] dark:hover:border-[#3392ff]/30 dark:hover:text-[#3392ff]"
+                  data-skill-tab={skill.id}
+                >
+                  {skill.name}
+                </button>
+              ))}
+            </div>
+            {skills.map((skill) => (
+              <div
+                id={`panel-${skill.id}`}
+                role="tabpanel"
+                aria-labelledby={`tab-${skill.id}`}
+                tabindex="0"
+                class="skill-panel hidden border-l-2 border-[#eee] pl-4 dark:border-[#222]"
+                data-skill-panel={skill.id}
+                hidden
+              >
+                <p class="text-[15px] leading-[1.6]">{skill.summary}</p>
+                <p class="mt-3 text-[14px] leading-[1.7] text-[#6b6b6b] dark:text-[#8a8a8a]">{skill.description}</p>
+              </div>
+            ))}
+          </div>
           <div class="flex flex-wrap gap-x-8 gap-y-3 text-[13px]">
             <a href="https://github.com/marespopa/marespopa/tree/master/skills" class="text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#007aff] dark:hover:text-[#3392ff] transition-colors">
               Browse on GitHub →
@@ -104,6 +187,68 @@ const posts = (await getCollection('blog'))
             </a>
           </div>
         </section>
+
+        <script>
+          const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-skill-tab]'));
+          const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-skill-panel]'));
+
+          let activeSkillId: string | null = null;
+
+          const activateSkill = (skillId: string | null, moveFocus = false) => {
+            activeSkillId = skillId;
+
+            tabs.forEach((tab) => {
+              const isActive = tab.dataset.skillTab === skillId;
+              tab.setAttribute('aria-selected', String(isActive));
+              tab.tabIndex = isActive ? 0 : -1;
+              tab.classList.toggle('border-[#007aff]', isActive);
+              tab.classList.toggle('text-[#007aff]', isActive);
+              tab.classList.toggle('dark:border-[#3392ff]', isActive);
+              tab.classList.toggle('dark:text-[#3392ff]', isActive);
+              tab.classList.toggle('border-transparent', !isActive);
+              tab.classList.toggle('text-[#6b6b6b]', !isActive);
+              tab.classList.toggle('dark:text-[#8a8a8a]', !isActive);
+            });
+
+            panels.forEach((panel) => {
+              const isActive = panel.dataset.skillPanel === skillId;
+              panel.hidden = !isActive;
+              panel.classList.toggle('hidden', !isActive);
+            });
+
+            if (moveFocus && skillId) {
+              tabs.find((tab) => tab.dataset.skillTab === skillId)?.focus();
+            }
+          };
+
+          tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+              const skillId = tab.dataset.skillTab ?? '';
+              activateSkill(activeSkillId === skillId ? null : skillId);
+            });
+            tab.addEventListener('keydown', (event) => {
+              const direction = event.key === 'ArrowRight' || event.key === 'ArrowDown'
+                ? 1
+                : event.key === 'ArrowLeft' || event.key === 'ArrowUp'
+                  ? -1
+                  : 0;
+
+              if (event.key === 'Home' || event.key === 'End') {
+                event.preventDefault();
+                const targetIndex = event.key === 'Home' ? 0 : tabs.length - 1;
+                activateSkill(tabs[targetIndex].dataset.skillTab ?? '', true);
+              } else if (direction) {
+                event.preventDefault();
+                const targetIndex = (index + direction + tabs.length) % tabs.length;
+                activateSkill(tabs[targetIndex].dataset.skillTab ?? '', true);
+              } else if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const skillId = tab.dataset.skillTab ?? '';
+                activateSkill(activeSkillId === skillId ? null : skillId);
+              }
+            });
+          });
+        </script>
 
         <section class="space-y-8">
           <h2 class="text-xs font-bold text-[#0066cc] dark:text-[#3392ff] uppercase tracking-widest">Music</h2>

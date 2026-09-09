@@ -1,5 +1,5 @@
 ---
-name: story_creator_skill
+name: story-creator
 description: Transforms informal technical notes, Slack threads, or specs into structured engineering tickets.
 ---
 
