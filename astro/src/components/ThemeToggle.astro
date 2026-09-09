@@ -1,50 +1,68 @@
 ---
-// Theme toggle component with brutalism design
+// Theme toggle component with soft, refined animations
 // Cycles: light -> dark -> system (default)
 ---
 
 <button
   id="theme-toggle"
-  class="fixed top-4 right-4 z-50 p-3 bg-emerald-600 dark:bg-dark-800 border-2 border-black shadow-brutal hover:shadow-brutal-hover transition-all duration-200 transform hover:-translate-y-1 hover:translate-x-1"
+  class="fixed top-6 right-6 z-50 p-2.5 rounded-full bg-white/80 dark:bg-[#242424]/80 backdrop-blur-md border border-[#eee] dark:border-[#333] text-[#6b6b6b] dark:text-[#8a8a8a] hover:text-[#111] dark:hover:text-[#eee] hover:border-[#ccc] dark:hover:border-[#555] shadow-xs hover:shadow-md transition-all duration-300 ease-out hover:scale-105 active:scale-95 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007aff]"
   aria-label="Toggle theme (light / dark / system)"
+  title="Toggle theme (light / dark / system)"
 >
-  <!-- Sun icon for light mode -->
-  <svg
-    id="sun-icon"
-    class="w-6 h-6 text-white"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-      clip-rule="evenodd"
-    ></path>
-  </svg>
-  <!-- Moon icon for dark mode -->
-  <svg
-    id="moon-icon"
-    class="w-6 h-6 text-white hidden"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-  </svg>
-  <!-- Monitor icon for system mode -->
-  <svg
-    id="system-icon"
-    class="w-6 h-6 text-white hidden"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect x="3" y="4" width="18" height="12" rx="1" stroke-linecap="round" stroke-linejoin="round"></rect>
-    <path d="M8 20h8M12 16v4" stroke-linecap="round" stroke-linejoin="round"></path>
-  </svg>
+  <div class="relative w-4 h-4 flex items-center justify-center">
+    <!-- Sun icon for light mode -->
+    <svg
+      id="sun-icon"
+      class="w-4 h-4 transition-transform duration-500 ease-out group-hover:rotate-45"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <!-- Moon icon for dark mode -->
+    <svg
+      id="moon-icon"
+      class="w-4 h-4 hidden transition-transform duration-500 ease-out group-hover:-rotate-12"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <!-- Monitor icon for system mode -->
+    <svg
+      id="system-icon"
+      class="w-4 h-4 hidden transition-transform duration-500 ease-out group-hover:scale-110"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+      <line x1="8" y1="21" x2="16" y2="21"></line>
+      <line x1="12" y1="17" x2="12" y2="21"></line>
+    </svg>
+  </div>
 </button>
 
 <style>
@@ -111,16 +129,14 @@
     themeToggle?.addEventListener('click', () => {
       const currentTheme = getStoredTheme();
       const nextTheme = order[(order.indexOf(currentTheme) + 1) % order.length];
+      
+      // Gentle scale transition on click
+      themeToggle.style.transform = 'scale(0.92)';
+      setTimeout(() => {
+        themeToggle.style.transform = '';
+      }, 150);
+
       setTheme(nextTheme);
-    });
-
-    // Add glitch effect on hover
-    themeToggle?.addEventListener('mouseenter', () => {
-      themeToggle.classList.add('animate-glitch');
-    });
-
-    themeToggle?.addEventListener('mouseleave', () => {
-      themeToggle.classList.remove('animate-glitch');
     });
   }
 
