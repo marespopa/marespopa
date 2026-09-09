@@ -103,6 +103,8 @@ Audits a frontend component, focused file, or diff for render bottlenecks, bundl
 
 Copy an individual prompt into the skill or prompt directory supported by your AI coding tool, or download the repository from GitHub and use the files from `skills/`. The prompt frontmatter contains the skill name and description used by compatible tools.
 
+The skills-only ZIP is published as a GitHub Release. To create a release, push a tag matching `skills-v*`, for example `skills-v1.0.0`. The archive contains this directory and its license file.
+
 ## License
 
 These skill prompts are written content and are licensed under [CC BY-NC-ND 4.0](LICENSE.md). You may share them with attribution for non-commercial purposes, but you may not distribute modified versions.
