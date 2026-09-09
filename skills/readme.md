@@ -10,7 +10,7 @@ Reusable prompts for architecture, accessibility, performance, planning, communi
 | [codebase-onboarder](codebase_onboarder_skill.md) | Quickly understanding complex or legacy code |
 | [dep-upgrade-plan](dep_upgrade_plan_skill.md) | Planning package and dependency upgrades |
 | [eli5-stakeholder](eli5_stakeholder_skill.md) | Explaining technical work to non-engineers |
-| [grill-me](grill_me_skill.md) | Stress-testing designs and implementation proposals |
+| [quiz-me](quiz_me_skill.md) | Stress-testing designs and implementation proposals |
 | [smart-commit](smart_commit_skill.md) | Validating staged changes and drafting commit messages |
 | [story-creator](story_creator_skill.md) | Turning notes into actionable engineering tickets |
 | [webperf-audit](webperf_audit_skill.md) | Finding frontend performance and Web Vitals issues |
@@ -49,7 +49,7 @@ Translates a technical issue, architectural trade-off, or technical debt item in
 
 **Output:** Sections titled **What Happened / What We Are Doing**, **Why It Matters (Business Impact)**, and **Options & Recommended Path**.
 
-### grill-me
+### quiz-me
 
 **Role:** Technical interrogator.
 
@@ -93,7 +93,7 @@ Audits a frontend component, focused file, or diff for render bottlenecks, bundl
 
 - Start with `codebase-onboarder` when the code or architecture is unfamiliar.
 - Use `story-creator` to turn a rough request into implementation-ready work.
-- Use `grill-me` before committing to a significant design or refactor.
+- Use `quiz-me` before committing to a significant design or refactor.
 - Use `dep-upgrade-plan` for dependency version changes.
 - Use `a11y-guard` and `webperf-audit` for focused frontend quality reviews.
 - Use `eli5-stakeholder` when the audience is non-technical.
