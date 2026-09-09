@@ -1,0 +1,18 @@
+---
+const destination = '/?skill=quiz-me#skills';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <link rel="canonical" href="https://www.marespopa.com/quiz-me" />
+    <title>quiz-me | Mares Popa</title>
+  </head>
+  <body>
+    <script>
+      window.location.replace('/?skill=quiz-me#skills');
+    </script>
+    <a href={destination}>Open quiz-me</a>
+  </body>
+</html>

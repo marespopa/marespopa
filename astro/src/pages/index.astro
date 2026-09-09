@@ -221,6 +221,11 @@ const skills = [
             }
           };
 
+          const selectedSkill = new URLSearchParams(window.location.search).get('skill');
+          if (selectedSkill && tabs.some((tab) => tab.dataset.skillTab === selectedSkill)) {
+            activateSkill(selectedSkill);
+          }
+
           tabs.forEach((tab, index) => {
             tab.addEventListener('click', () => {
               const skillId = tab.dataset.skillTab ?? '';
